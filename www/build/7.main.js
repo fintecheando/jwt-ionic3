@@ -1,15 +1,15 @@
 webpackJsonp([7],{
 
-/***/ 301:
+/***/ 303:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__forgot_page__ = __webpack_require__(310);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_page__ = __webpack_require__(434);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(111);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ForgotPageModule", function() { return ForgotPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginPageModule", function() { return LoginPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,31 +20,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ForgotPageModule = (function () {
-    function ForgotPageModule() {
+var LoginPageModule = (function () {
+    function LoginPageModule() {
     }
-    return ForgotPageModule;
+    return LoginPageModule;
 }());
-ForgotPageModule = __decorate([
+LoginPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__forgot_page__["a" /* ForgotPage */],
+            __WEBPACK_IMPORTED_MODULE_2__login_page__["a" /* LoginPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__forgot_page__["a" /* ForgotPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__login_page__["a" /* LoginPage */]),
             __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["a" /* TranslateModule */].forChild()
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__forgot_page__["a" /* ForgotPage */]
+            __WEBPACK_IMPORTED_MODULE_2__login_page__["a" /* LoginPage */]
         ]
     })
-], ForgotPageModule);
+], LoginPageModule);
 
-//# sourceMappingURL=forgot-page.module.js.map
+//# sourceMappingURL=login-page.module.js.map
 
 /***/ }),
 
-/***/ 310:
+/***/ 434:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -53,7 +53,7 @@ ForgotPageModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth_service__ = __webpack_require__(112);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ForgotPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -68,29 +68,48 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var ForgotPage = (function () {
-    function ForgotPage(navCtrl, navParams, menuCtrl, storage, formBuilder, authService) {
+var LoginPage = (function () {
+    function LoginPage(navCtrl, navParams, menuCtrl, storage, formBuilder, authService) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.menuCtrl = menuCtrl;
         this.storage = storage;
         this.formBuilder = formBuilder;
         this.authService = authService;
-        this.forgotData = this.formBuilder.group({
-            egn: ['', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["e" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_3__angular_forms__["e" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_3__angular_forms__["e" /* Validators */].minLength(10), , __WEBPACK_IMPORTED_MODULE_3__angular_forms__["e" /* Validators */].maxLength(10)])],
-            email: ['', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["e" /* Validators */].required],
+        this.loginData = this.formBuilder.group({
+            username: ['', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["e" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_3__angular_forms__["e" /* Validators */].required])],
+            password: ['', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["e" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_3__angular_forms__["e" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_3__angular_forms__["e" /* Validators */].minLength(6)])],
         });
     }
-    ForgotPage.prototype.ionViewDidLoad = function () {
+    LoginPage.prototype.ionViewDidLoad = function () {
         //hide menu when on the login page, regardless of the screen resolution
         this.menuCtrl.enable(false);
     };
-    return ForgotPage;
+    LoginPage.prototype.login = function () {
+        var _this = this;
+        //use this.loginData.value to authenticate the user
+        this.authService.login(this.loginData.value)
+            .then(function () { return _this.redirectToHome(); })
+            .catch(function (e) { return console.log("login error", e); });
+    };
+    LoginPage.prototype.redirectToHome = function () {
+        this.navCtrl.setRoot('ProfilePage');
+        this.menuCtrl.enable(true);
+    };
+    /**
+     * Opens a paage
+     *
+     * @param page string Page name
+     */
+    LoginPage.prototype.openPage = function (page) {
+        this.navCtrl.push(page);
+    };
+    return LoginPage;
 }());
-ForgotPage = __decorate([
+LoginPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-forgot-page',template:/*ion-inline-start:"/home/afiliamedica/dev/ionic3-seed-jwt/src/pages/forgot-page/forgot-page.html"*/'<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>       \n    <ion-title>{{ \'page.forgotten_password\' | translate }}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-grid>\n    <ion-row justify-content-around>\n      <ion-col col-sm-6 col-md-6 col-lg-4 col-xl-3  align-self-center>\n        <form [formGroup]="forgotData" (ngSubmit)="login()">\n          <ion-item>\n            <ion-label floating>{{ \'label.email\' | translate }}:</ion-label>\n            <ion-input type="email" formControlName="email"></ion-input>\n          </ion-item>\n\n          <button margin-top ion-button type="submit" [disabled]="!forgotData.valid">{{ \'button.submit\' | translate }}</button>\n\n        </form>\n\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n</ion-content>\n'/*ion-inline-end:"/home/afiliamedica/dev/ionic3-seed-jwt/src/pages/forgot-page/forgot-page.html"*/,
+        selector: 'page-login-page',template:/*ion-inline-start:"/home/afiliamedica/dev/ionic3-seed-jwt/src/pages/login-page/login-page.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{ \'page.login\' | translate }}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-grid>\n    <ion-row justify-content-around>\n      <ion-col col-sm-6 col-md-6 col-lg-4 col-xl-3  align-self-center>\n        <form [formGroup]="loginData" (ngSubmit)="login()"  *ngIf="!showRoleSelection">\n          <ion-item>\n            <ion-label floating>{{ \'label.username\' | translate }}:</ion-label>\n            <ion-input type="text" formControlName="username"></ion-input>\n          </ion-item>\n          <ion-item>\n            <ion-label floating>{{ \'label.password\' | translate }}:</ion-label>\n            <ion-input type="password" formControlName="password"></ion-input>\n          </ion-item>\n\n          <button margin-top ion-button type="submit" [disabled]="!loginData.valid">{{ \'button.login\' | translate }}</button>\n\n        </form>\n    \n        <ion-row padding-top>\n          <ion-col>\n            <button ion-button clear block (click)="openPage(\'RegisterPage\')">{{ \'button.new_registration\' | translate }}</button>\n          </ion-col>\n          <ion-col>\n            <button ion-button clear block (click)="openPage(\'ForgotPage\')">{{ \'button.forgotten_password\' | translate }}</button>\n          </ion-col>\n        </ion-row>\n        \n      </ion-col>\n\n    </ion-row>\n    \n    \n    \n  </ion-grid>\n\n</ion-content>\n'/*ion-inline-end:"/home/afiliamedica/dev/ionic3-seed-jwt/src/pages/login-page/login-page.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -98,9 +117,9 @@ ForgotPage = __decorate([
         __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["a" /* Storage */],
         __WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* FormBuilder */],
         __WEBPACK_IMPORTED_MODULE_4__providers_auth_service__["a" /* AuthService */]])
-], ForgotPage);
+], LoginPage);
 
-//# sourceMappingURL=forgot-page.js.map
+//# sourceMappingURL=login-page.js.map
 
 /***/ })
 

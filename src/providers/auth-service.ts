@@ -6,7 +6,8 @@ import 'rxjs/add/operator/toPromise';
 import {UserModel} from '../models/user.model';
 import {CredentialsModel} from '../models/credentials.model';
 
-import *  as AppConfig from '../app/config';
+//import *  as AppConfig from '../app/config';
+import { AppConfig } from '../app/app.config';
 
 @Injectable()
 export class AuthService {
@@ -18,7 +19,7 @@ export class AuthService {
     private http: Http,
     private authHttp: AuthHttp) {
 
-    this.cfg = AppConfig.cfg;
+    this.cfg = AppConfig;
   }
 
   register(userData: UserModel) {
@@ -57,3 +58,4 @@ export class AuthService {
   }
 
 }
+

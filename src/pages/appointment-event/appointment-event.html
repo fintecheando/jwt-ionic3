@@ -1,0 +1,158 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title><span class="right" (click)="saveEvent()">GUARDAR <ion-icon name="md-done-all"></ion-icon></span></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="appointment-event-content">
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="section" (ionChange)="onSegmentChanged($event)">
+      <ion-segment-button value="personal">
+        Personal
+      </ion-segment-button>
+      <ion-segment-button value="medical">
+        Médico
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+  <form [formGroup]="eventForm" (ngSubmit)="createPersonalEvent()">
+    <ion-list class="switchers-list">
+      <ion-item class="switcher-item">
+        <ion-label>Todo el día</ion-label>
+        <ion-toggle formControlName="isAllDay" (ionChange)="onIsAllDay()"></ion-toggle>
+      </ion-item>
+    </ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-col width-60>
+          <ion-item>
+            <ion-label>Inicio</ion-label>
+            <ion-datetime displayFormat="DD/MMM/YYYY" formControlName="dateStart"></ion-datetime>
+          </ion-item>
+        </ion-col>
+        <ion-col width-40>
+          <ion-item *ngIf="showTimes">
+            <ion-label></ion-label>
+            <ion-datetime displayFormat="h:mm A" formControlName="dateStart"></ion-datetime>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-60>
+          <ion-item>
+            <ion-label>Fin</ion-label>
+            <ion-datetime displayFormat="DD/MMM/YYYY" formControlName="dateEnd"></ion-datetime>
+          </ion-item>
+        </ion-col>
+        <ion-col width-40>
+          <ion-item *ngIf="showTimes">
+            <ion-label></ion-label>
+            <ion-datetime displayFormat="h:mm A" formControlName="dateEnd"></ion-datetime>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-list class="switchers-list" *ngIf="!isMedicalEvent">
+      <ion-item class="switcher-item">
+        <ion-label>Mostrar como ocupado</ion-label>
+        <ion-toggle formControlName="isBusy"></ion-toggle>
+      </ion-item>
+    </ion-list>
+
+
+    <!--Paciente-->
+    <ion-item *ngIf="isMedicalEvent" class="switchers-list">
+      <ion-item-divider class="item-icon-right switcher-item">Paciente
+        <span class="right">Agregar
+          <ion-icon name="md-add-circle"></ion-icon></span>
+      </ion-item-divider>
+      <!--<ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)">-->
+      <ion-searchbar [showCancelButton]="shouldShowCancel" (ionInput)="onSearchPatient($event)" (ionCancel)="onCancelSearchPatien($event)" placeholder="Buscar">
+      </ion-searchbar>
+      <!--Listado de pacientes-->
+        <ion-list inset id="patients">
+          <button ion-item *ngFor="let patient of allPatients">
+            <!--<ion-avatar item-left>-->
+              <!--<img [src]="user.avatar_url">-->
+            <!--</ion-avatar>-->
+            <h2>{{patient.name}}&nbsp;{{patient.lastName}}&nbsp;{{patient.secondLastName}}</h2>
+            <ion-icon name="arrow-forward" item-right></ion-icon>
+          </button>
+        </ion-list>
+        <!--<ion-item *ngFor="let reminder of reminders" class="item-icon-right switcher-item" (click)="removeReminder(reminder)" value={{reminder}}>{{reminder}}<ion-icon name="md-trash" class="right"></ion-icon>-->
+    </ion-item>
+
+
+
+    <ion-item>
+      <!--<ion-label>Titulo</ion-label>-->
+      <ion-label floating>Titulo</ion-label>
+      <ion-input type="text" formControlName="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Descripcion</ion-label>
+      <ion-textarea formControlName="description" rows="2"></ion-textarea>
+    </ion-item>
+
+    <!--Recordatorios-->
+    <ion-list inset id="reminders" class="switchers-list">
+      <ion-item class="item-icon-left switcher-item" id="reminder" (click)="addReminder()">
+        <ion-icon name="alarm"></ion-icon> Recordatorio<span class="right">Agregar
+          <ion-icon name="md-add-circle"></ion-icon></span></ion-item>
+      <ion-item *ngFor="let reminder of reminders" class="item-icon-right switcher-item" (click)="removeReminder(reminder)" value={{reminder}}>
+        {{reminder}}<ion-icon name="md-trash" class="right"></ion-icon>
+      </ion-item>        
+    </ion-list>
+
+    <!--Consultorios-->
+    <ion-item *ngIf="isMedicalEvent">
+      <ion-item-divider class="item-icon-right">Consultorios
+        <span class="right">Agregar
+          <ion-icon name="md-add-circle"></ion-icon></span>
+      </ion-item-divider>
+      <ion-item>
+        <ion-label>Consultorio</ion-label>
+        <ion-select>
+          <ion-option value="f">Consultorio1</ion-option>
+          <ion-option value="m">Consultorio2</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-item>
+
+    <!--Tipo de procedimiento-->
+    <ion-item *ngIf="isMedicalEvent">
+      <ion-label>Procedimiento</ion-label>
+      <ion-select formControlName="procedure">
+        <ion-option value="1">Revisión</ion-option>
+        <ion-option value="2">Cirugía</ion-option>
+        <ion-option value="3">Post Cirugía</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-list class="switchers-list" *ngIf="isMedicalEvent">
+      <ion-item class="switcher-item">
+        <ion-label>Es asegurado</ion-label>
+        <ion-toggle formControlName="hasInsurance" (ionChange)="onHasInsurance()"></ion-toggle>
+      </ion-item>
+    </ion-list>
+
+    <!--Tipo de procedimiento-->
+    <ion-item *ngIf="isMedicalEvent">
+      <ion-label>Aseguradora</ion-label>
+      <ion-select>
+        <ion-option value="a">Axxa</ion-option>
+        <ion-option value="b">GNP</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <!---->
+    <ion-list id="reminders" class="switchers-list" *ngIf="!isMedicalEvent">
+      <ion-item class="item-icon-left switcher-item" id="reminder" (click)="addReminder()">
+        <!--<i class="icon md-alarm"></i>Agregar recordatorio</ion-item>-->
+        <ion-icon name="alarm"></ion-icon> Agregar contacto</ion-item>
+    </ion-list>
+ 
+  </form>
+</ion-content>

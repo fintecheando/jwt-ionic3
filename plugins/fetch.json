@@ -46,5 +46,53 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "cordova-plugin-tts": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-tts@^0.2.3"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "phonegap-plugin-speech-recognition": {
+        "source": {
+            "type": "registry",
+            "id": "https://github.com/macdonst/SpeechRecognitionPlugin"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-compat": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-compat@^1.0.0"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-geolocation": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-geolocation"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-speechrecognition": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-speechrecognition"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-sim": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-sim"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

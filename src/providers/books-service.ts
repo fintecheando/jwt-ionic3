@@ -3,7 +3,8 @@ import {AuthHttp} from 'angular2-jwt';
 import {BookModel} from '../models/book.model';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
-import *  as AppConfig from '../app/config';
+//import *  as AppConfig from '../app/config';
+import { AppConfig } from '../app/app.config';
 
 @Injectable()
 export class BooksService {
@@ -13,7 +14,7 @@ export class BooksService {
   constructor(
     private authHttp: AuthHttp) {
 
-    this.cfg = AppConfig.cfg;
+    this.cfg = AppConfig;
   }
 
   getAll() {
@@ -63,3 +64,4 @@ export class BooksService {
   }
 
 }
+

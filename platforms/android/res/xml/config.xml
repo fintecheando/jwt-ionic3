@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="digital.toxic.ionic3seedjwt" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.mx.afiliamedica.afiliamd" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
@@ -19,9 +19,25 @@
         <param name="android-package" value="io.ionic.keyboard.IonicKeyboard" />
         <param name="onload" value="true" />
     </feature>
-    <name>ionic3-seed-jwt</name>
-    <description>Ionic3 seed project with JWT support</description>
-    <author email="venelinphp@gmail.com" href="http://toxic.digital/">Venelin Manchev</author>
+    <feature name="SpeechRecognition">
+        <param name="android-package" value="org.apache.cordova.speech.SpeechRecognition" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
+    </feature>
+    <feature name="SpeechRecognition">
+        <param name="android-package" value="com.pbakondy.SpeechRecognition" />
+    </feature>
+    <feature name="Sim">
+        <param name="android-package" value="com.pbakondy.Sim" />
+    </feature>
+    <feature name="TTS">
+        <param name="android-package" value="com.wordsbaking.cordova.tts.TTS" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>AfiliaMD</name>
+    <description>La mejor aplicacion para los profesionales medicos</description>
+    <author email="afiliamedicatech@afiliamedica.com" href="https://afiliamedica.com/">Afiliamedica</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
