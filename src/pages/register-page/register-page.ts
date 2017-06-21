@@ -98,7 +98,7 @@ export class RegisterPage {
       .subscribe(matches => {
         _this.zone.run(() => {
           _this.matches = matches;
-          _this.regData.controls['username'].setValue(matches);
+          _this.regData.controls['username'].setValue(matches[0]);
         })
       }, error => console.error(error));
 
