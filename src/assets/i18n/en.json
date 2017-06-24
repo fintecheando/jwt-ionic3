@@ -2,9 +2,9 @@
   "label": {
     "email": "Email",
     "password": "Clave",
-    "username": "Usuario",
-    "password": "Clave",
-    "confirmPassword" : "Confirmar Clave",
+    "username": "Número de celular",
+    "password": "Contraseña",
+    "confirmPassword" : "Confirmar Contraseña",
     "title" : "Titulo",
     "author_name": "Autor",
     "pages": "Pages"
@@ -13,7 +13,7 @@
     "login" : "Entrar",
     "register" : "Afiliate",
     "new_registration" : "Afiliate!",
-    "forgotten_password" : "Recuperar Clave",
+    "forgotten_password" : "Recuperar Contraseña",
     "submit" : "Enviar",
     "add_book": "Agregar Libro",
     "edit": "Editar",
@@ -23,7 +23,7 @@
     "login" : "Entrar",
     "logout" : "Salir",
     "register" : "Afiliate",
-    "forgotten_password" : "Recuperar Clave",
+    "forgotten_password" : "Recuperar Contraseña",
     "profile" : "Perfil",
     "books" : {
       "list" : "My books",
