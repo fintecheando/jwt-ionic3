@@ -23,8 +23,10 @@ export class ForgotPage {
     public authService: AuthService) {
 
     this.forgotData = this.formBuilder.group({
-      egn: ['', Validators.compose([Validators.required, Validators.minLength(10), , Validators.maxLength(10)])],
-      email: ['', Validators.required],
+      //egn: ['', Validators.compose([Validators.required, Validators.minLength(10), , Validators.maxLength(10)])],
+      username: ['', Validators.compose([Validators.required])],  
+      email: ['', Validators.required]
+      
     });
 
   }
@@ -32,6 +34,13 @@ export class ForgotPage {
   ionViewDidLoad() {
     //hide menu when on the login page, regardless of the screen resolution
     this.menuCtrl.enable(false);
+  }
+  
+  forgot() {
+    
+    this.authService.forgot(this.forgotData.value)
+      .then(() => this.navCtrl.setRoot('LoginPage'))
+      .catch(e => console.log("registration error", e));         
   }
 
 }
