@@ -4,6 +4,7 @@ import {AuthHttp, tokenNotExpired} from 'angular2-jwt';
 import {Storage} from '@ionic/storage';
 import 'rxjs/add/operator/toPromise';
 import {UserModel} from '../models/user.model';
+import {ForgotModel} from '../models/forgot.model';
 import {CredentialsModel} from '../models/credentials.model';
 
 //import *  as AppConfig from '../app/config';
@@ -27,7 +28,16 @@ export class AuthService {
     return this.http.post(this.cfg.authUrl + this.cfg.user.register, userData)
       .toPromise()
       .then(data => this.saveData(data))
-      .catch(e => console.log("reg error", e));
+      .catch(e => console.log("registration error", e));
+
+  }
+  
+  forgot(forgotData: ForgotModel) {
+
+    return this.http.post(this.cfg.authUrl + this.cfg.user.forgot, forgotData)
+      .toPromise()
+      .then(data => this.saveData(data))
+      .catch(e => console.log("forgot error", e));
 
   }
 
@@ -44,6 +54,8 @@ export class AuthService {
 
     let rs = data.json();
     console.log(rs.token);
+    console.log(rs.username);
+    console.log(rs.email);
     this.storage.set("user", rs.user);
     this.storage.set("id_token", rs.token);
   }

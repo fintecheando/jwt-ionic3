@@ -5,7 +5,8 @@ export let cfg = {
   tokenName: 'token',
   user: {
     register: '/auth/register',
-    login: '/auth/login'
+    login: '/auth/login',
+    forgot: '/auth/forgot-password'
   },
   books: '/books'
 };
