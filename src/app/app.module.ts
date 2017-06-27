@@ -1,3 +1,4 @@
+import { LOCALE_ID } from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {ErrorHandler, NgModule,CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {IonicApp, IonicErrorHandler, IonicModule} from 'ionic-angular';
@@ -8,15 +9,9 @@ import {AuthHttp, AuthConfig} from 'angular2-jwt';
 import {Storage} from '@ionic/storage';
 import {AuthService} from '../providers/auth-service';
 import {BooksService} from '../providers/books-service';
+import {AppointmentService} from '../providers/appointment-service';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-
-import { CalendarComponent } from 'ionic2-calendar/calendar';
-import { MonthViewComponent } from 'ionic2-calendar/monthview';
-import { WeekViewComponent } from 'ionic2-calendar/weekview';
-import { DayViewComponent } from 'ionic2-calendar/dayview';
-
-//import { NgCalendarModule } from 'ionic2-calendar';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -42,7 +37,7 @@ export function createTranslateLoader(http: Http) {
     BrowserModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
-    HttpModule,
+    HttpModule,    
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -50,7 +45,6 @@ export function createTranslateLoader(http: Http) {
         deps: [Http]
       }
     })
-    
     //NgCalendarModule
   ],
   bootstrap: [IonicApp],
@@ -67,7 +61,11 @@ export function createTranslateLoader(http: Http) {
       deps: [Http]
     },
     AuthService,
-    BooksService
+    BooksService,
+    AppointmentService,
+    { provide: LOCALE_ID, useValue: "es-MX" },
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    { provide: AuthHttp, useFactory: getAuthHttp, deps: [Http] },    
   ]
 })
 export class AppModule {}

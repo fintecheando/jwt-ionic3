@@ -13,7 +13,7 @@ export class MyApp {
 
   rootPage: any = 'ProfilePage';
 
-  pages: Array<{title: string, component: any, method?: any}>;
+  pages: Array<{title: string, component: any, method?: any, icon?: any}>;
 
   constructor(
     public platform: Platform,
@@ -28,10 +28,10 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      {title: 'page.profile', component: 'ProfilePage'},
-      {title: 'page.Consultorio.calendar', component: 'AppointmentPage'}, 
-      {title: 'page.books.list', component: 'BooksPage'},
-      {title: 'page.logout', component: 'LoginPage', method: 'logout'}
+      {title: 'page.profile'              , component: 'ProfilePage'                  ,icon:'md-person'},
+      {title: 'page.Consultorio.calendar' , component: 'AppointmentPage'              ,icon:'calendar'}, 
+      {title: 'page.books.list'           , component: 'BooksPage'                    ,icon:'create'},
+      {title: 'page.logout'               , component: 'LoginPage', method: 'logout'  ,icon:'code'}
     ];
 
   }

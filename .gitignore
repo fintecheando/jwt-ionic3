@@ -1,0 +1,23 @@
+*.class
+.vscode
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+www/build/
+www/assets/
+www/
+node_modules/
+.project/
+project/nbproject/private/
+myApp/nbproject/private/
+platforms/
+plugins/
+nbproject/private/
+typings/
+hs_err_pid*
