@@ -39,7 +39,7 @@
           </ion-item>  
       </ion-col>
       <ion-col width-10>
-            <ion-icon name="mic" item-right (click)="listen()"></ion-icon>
+            <ion-icon name="mic" item-right (click)="listenUserName()"></ion-icon>
       </ion-col>
     </ion-row>
     <ion-row>
@@ -50,33 +50,29 @@
           </ion-item>
         </ion-col>
         <ion-col width-10>
-            <ion-icon name="mic" item-right (click)="listen()"></ion-icon>
+            <ion-icon name="mic" item-right (click)="listenEmail()"></ion-icon>
         </ion-col>
     </ion-row>
       
     <ion-row>
-        <ion-col width-90>   
+        <ion-col width-100>   
           <ion-item>
             <ion-label floating>{{ 'label.password' | translate }}:</ion-label>
             <ion-input type="password" formControlName="password"></ion-input>
           </ion-item>
         </ion-col>
-        <ion-col width-10>
-            <ion-icon name="mic" item-right (click)="listen()"></ion-icon>
-        </ion-col>
+        
     </ion-row>
     
     <ion-row>
-        <ion-col width-90>   
+        <ion-col width-100>   
       
           <ion-item>
             <ion-label floating>{{ 'label.confirmPassword' | translate }}:</ion-label>
             <ion-input type="password" formControlName="confirmPassword"></ion-input>
           </ion-item>
         </ion-col>
-        <ion-col width-10>
-            <ion-icon name="mic" item-right (click)="listen()"></ion-icon>
-        </ion-col>
+        
     </ion-row>
     
     

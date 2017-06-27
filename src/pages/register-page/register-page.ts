@@ -82,7 +82,10 @@ export class RegisterPage {
         }
     }
     
-    listen(): void {
+    
+
+    
+    listenUserName(): void {
     console.log('listen action triggered');
     if (this.isListening) {
       this.speech.stopListening();

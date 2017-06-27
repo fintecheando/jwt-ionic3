@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {IonicPage, NavController, NavParams, MenuController} from 'ionic-angular';
-import { AppointmentEventPage } from '../appointment-event/appointment-event';
+//import { AppointmentEventPage } from '../appointment-event-page/appointment-event-page';
 import {ProtectedPage} from '../protected-page/protected-page';
 import {Storage} from '@ionic/storage';
 
@@ -14,7 +14,7 @@ import {Storage} from '@ionic/storage';
 @IonicPage()
 @Component({
   selector: 'page-appointment',
-  templateUrl: 'appointment.html',
+  templateUrl: 'appointment-page.html',
 })
 export class AppointmentPage extends ProtectedPage{
     
@@ -104,9 +104,9 @@ export class AppointmentPage extends ProtectedPage{
 
   
 
-  newAppointmentEvent(){
-      this.navCtrl.push(AppointmentEventPage);
-  }
+  //newAppointmentEvent(){
+    //  this.navCtrl.push(AppointmentEventPage);
+ // }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AppointmentPage');

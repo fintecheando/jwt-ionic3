@@ -7,7 +7,22 @@
     "confirmPassword" : "Confirmar Contraseña",
     "title" : "Titulo",
     "author_name": "Autor",
-    "pages": "Pages"
+    "pages": "Pages",
+    "name": "Nombre(s)",
+    "lastName":"Apellido Paterno",
+    "secondLastName" : "Apellido Materno",
+    "workPhone" : "Teléfono de Oficina",
+    "homePhone" : "Teléfono de Casa",
+    "rfc" : "RFC",
+    "curp" : "CURP",
+    "sex" : "Genero",
+    "isAfilia" : "Es Paciente Afilia",
+    "documents" : "Documentos",        
+    "addresses" : "Direcciones",        
+    "promotions" : "Promociones",        
+    "paymentMethods" : "Metodos de Pago",                
+    "contacts" : "Historial Medico",                    
+    "vitalSignalDetails" : "Signos Vitales"                                          
   },
   "button" : {
     "login" : "Entrar",

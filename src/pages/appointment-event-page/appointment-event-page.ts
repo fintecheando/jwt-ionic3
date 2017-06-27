@@ -10,14 +10,14 @@ import { BASE_PATH, COLLECTION_FORMATS } from '../../app/variables';
 import { Configuration } from '../../app/configuration';
 import { AppointmentService } from '../../providers/appointment-service';
 import { UserProfileService } from '../../providers/userProfile-service';
-import { AppointmentPage } from '../appointment/appointment';
+import { AppointmentPage } from '../appointment-page/appointment-page';
 
 import moment from 'moment';
 import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'appointment-event-page',
-  templateUrl: 'appointment-event.html',
+  templateUrl: 'appointment-event-page.html',
 })
 
 export class AppointmentEventPage {

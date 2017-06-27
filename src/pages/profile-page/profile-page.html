@@ -25,6 +25,59 @@
     </ion-row>
        
   </ion-card>
+    
+   <form [formGroup]="profileData" (ngSubmit)="register()" >
+        <ion-grid>
+          <ion-row>
+            <ion-col width-90>
+                <ion-item>
+                  <ion-label floating>{{ 'label.name' | translate }}:</ion-label>
+                  <ion-input type="text" formControlName="name" ></ion-input>
+                </ion-item>  
+            </ion-col>
+            <ion-col width-10>
+                  <ion-icon name="mic" item-right (click)="listenName()"></ion-icon>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col width-90>
+                <ion-item>
+                  <ion-label floating>{{ 'label.lastName' | translate }}:</ion-label>
+                  <ion-input type="text" formControlName="firstname" ></ion-input>
+                </ion-item>  
+            </ion-col>
+            <ion-col width-10>
+                  <ion-icon name="mic" item-right (click)="listenFirstName()"></ion-icon>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col width-90>
+                <ion-item>
+                  <ion-label floating>{{ 'label.secondLastName' | translate }}:</ion-label>
+                  <ion-input type="text" formControlName="secondname" ></ion-input>
+                </ion-item>  
+            </ion-col>
+            <ion-col width-10>
+                  <ion-icon name="mic" item-right (click)="secondFirstName()"></ion-icon>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col width-90>
+                <ion-item>
+                  <ion-label floating>{{ 'label.workPhone' | translate }}:</ion-label>
+                  <ion-input type="text" formControlName="workPhone" ></ion-input>
+                </ion-item>  
+            </ion-col>
+            <ion-col width-10>
+                  <ion-icon name="mic" item-right (click)="secondFirstName()"></ion-icon>
+            </ion-col>
+          </ion-row>  
+         
+
+
+        </ion-grid>
+           <button margin-top ion-button type="submit" [disabled]="!profileData.valid">{{ 'button.register' | translate  }}</button>        
+      </form>  
 
 
 </ion-content>

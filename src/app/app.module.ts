@@ -11,6 +11,11 @@ import {BooksService} from '../providers/books-service';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
+import { CalendarComponent } from 'ionic2-calendar/calendar';
+import { MonthViewComponent } from 'ionic2-calendar/monthview';
+import { WeekViewComponent } from 'ionic2-calendar/weekview';
+import { DayViewComponent } from 'ionic2-calendar/dayview';
+
 //import { NgCalendarModule } from 'ionic2-calendar';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';

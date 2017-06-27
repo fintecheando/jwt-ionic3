@@ -33,10 +33,10 @@ export class AuthService {
   }
   
   forgot(forgotData: ForgotModel) {
-
+    console.log('Se accede al servicio de authorizacion');
     return this.http.post(this.cfg.authUrl + this.cfg.user.forgot, forgotData)
       .toPromise()
-      .then(data => this.saveData(data))
+      //.then(data => this.saveData(data))
       .catch(e => console.log("forgot error", e));
 
   }
@@ -53,9 +53,6 @@ export class AuthService {
   saveData(data: any) {
 
     let rs = data.json();
-    console.log(rs.token);
-    console.log(rs.username);
-    console.log(rs.email);
     this.storage.set("user", rs.user);
     this.storage.set("id_token", rs.token);
   }
