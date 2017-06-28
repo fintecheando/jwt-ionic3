@@ -1,7 +1,6 @@
 {
   "label": {
     "email": "Email",
-    "password": "Clave",
     "username": "Número de celular",
     "password": "Contraseña",
     "confirmPassword" : "Confirmar Contraseña",
@@ -40,18 +39,36 @@
     "logout" : "Salir",
     "register" : "Afiliate",
     "forgotten_password" : "Recuperar Contraseña",
-    "profile" : "Perfil",
-    "books" : {
-      "list" : "My books",
-      "add": "Add book",
-      "edit" : "Edit book",
-      "preview": "Preview"
+
+    "appointment" : {
+      "title" : "Consultorio" 
     },
-    "Consultorio" : {
-      "calendar" : "Calendario",
-      "add": "Add book",
-      "edit" : "Edit book",
-      "preview": "Preview"
-    }
+    "pendings" : {
+      "title" : "Pendientes"
+    },
+    "medicalVisit" : {
+      "title" : "Paso de Visita"
+    },
+    "notes" : {
+      "title" : "Notas"
+    },
+    "myTeam" : {
+      "title" : "Mi equipo"
+    },
+    "patients" : {
+      "title" : "Pacientes"
+    },
+    "prescriptions" : {
+      "title" : "Recetas"
+    },
+    "insurances" : {
+      "title" : "Seguros"
+    },
+    "finances" : {
+      "title" : "Finanzas"
+    },
+    "profile" : {
+      "title" : "Mi perfil"
+    }    
   }
 }

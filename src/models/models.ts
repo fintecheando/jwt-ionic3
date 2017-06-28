@@ -29,3 +29,4 @@ export * from './User';
 export * from './UserResetVO';
 export * from './UserVO';
 export * from './VitalSign';
+export * from './Countries';

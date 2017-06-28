@@ -1,30 +1,22 @@
 import { Component } from '@angular/core';
-import {IonicPage, NavController, NavParams, MenuController} from 'ionic-angular';
-//import { AppointmentEventPage } from '../appointment-event-page/appointment-event-page';
-import {ProtectedPage} from '../protected-page/protected-page';
-import {Storage} from '@ionic/storage';
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
+import { ProtectedPage } from '../protected-page/protected-page';
+import { Storage } from '@ionic/storage';
 
-
-/**
- * Generated class for the AppointmentPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 @IonicPage()
 @Component({
-  selector: 'page-appointment',
-  templateUrl: 'appointment-page.html',
+    selector: 'appointment-page',
+    templateUrl: 'appointment-page.html',
 })
-export class AppointmentPage extends ProtectedPage{
-    
+export class AppointmentPage extends ProtectedPage {
+
     constructor(
         public navCtrl: NavController,
         public navParams: NavParams,
         public menuCtrl: MenuController,
         public storage: Storage) {
-            super(navCtrl, navParams, storage);
-        }
+        super(navCtrl, navParams, storage);
+    }
     eventSource;
     viewTitle;
     isToday: boolean;
@@ -51,7 +43,7 @@ export class AppointmentPage extends ProtectedPage{
         console.log('Selected time: ' + ev.selectedTime + ', hasEvents: ' +
             (ev.events !== undefined && ev.events.length !== 0) + ', disabled: ' + ev.disabled);
     }
-    onCurrentDateChanged(event:Date) {
+    onCurrentDateChanged(event: Date) {
         var today = new Date();
         today.setHours(0, 0, 0, 0);
         event.setHours(0, 0, 0, 0);
@@ -96,20 +88,19 @@ export class AppointmentPage extends ProtectedPage{
     onRangeChanged(ev) {
         console.log('range changed: startTime: ' + ev.startTime + ', endTime: ' + ev.endTime);
     }
-    markDisabled = (date:Date) => {
+    markDisabled = (date: Date) => {
         var current = new Date();
         current.setHours(0, 0, 0);
         return date < current;
     };
 
-  
+    newAppointmentEvent() {
+        this.navCtrl.push('AppointmentEventPage');
+        console.log('AppointmentEventPage')
+    }
 
-  //newAppointmentEvent(){
-    //  this.navCtrl.push(AppointmentEventPage);
- // }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AppointmentPage');
-  }
+    ionViewDidLoad() {
+        console.log('ionViewDidLoad AppointmentPage');
+    }
 
 }

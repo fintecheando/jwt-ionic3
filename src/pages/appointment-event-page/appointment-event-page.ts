@@ -2,29 +2,32 @@ import { Http, Headers, URLSearchParams } from '@angular/http';
 import { RequestMethod, RequestOptions, RequestOptionsArgs } from '@angular/http';
 import { Response, ResponseContentType } from '@angular/http';
 import { Component } from '@angular/core';
-import { NavController, SegmentButton, NavParams, AlertController, ToastController } from 'ionic-angular';
+import { IonicPage, NavController, SegmentButton, NavParams, AlertController, ToastController } from 'ionic-angular';
 import { Validators, FormGroup, FormControl } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
-import * as models from '../../models/models';
 import { BASE_PATH, COLLECTION_FORMATS } from '../../app/variables';
 import { Configuration } from '../../app/configuration';
 import { AppointmentService } from '../../providers/appointment-service';
 import { UserProfileService } from '../../providers/userProfile-service';
-import { AppointmentPage } from '../appointment-page/appointment-page';
+//import { AppointmentPage } from '../appointment-page/appointment-page';
+import {ProtectedPage} from '../protected-page/protected-page';
+import {Storage} from '@ionic/storage';
 
+import * as models from '../../models/models';
 import moment from 'moment';
 import 'rxjs/add/operator/map';
 
+@IonicPage()
 @Component({
   selector: 'appointment-event-page',
   templateUrl: 'appointment-event-page.html',
 })
 
-export class AppointmentEventPage {
+export class AppointmentEventPage extends ProtectedPage {
   eventForm: FormGroup;
   public event = {
-    dateStart: new Date().toISOString(),
-    dateEnd: new Date().toISOString(),
+    startDate: new Date().toISOString(),
+    endDate: new Date().toISOString(),
   }
   section: string;
   remidnerRadioOpen: false;
@@ -35,7 +38,16 @@ export class AppointmentEventPage {
   reminders: any[] = [];
   private allPatients: any[] = [];
 
-  constructor(public nav: NavController, public navParams: NavParams, public alertCtrl: AlertController, private appointmentEvent: AppointmentService, private userProfile: UserProfileService, private toastCtrl: ToastController) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public alertCtrl: AlertController,
+    public storage: Storage,    
+    private appointmentEvent: AppointmentService,
+    private userProfile: UserProfileService,
+    private toastCtrl: ToastController) 
+    {
+    super(navCtrl, navParams, storage);
     this.section = "personal";
     this.isMedicalEvent = false;
     this.hasInsurance = false;
@@ -44,29 +56,28 @@ export class AppointmentEventPage {
     //this.procedures = [{id: 1,title:'Revision'},{id: 2,title:'Cirugia'}, {id: 2,title:'PostCirugia'}];
     var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds
     var localISOTime = (new Date(Date.now() - tzoffset)).toISOString().slice(0, -1); //Get local dateTime ISO format
-    this.event.dateStart = new Date(localISOTime).toISOString();
-    this.event.dateEnd = new Date(moment(localISOTime).subtract(new Date(localISOTime).getTimezoneOffset(), 'minutes').toDate()).toISOString();
-    this.event.dateEnd = new Date(moment(this.event.dateEnd).add(1, 'hours').toDate()).toISOString();     //Add 1 hour
+    this.event.startDate = new Date(localISOTime).toISOString();
+    this.event.endDate = new Date(moment(localISOTime).subtract(new Date(localISOTime).getTimezoneOffset(), 'minutes').toDate()).toISOString();
+    this.event.endDate = new Date(moment(this.event.endDate).add(1, 'hours').toDate()).toISOString();     //Add 1 hour
     this.eventForm = new FormGroup({
       isAllDay: new FormControl(false, Validators.required),
       title: new FormControl('', Validators.required),
-      dateStart: new FormControl(this.event.dateStart, Validators.required),
-      dateEnd: new FormControl(this.event.dateEnd, Validators.required),
+      startDate: new FormControl(this.event.startDate, Validators.required),
+      endDate: new FormControl(this.event.endDate, Validators.required),
       description: new FormControl('', Validators.required),
       isBusy: new FormControl(false, Validators.required),
       hasInsurance: new FormControl(false, Validators.required),
-      newItemElement: new FormControl('', Validators.required),
-      procedure: new FormControl('', Validators.required)
+      procedure: new FormControl('')
     });
 
   }
 
-  saveEvent() {
+  save() {
     let newAppointment: models.Appointment = {
       title: this.eventForm.get('title').value,
       description: this.eventForm.get('description').value,
-      startDate: this.eventForm.get('dateStart').value,
-      endDate: this.eventForm.get('dateEnd').value,
+      startDate: this.eventForm.get('startDate').value,
+      endDate: this.eventForm.get('endDate').value,
       isAllDay: this.eventForm.get('isAllDay').value,
       reminders: [],
       reminderMethods: [],
@@ -87,32 +98,36 @@ export class AppointmentEventPage {
     newAppointment.location = newLocation;
     let newDoctor: models.Doctor = { userId: 2 }
     newAppointment.doctor = newDoctor;
-    let newPatient: models.Patient = { userId: 5 }
+    let newPatient: models.Patient = { userId: 3 }
     newAppointment.patient = newPatient;
-    let newInsurance: models.MedicalInsurance = { id: 1 }
-    newAppointment.insurance = newInsurance;
-
-    let toast = this.toastCtrl.create({ message: 'El evento se agrego a tu agenda exitosamente', duration: 5000, position: 'middle', showCloseButton	: true });
-
-    toast.onDidDismiss(() => {
-      //console.log('Dismissed toast');
-    });
-
-    toast.present();
-    this.nav.push(AppointmentPage);
+    //let newInsurance: models.MedicalInsurance = { id: 1 }
+    //newAppointment.insurance = newInsurance;
 
     this.appointmentEvent.createAppointment(newAppointment)
       .subscribe(
-      (e) => //console.log(e),
         () => {
-          //this.slimLoadingBarService.complete();
-          /*let index = this.appointmentsScheduled.indexOf(appointment);
-          if (index > -1) {
-            this.appointmentsScheduled.splice(index, 1);
-          }
-          this.appointmentsCheckedIn.push(appointment);*/
-
-        }
+                let alert = this.alertCtrl.create({
+                  title: 'AfiliaMD', subTitle: 'El evento se agrego a tu agenda exitosamente',
+                  buttons: ['Aceptar']
+                });
+                alert.present();         
+                this.navCtrl.pop(); //Go Back to the calendar
+                },
+        (e) => { 
+                let alert = this.alertCtrl.create({
+                  title: 'Error', subTitle: 'Ocurrio un error al guardar la información, favor de reintentar más tarde',
+                  buttons: ['Aceptar']
+                });
+                alert.present();                
+              },
+        /*() => {
+                let alert = this.alertCtrl.create({
+                  title: 'AfiliaMD', subTitle: 'El evento se agrego a tu agenda exitosamente',
+                  buttons: ['Aceptar']
+                });
+                alert.present();                
+                this.navCtrl.pop(); //Go Back to the calendar
+        }*/
       );
   }
 
@@ -188,4 +203,9 @@ export class AppointmentEventPage {
     });
     alert.present();
   }
+
+  alerta(){
+    console.log ("click en el microfono");
+  }
+
 }

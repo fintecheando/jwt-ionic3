@@ -2,6 +2,7 @@ import * as models from './models';
 export interface Doctor {
     userId?: number;
     userType?: string;
+    fullName?: string;
     name?: string;
     lastName?: string;
     secondLastName?: string;
@@ -15,6 +16,8 @@ export interface Doctor {
     sex?: string;
     createDate?: Date;
     updateDate?: Date;
+    isAfilia?: boolean;
+    afiliaId?: number;
     version?: number;
     email?: string;
     password?: string;

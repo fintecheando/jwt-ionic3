@@ -1,6 +1,13 @@
 <ion-header>
   <ion-navbar>
-    <ion-title><span class="right" (click)="saveEvent()">GUARDAR <ion-icon name="md-done-all"></ion-icon></span></ion-title>
+    <!--<ion-title><span class="right" (click)="saveEvent()">GUARDAR <ion-icon name="md-done-all"></ion-icon></span></ion-title>-->
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-title></ion-title>
+    <ion-buttons end [hidden]="!eventForm.dirty">
+      <button ion-button icon-end (click)="save()">
+        GUARDAR <ion-icon name="md-done-all"></ion-icon>
+      </button>
+    </ion-buttons>    
   </ion-navbar>
 </ion-header>
 
@@ -28,13 +35,13 @@
         <ion-col width-60>
           <ion-item>
             <ion-label>Inicio</ion-label>
-            <ion-datetime displayFormat="DD/MMM/YYYY" formControlName="dateStart"></ion-datetime>
+            <ion-datetime displayFormat="DD/MMM/YYYY" formControlName="startDate"></ion-datetime>
           </ion-item>
         </ion-col>
         <ion-col width-40>
           <ion-item *ngIf="showTimes">
             <ion-label></ion-label>
-            <ion-datetime displayFormat="h:mm A" formControlName="dateStart"></ion-datetime>
+            <ion-datetime displayFormat="h:mm A" formControlName="startDate"></ion-datetime>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -42,13 +49,13 @@
         <ion-col width-60>
           <ion-item>
             <ion-label>Fin</ion-label>
-            <ion-datetime displayFormat="DD/MMM/YYYY" formControlName="dateEnd"></ion-datetime>
+            <ion-datetime displayFormat="DD/MMM/YYYY" formControlName="endDate"></ion-datetime>
           </ion-item>
         </ion-col>
         <ion-col width-40>
           <ion-item *ngIf="showTimes">
             <ion-label></ion-label>
-            <ion-datetime displayFormat="h:mm A" formControlName="dateEnd"></ion-datetime>
+            <ion-datetime displayFormat="h:mm A" formControlName="endDate"></ion-datetime>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -69,19 +76,20 @@
           <ion-icon name="md-add-circle"></ion-icon></span>
       </ion-item-divider>
       <!--<ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)">-->
-      <ion-searchbar [showCancelButton]="shouldShowCancel" (ionInput)="onSearchPatient($event)" (ionCancel)="onCancelSearchPatien($event)" placeholder="Buscar">
+      <ion-searchbar [showCancelButton]="shouldShowCancel" (ionInput)="onSearchPatient($event)" (ionCancel)="onCancelSearchPatien($event)"
+        placeholder="Buscar">
       </ion-searchbar>
       <!--Listado de pacientes-->
-        <ion-list inset id="patients">
-          <button ion-item *ngFor="let patient of allPatients">
+      <ion-list inset id="patients">
+        <button ion-item *ngFor="let patient of allPatients">
             <!--<ion-avatar item-left>-->
               <!--<img [src]="user.avatar_url">-->
             <!--</ion-avatar>-->
             <h2>{{patient.name}}&nbsp;{{patient.lastName}}&nbsp;{{patient.secondLastName}}</h2>
             <ion-icon name="arrow-forward" item-right></ion-icon>
           </button>
-        </ion-list>
-        <!--<ion-item *ngFor="let reminder of reminders" class="item-icon-right switcher-item" (click)="removeReminder(reminder)" value={{reminder}}>{{reminder}}<ion-icon name="md-trash" class="right"></ion-icon>-->
+      </ion-list>
+      <!--<ion-item *ngFor="let reminder of reminders" class="item-icon-right switcher-item" (click)="removeReminder(reminder)" value={{reminder}}>{{reminder}}<ion-icon name="md-trash" class="right"></ion-icon>-->
     </ion-item>
 
 
@@ -102,8 +110,9 @@
         <ion-icon name="alarm"></ion-icon> Recordatorio<span class="right">Agregar
           <ion-icon name="md-add-circle"></ion-icon></span></ion-item>
       <ion-item *ngFor="let reminder of reminders" class="item-icon-right switcher-item" (click)="removeReminder(reminder)" value={{reminder}}>
-        {{reminder}}<ion-icon name="md-trash" class="right"></ion-icon>
-      </ion-item>        
+        {{reminder}}
+        <ion-icon name="md-trash" class="right"></ion-icon>
+      </ion-item>
     </ion-list>
 
     <!--Consultorios-->
@@ -153,6 +162,5 @@
         <!--<i class="icon md-alarm"></i>Agregar recordatorio</ion-item>-->
         <ion-icon name="alarm"></ion-icon> Agregar contacto</ion-item>
     </ion-list>
- 
   </form>
 </ion-content>

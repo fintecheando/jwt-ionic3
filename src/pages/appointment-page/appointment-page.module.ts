@@ -1,25 +1,27 @@
-import { NgModule,NO_ERRORS_SCHEMA } from '@angular/core';
-import { IonicPageModule,IonicApp, IonicModule } from 'ionic-angular';
+import { NgModule,NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { IonicPageModule } from 'ionic-angular';
 import { AppointmentPage } from './appointment-page';
 //import { AppointmentEventPage } from '../appointment-event-page/appointment-event-page';
 import { NgCalendarModule  } from 'ionic2-calendar';
+import {TranslateModule} from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
     AppointmentPage,
-   // AppointmentEventPage,
+    //AppointmentEventPage,
   ],
   imports: [
-  NgCalendarModule,
-  //AppointmentEventPage,
+    NgCalendarModule,
+    //IonicPageModule.forChild(AppointmentEventPage),
     IonicPageModule.forChild(AppointmentPage),
+    TranslateModule.forChild()    
   ],
   exports: [
     AppointmentPage
   ],
   entryComponents: [
-      //AppointmentEventPage
+      //sAppointmentEventPage,
   ],
-  schemas: [NO_ERRORS_SCHEMA]
+  schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppointmentPageModule {}

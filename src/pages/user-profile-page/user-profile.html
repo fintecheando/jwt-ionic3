@@ -1,0 +1,132 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Mis datos personales</ion-title>
+    <ion-buttons end [hidden]="!profileForm.dirty">
+      <button ion-button icon-end (click)="save()">
+        GUARDAR <ion-icon name="md-done-all"></ion-icon>
+      </button>
+    </ion-buttons>
+
+
+  
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="profile-content">
+  <!--<div class="user-image-content">
+    <ion-row no-padding class="user-image-row">
+      <ion-col no-padding width-40>
+        <preload-image class="user-image" [ratio]="{w:1, h:1}" [src]="" alt="aca va la img" title="IMAGE!"></preload-image>
+      </ion-col>
+    </ion-row>
+    <h3 class="image-action">Change profile picture</h3>
+  </div>-->
+
+  <form [formGroup]="profileForm" class="profile-form">
+    <ion-item-divider>Datos personsales</ion-item-divider>
+    <ion-list class="user-data-content">
+      <ion-item>
+        <ion-label stacked>Name</ion-label>
+        <ion-input type="text" formControlName="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Apellido Paterno</ion-label>
+        <ion-input type="text" formControlName="lastName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Apellido Materno</ion-label>
+        <ion-input type="text" formControlName="secondLastName"></ion-input>
+      </ion-item>      
+      <ion-item>
+        <ion-label stacked>RFC</ion-label>
+        <ion-input type="text" formControlName="rfc"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>CURP</ion-label> 
+        <ion-input type="text" formControlName="curp"></ion-input>
+      </ion-item>
+
+      <ion-item-divider>País de nacimiento</ion-item-divider>
+      <ion-searchbar formControlName="nationality" [showCancelButton]="shouldShowCancel" (ionInput)="onSearchCountry($event)" (ionCancel)="onCancelSearchCountry($event)" placeholder="Buscar"  >
+      </ion-searchbar>
+      <ion-list inset id="countries">
+        <button ion-item *ngFor="let country of allCountries" (click)="onCountrySelected(country)">{{country.name}}<ion-icon name="arrow-forward" item-right></ion-icon></button>
+      </ion-list>
+    </ion-list>
+
+    <ion-item-divider>Datos profesionales</ion-item-divider>
+    <ion-list class="user-data-content">
+      <ion-item>
+        <ion-label stacked>Cédula Profesional</ion-label>
+        <ion-input type="text" formControlName="medicalLicense"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Cédula Especialidad</ion-label>
+        <ion-input type="text" formControlName="specialityLicence"></ion-input>
+      </ion-item>
+    </ion-list>
+
+
+    <ion-item-divider>Datos de contacto</ion-item-divider>
+    <ion-list class="user-data-content">
+      <ion-item>
+        <ion-label stacked>Teléfono celular</ion-label>
+        <ion-input type="text" formControlName="mobilePhoneNumber"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Correo electrónico</ion-label>
+        <ion-input type="text" formControlName="email"></ion-input>
+      </ion-item>
+    </ion-list>
+
+
+
+<!--
+    <ion-row class="user-preferences-row">
+      <span class="radio-tags-label">Currency</span>
+      <ion-list class="radio-tags" radio-group >
+        <ion-item class="radio-tag">
+          <ion-label>&#36;</ion-label>
+          <ion-radio value="dollar"></ion-radio>
+        </ion-item>
+        <ion-item class="radio-tag">
+          <ion-label>
+            <span>&euro;</span>
+          </ion-label>
+          <ion-radio value="euro"></ion-radio>
+        </ion-item>
+        <ion-item class="radio-tag">
+          <ion-label>
+            <span>&pound;</span>
+          </ion-label>
+          <ion-radio value="pound"></ion-radio>
+        </ion-item>
+      </ion-list>
+    </ion-row>
+
+    <ion-row class="user-preferences-row">
+      <span class="radio-tags-label">Weather</span>
+      <ion-list class="radio-tags" radio-group >
+        <ion-item class="radio-tag">
+          <ion-label>&deg;C</ion-label>
+          <ion-radio value="celsius"></ion-radio>
+        </ion-item>
+        <ion-item class="radio-tag">
+          <ion-label>
+            <span>&deg;F</span>
+          </ion-label>
+          <ion-radio value="fahrenheit"></ion-radio>
+        </ion-item>
+      </ion-list>
+    </ion-row>
+
+    <ion-list class="switchers-list">
+      <ion-item class="switcher-item">
+        <ion-label>Notifications</ion-label>
+        <ion-toggle></ion-toggle>
+      </ion-item>
+    </ion-list>
+-->
+  </form>
+  <!--<button class="alt-button logout-button" ion-button full icon-left (click)="logout()"><ion-icon name="log-out"></ion-icon>Log out</button>-->
+</ion-content>
