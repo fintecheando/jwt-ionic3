@@ -22,7 +22,8 @@
     "promotions" : "Promociones",        
     "paymentMethods" : "Metodos de Pago",                
     "contacts" : "Historial Medico",                    
-    "vitalSignalDetails" : "Signos Vitales"                                          
+    "vitalSignalDetails" : "Signos Vitales",
+    "terms" : "Terminos y Condiciones"
   },
   "button" : {
     "login" : "Entrar",
