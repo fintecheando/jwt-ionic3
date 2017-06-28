@@ -53,6 +53,122 @@ export class ProfilePage extends ProtectedPage {
 
   ionViewDidLoad() {
     this.menuCtrl.enable(true);
+    //hide menu when on the login page, regardless of the screen resolution
+        //this.menuCtrl.enable(false);
+        this.tts.speak({
+            locale: 'es-US',
+                rate: 0.9,
+                text: 'Completa tú informacion como Paciente'
+            })
+            .then(() => console.log('Success'))
+            .catch((reason: any) => console.log(reason));
   }
+  
+  async hasPermission():Promise<boolean> {
+        try {
+                const permission = await this.speech.hasPermission();
+                console.log(permission);
+                return permission;
+        } catch(e) {
+            console.log(e);
+        }
+    }
+
+    async getPermission():Promise<void> {
+        try {
+            this.speech.requestPermission();
+        } catch(e) {
+            console.log(e);
+        }
+    }
+    
+    listenName(): void {
+        console.log('listen action triggered');
+        if (this.isListening) {
+            this.speech.stopListening();
+            this.toggleListenMode();
+            return;
+        }
+
+        this.toggleListenMode();
+    
+        //let _this = this;
+
+        this.speech.startListening()
+            .subscribe(matches => {
+                this.zone.run(() => {
+                    this.matches = matches;
+                    this.profileData.controls['name'].setValue(matches[0]);
+                })
+            }, error => console.error(error));
+    }
+    
+    listenFirstName(): void {
+        console.log('listen action triggered');
+        if (this.isListening) {
+            this.speech.stopListening();
+            this.toggleListenMode();
+            return;
+        }
+
+        this.toggleListenMode();
+    
+        //let _this = this;
+
+        this.speech.startListening()
+            .subscribe(matches => {
+                this.zone.run(() => {
+                    this.matches = matches;
+                    this.profileData.controls['firstname'].setValue(matches[0]);
+                })
+            }, error => console.error(error));
+    }
+    
+    listenSecondName(): void {
+        console.log('listen action triggered');
+        if (this.isListening) {
+            this.speech.stopListening();
+            this.toggleListenMode();
+            return;
+        }
+
+        this.toggleListenMode();
+    
+        //let _this = this;
+
+        this.speech.startListening()
+            .subscribe(matches => {
+                this.zone.run(() => {
+                    this.matches = matches;
+                    this.profileData.controls['secondname'].setValue(matches[0]);
+                })
+            }, error => console.error(error));
+    }
+    
+    listenWorkPhone(): void {
+        console.log('listen action triggered');
+        if (this.isListening) {
+            this.speech.stopListening();
+            this.toggleListenMode();
+            return;
+        }
+
+        this.toggleListenMode();
+    
+        //let _this = this;
+
+        this.speech.startListening()
+            .subscribe(matches => {
+                this.zone.run(() => {
+                    this.matches = matches;
+                    this.profileData.controls['workPhone'].setValue(matches[0]);
+                })
+            }, error => console.error(error));
+    }
+
+    toggleListenMode():void {
+      this.isListening = this.isListening ? false : true;
+      console.log('listening mode is now : ' + this.isListening);
+    }
 
 }

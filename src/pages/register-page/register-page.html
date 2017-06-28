@@ -60,21 +60,26 @@
             <ion-label floating>{{ 'label.password' | translate }}:</ion-label>
             <ion-input type="password" formControlName="password"></ion-input>
           </ion-item>
-        </ion-col>
-        
+        </ion-col>        
     </ion-row>
-    
+          
     <ion-row>
-        <ion-col width-100>   
-      
+        <ion-col width-100>      
           <ion-item>
             <ion-label floating>{{ 'label.confirmPassword' | translate }}:</ion-label>
             <ion-input type="password" formControlName="confirmPassword"></ion-input>
           </ion-item>
-        </ion-col>
-        
+        </ion-col>        
     </ion-row>
-    
+      
+    <ion-row>
+        <ion-col width-100>      
+          <ion-item>
+            <ion-label floating>{{ 'label.terms' | translate }}:</ion-label>
+            <ion-checkbox formControlName="terms" (ionChange)="updateTerms()"></ion-checkbox>          
+          </ion-item>
+        </ion-col>        
+    </ion-row>
     
   </ion-grid>
      <button margin-top ion-button type="submit" [disabled]="!regData.valid">{{ 'button.register' | translate  }}</button>        

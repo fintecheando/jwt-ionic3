@@ -12,34 +12,37 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
 
 @IonicPage()
 @Component({
-  selector: 'page-register-page',
-  templateUrl: 'register-page.html',
+    selector: 'page-register-page',
+    templateUrl: 'register-page.html',
 })
+
 export class RegisterPage {
 
-  private regData: FormGroup;
-  isListening: boolean = false;
-  matches: Array<String>;
+    private regData: FormGroup;
+    isListening: boolean = false;
+    matches: Array<String>;
+    terms: boolean;
 
-  constructor(
-    public navCtrl: NavController,
-    public navParams: NavParams,
-    public menuCtrl: MenuController,
-    public storage: Storage,
-    public formBuilder: FormBuilder,
-    public speech: SpeechRecognition, 
-    private tts: TextToSpeech,
-    private zone: NgZone,
-    public authService: AuthService) {
+    constructor(
+        public navCtrl: NavController,
+        public navParams: NavParams,
+        public menuCtrl: MenuController,
+        public storage: Storage,
+        public formBuilder: FormBuilder,
+        public speech: SpeechRecognition, 
+        private tts: TextToSpeech,
+        private zone: NgZone,
+        public authService: AuthService) {
 
-    this.regData = this.formBuilder.group({
-      username: ['', Validators.required],
-      email: ['', Validators.required],
-      password: ['', Validators.required],
-      confirmPassword: ['', Validators.required]
-    });
+        this.regData = this.formBuilder.group({
+            username: ['', Validators.required],
+            email: ['', Validators.required],
+            password: ['', Validators.required],
+            confirmPassword: ['', Validators.required],
+            terms : ['', Validators.required]
+        });
 
-  }
+    }
 
     ionViewDidLoad() {
         //hide menu when on the login page, regardless of the screen resolution
@@ -47,7 +50,7 @@ export class RegisterPage {
         this.tts.speak({
             locale: 'es-US',
                 rate: 0.9,
-                text: 'Afíliate como Médico'
+                text: 'Afíliate como Paciente'
             })
             .then(() => console.log('Success'))
             .catch((reason: any) => console.log(reason));
@@ -57,6 +60,10 @@ export class RegisterPage {
         this.authService.register(this.regData.value)
             .then(() => this.navCtrl.setRoot('ProfilePage'))
             .catch(e => console.log("reg error", e));         
+    }
+    
+    updateTerms() {
+        console.log('Terms new state:' + this.terms);
     }
   
     async hasPermission():Promise<boolean> {
