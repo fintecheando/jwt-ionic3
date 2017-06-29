@@ -1,14 +1,11 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Mis datos personales</ion-title>
+    <ion-title>{{ 'page.profile.user-profile.title' | translate }}</ion-title>
     <ion-buttons end [hidden]="!profileForm.dirty">
       <button ion-button icon-end (click)="save()">
         GUARDAR <ion-icon name="md-done-all"></ion-icon>
       </button>
     </ion-buttons>
-
-
-  
   </ion-navbar>
 </ion-header>
 
@@ -23,30 +20,30 @@
   </div>-->
 
   <form [formGroup]="profileForm" class="profile-form">
-    <ion-item-divider>Datos personsales</ion-item-divider>
+    <ion-item-divider>{{ 'page.profile.user-profile.personalData' | translate }}</ion-item-divider>
     <ion-list class="user-data-content">
       <ion-item>
-        <ion-label stacked>Name</ion-label>
+        <ion-label stacked>{{ 'page.profile.user-profile.name' | translate }}</ion-label>
         <ion-input type="text" formControlName="name"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label stacked>Apellido Paterno</ion-label>
+        <ion-label stacked>{{ 'page.profile.user-profile.lastName' | translate }}</ion-label>
         <ion-input type="text" formControlName="lastName"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label stacked>Apellido Materno</ion-label>
+        <ion-label stacked>{{ 'page.profile.user-profile.secondLastName' | translate }}</ion-label>
         <ion-input type="text" formControlName="secondLastName"></ion-input>
       </ion-item>      
       <ion-item>
-        <ion-label stacked>RFC</ion-label>
+        <ion-label stacked>{{ 'page.profile.user-profile.rfc' | translate }}</ion-label>
         <ion-input type="text" formControlName="rfc"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label stacked>CURP</ion-label> 
+        <ion-label stacked>{{ 'page.profile.user-profile.curp' | translate }}</ion-label> 
         <ion-input type="text" formControlName="curp"></ion-input>
       </ion-item>
 
-      <ion-item-divider>País de nacimiento</ion-item-divider>
+      <ion-item-divider>{{ 'page.profile.user-profile.nationality' | translate }}</ion-item-divider>
       <ion-searchbar formControlName="nationality" [showCancelButton]="shouldShowCancel" (ionInput)="onSearchCountry($event)" (ionCancel)="onCancelSearchCountry($event)" placeholder="Buscar"  >
       </ion-searchbar>
       <ion-list inset id="countries">
@@ -54,31 +51,75 @@
       </ion-list>
     </ion-list>
 
-    <ion-item-divider>Datos profesionales</ion-item-divider>
+    <ion-item-divider>{{ 'page.profile.user-profile.contactInformation' | translate }}</ion-item-divider>
     <ion-list class="user-data-content">
       <ion-item>
-        <ion-label stacked>Cédula Profesional</ion-label>
-        <ion-input type="text" formControlName="medicalLicense"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label stacked>Cédula Especialidad</ion-label>
-        <ion-input type="text" formControlName="specialityLicence"></ion-input>
-      </ion-item>
-    </ion-list>
-
-
-    <ion-item-divider>Datos de contacto</ion-item-divider>
-    <ion-list class="user-data-content">
-      <ion-item>
-        <ion-label stacked>Teléfono celular</ion-label>
+        <ion-label stacked>{{ 'page.profile.user-profile.mobilePhoneNumber' | translate }}</ion-label>
         <ion-input type="text" formControlName="mobilePhoneNumber"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label stacked>Correo electrónico</ion-label>
+        <ion-label stacked>{{ 'page.profile.user-profile.workPhone' | translate }}</ion-label>
+        <ion-input type="text" formControlName="workPhone"></ion-input>
+      </ion-item>      
+      <ion-item>
+        <ion-label stacked>{{ 'page.profile.user-profile.email' | translate }}</ion-label>
         <ion-input type="text" formControlName="email"></ion-input>
       </ion-item>
+      <ion-item>
+        <ion-label stacked>{{ 'page.profile.user-profile.facebook' | translate }}</ion-label>
+        <ion-input type="text" formControlName="facebook"></ion-input>
+      </ion-item>      
     </ion-list>
 
+
+    <ion-item-divider>{{ 'page.profile.user-profile.education' | translate }}</ion-item-divider>
+    <ion-list class="user-data-content">
+      <ion-item>
+        <ion-label stacked>{{ 'page.profile.user-profile.medicalLicense' | translate }}</ion-label>
+        <ion-input type="text" formControlName="medicalLicense"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>{{ 'page.profile.user-profile.institution' | translate }}</ion-label>
+        <ion-input type="text" formControlName="institution"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{ 'page.profile.user-profile.graduationDate' | translate }}</ion-label>
+        <ion-datetime displayFormat="DD/MMM/YYYY" formControlName="graduationDate"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>{{ 'page.profile.user-profile.hasSpeciality' | translate }}</ion-label>
+        <ion-toggle formControlName="hasSpeciality"></ion-toggle>
+      </ion-item>
+
+      <!-- ESPECIALIDADES 
+        <ion-item-divider class="item-icon-right switcher-item">{{ 'page.profile.user-profile.speciality' | translate }}
+          <span class="right">Agregar
+            <ion-icon name="md-add-circle"></ion-icon></span>
+        </ion-item-divider>      
+        <ion-item *ngIf="!hasSpeciality">
+          <ion-label stacked>{{ 'page.profile.user-profile.specialityLicence' | translate }}</ion-label>
+          <ion-input type="text" formControlName="specialityLicence"></ion-input>
+        </ion-item>
+
+        <ion-select formControlName="speciality">
+          <ion-option *ngFor="let item of specialities"  value="{{item.idSpeciality}}">{{item.description}}</ion-option>       
+        </ion-select>-->
+
+      <ion-item>
+        <ion-label stacked>{{ 'page.profile.user-profile.profActivities' | translate }}</ion-label>
+        <ion-input type="text" formControlName="institution"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>{{ 'page.profile.user-profile.distinctions' | translate }}</ion-label>
+        <ion-input type="text" formControlName="institution"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>{{ 'page.profile.user-profile.asosiations' | translate }}</ion-label>
+        <ion-input type="text" formControlName="institution"></ion-input>
+      </ion-item>
+
+    </ion-list>
 
 
 <!--

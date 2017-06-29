@@ -1,14 +1,14 @@
-webpackJsonp([0],Array(297).concat([
-/* 297 */
+webpackJsonp([0],Array(302).concat([
+/* 302 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__appointment__ = __webpack_require__(311);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__appointment_event_appointment_event__ = __webpack_require__(310);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppointmentPageModule", function() { return AppointmentPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__appointment_event_page_appointment_event_page__ = __webpack_require__(432);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(113);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppointmentEventPageModule", function() { return AppointmentEventPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -19,43 +19,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AppointmentPageModule = (function () {
-    function AppointmentPageModule() {
+var AppointmentEventPageModule = (function () {
+    function AppointmentEventPageModule() {
     }
-    return AppointmentPageModule;
+    return AppointmentEventPageModule;
 }());
-AppointmentPageModule = __decorate([
+AppointmentEventPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__appointment__["a" /* AppointmentPage */],
-            __WEBPACK_IMPORTED_MODULE_3__appointment_event_appointment_event__["a" /* AppointmentEventPage */],
+            __WEBPACK_IMPORTED_MODULE_2__appointment_event_page_appointment_event_page__["a" /* AppointmentEventPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_3__appointment_event_appointment_event__["a" /* AppointmentEventPage */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__appointment__["a" /* AppointmentPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__appointment_event_page_appointment_event_page__["a" /* AppointmentEventPage */]),
+            __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["a" /* TranslateModule */].forChild()
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__appointment__["a" /* AppointmentPage */]
+            __WEBPACK_IMPORTED_MODULE_2__appointment_event_page_appointment_event_page__["a" /* AppointmentEventPage */]
         ],
-        entryComponents: [
-            __WEBPACK_IMPORTED_MODULE_3__appointment_event_appointment_event__["a" /* AppointmentEventPage */]
-        ],
-        schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["NO_ERRORS_SCHEMA"]]
+        entryComponents: [],
+        schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["NO_ERRORS_SCHEMA"], __WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
     })
-], AppointmentPageModule);
+], AppointmentEventPageModule);
 
-//# sourceMappingURL=appointment.module.js.map
+//# sourceMappingURL=appointment-event-page.module.js.map
 
 /***/ }),
-/* 298 */,
-/* 299 */,
-/* 300 */,
-/* 301 */,
-/* 302 */,
 /* 303 */,
 /* 304 */,
 /* 305 */,
-/* 306 */
+/* 306 */,
+/* 307 */,
+/* 308 */,
+/* 309 */,
+/* 310 */,
+/* 311 */,
+/* 312 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {//! moment.js
@@ -1887,7 +1885,7 @@ function loadLocale(name) {
             module && module.exports) {
         try {
             oldLocale = globalLocale._abbr;
-            __webpack_require__(440)("./" + name);
+            __webpack_require__(453)("./" + name);
             // because defineLocale currently also sets the global locale, we
             // want to undo that for lazy loaded locales
             getSetGlobalLocale(oldLocale);
@@ -4522,10 +4520,10 @@ return hooks;
 
 })));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(439)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(452)(module)))
 
 /***/ }),
-/* 307 */
+/* 313 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4552,389 +4550,10 @@ var ProtectedPage = (function () {
 //# sourceMappingURL=protected-page.js.map
 
 /***/ }),
-/* 308 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Configuration; });
-var Configuration = (function () {
-    function Configuration() {
-    }
-    return Configuration;
-}());
-
-//# sourceMappingURL=configuration.js.map
-
-/***/ }),
-/* 309 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BASE_PATH; });
-/* unused harmony export COLLECTION_FORMATS */
-
-var BASE_PATH = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["OpaqueToken"]('basePath');
-var COLLECTION_FORMATS = {
-    'csv': ',',
-    'tsv': '   ',
-    'ssv': ' ',
-    'pipes': '|'
-};
-//# sourceMappingURL=variables.js.map
-
-/***/ }),
-/* 310 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_appointment_service__ = __webpack_require__(437);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_userProfile_service__ = __webpack_require__(438);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__appointment_appointment__ = __webpack_require__(311);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_moment__ = __webpack_require__(306);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_map__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_map__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppointmentEventPage; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-var AppointmentEventPage = (function () {
-    function AppointmentEventPage(nav, navParams, alertCtrl, appointmentEvent, userProfile, toastCtrl) {
-        this.nav = nav;
-        this.navParams = navParams;
-        this.alertCtrl = alertCtrl;
-        this.appointmentEvent = appointmentEvent;
-        this.userProfile = userProfile;
-        this.toastCtrl = toastCtrl;
-        this.event = {
-            dateStart: new Date().toISOString(),
-            dateEnd: new Date().toISOString(),
-        };
-        this.showTimes = true;
-        this.reminders = [];
-        this.allPatients = [];
-        this.section = "personal";
-        this.isMedicalEvent = false;
-        this.hasInsurance = false;
-        this.reminders = [];
-        this.allPatients = [];
-        //this.procedures = [{id: 1,title:'Revision'},{id: 2,title:'Cirugia'}, {id: 2,title:'PostCirugia'}];
-        var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds
-        var localISOTime = (new Date(Date.now() - tzoffset)).toISOString().slice(0, -1); //Get local dateTime ISO format
-        this.event.dateStart = new Date(localISOTime).toISOString();
-        this.event.dateEnd = new Date(__WEBPACK_IMPORTED_MODULE_6_moment___default()(localISOTime).subtract(new Date(localISOTime).getTimezoneOffset(), 'minutes').toDate()).toISOString();
-        this.event.dateEnd = new Date(__WEBPACK_IMPORTED_MODULE_6_moment___default()(this.event.dateEnd).add(1, 'hours').toDate()).toISOString(); //Add 1 hour
-        this.eventForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* FormGroup */]({
-            isAllDay: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["h" /* FormControl */](false, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
-            title: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["h" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
-            dateStart: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["h" /* FormControl */](this.event.dateStart, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
-            dateEnd: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["h" /* FormControl */](this.event.dateEnd, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
-            description: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["h" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
-            isBusy: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["h" /* FormControl */](false, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
-            hasInsurance: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["h" /* FormControl */](false, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
-            newItemElement: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["h" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
-            procedure: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["h" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required)
-        });
-    }
-    AppointmentEventPage.prototype.saveEvent = function () {
-        var newAppointment = {
-            title: this.eventForm.get('title').value,
-            description: this.eventForm.get('description').value,
-            startDate: this.eventForm.get('dateStart').value,
-            endDate: this.eventForm.get('dateEnd').value,
-            isAllDay: this.eventForm.get('isAllDay').value,
-            reminders: [],
-            reminderMethods: [],
-            attendees: [],
-            appointmentStatus: [],
-            procedures: this.eventForm.get('procedure').value
-        };
-        var newAppointmentType = { id: this.section === "personal" ? 1 : 2, };
-        newAppointment.isBusy = this.section === "personal" ? this.eventForm.get('isBusy').value : true; //Medical event allways busy
-        newAppointment.appointmentType = newAppointmentType;
-        for (var i = 0; i < this.reminders.length; i++) {
-            var newReminder = { id: this.reminders[i] };
-            newAppointment.reminders.push(newReminder);
-        }
-        var newReminderMethods = { id: 1 };
-        newAppointment.reminderMethods.push(newReminderMethods);
-        var newLocation = { institutionId: 1 };
-        newAppointment.location = newLocation;
-        var newDoctor = { userId: 2 };
-        newAppointment.doctor = newDoctor;
-        var newPatient = { userId: 5 };
-        newAppointment.patient = newPatient;
-        var newInsurance = { id: 1 };
-        newAppointment.insurance = newInsurance;
-        var toast = this.toastCtrl.create({ message: 'El evento se agrego a tu agenda exitosamente', duration: 5000, position: 'middle', showCloseButton: true });
-        toast.onDidDismiss(function () {
-            //console.log('Dismissed toast');
-        });
-        toast.present();
-        this.nav.push(__WEBPACK_IMPORTED_MODULE_5__appointment_appointment__["a" /* AppointmentPage */]);
-        this.appointmentEvent.createAppointment(newAppointment)
-            .subscribe(function (e) {
-            return function () {
-                //this.slimLoadingBarService.complete();
-                /*let index = this.appointmentsScheduled.indexOf(appointment);
-                if (index > -1) {
-                  this.appointmentsScheduled.splice(index, 1);
-                }
-                this.appointmentsCheckedIn.push(appointment);*/
-            };
-        });
-    };
-    AppointmentEventPage.prototype.onSearchPatient = function (searchEvent) {
-        var _this = this;
-        var term = searchEvent.target.value;
-        // We will only perform the search if we have 3 or more characters
-        if (term != null) {
-            if (term.trim() === '' || term.trim().length < 3) {
-                this.allPatients = [];
-            }
-            else {
-                this.userProfile.getUser(undefined, term, undefined, undefined, undefined)
-                    .subscribe(function (usersProfile) {
-                    _this.allPatients = usersProfile;
-                });
-            }
-        }
-        else {
-            this.allPatients = [];
-        }
-    };
-    AppointmentEventPage.prototype.onCancelSearchPatien = function () { this.allPatients = []; };
-    AppointmentEventPage.prototype.ionViewDidLoad = function () {
-    };
-    AppointmentEventPage.prototype.onSegmentChanged = function (segmentButton) {
-        if (segmentButton.value == 'personal') {
-            this.isMedicalEvent = false;
-        }
-        else {
-            this.isMedicalEvent = true;
-        }
-    };
-    AppointmentEventPage.prototype.onSegmentSelected = function (segmentButton) {
-        //console.log('Segment selected' + segmentButton.value);
-    };
-    AppointmentEventPage.prototype.createPersonalEvent = function () {
-    };
-    AppointmentEventPage.prototype.onIsAllDay = function () {
-        var optionValue = this.eventForm.get('isAllDay').value;
-        if (optionValue == true) {
-            this.showTimes = false;
-        }
-        else {
-            this.showTimes = true;
-        }
-    };
-    AppointmentEventPage.prototype.onHasInsurance = function () {
-    };
-    AppointmentEventPage.prototype.removeReminder = function (reminder) {
-        this.reminders.splice(this.reminders.indexOf(reminder), 1);
-    };
-    AppointmentEventPage.prototype.addReminder = function () {
-        var _this = this;
-        var alert = this.alertCtrl.create({ cssClass: 'category-prompt' });
-        //alert.setTitle('Lightsaber color');
-        alert.addInput({ type: 'radio', label: '1 minuto', value: '1', checked: false });
-        alert.addInput({ type: 'radio', label: '5 minutos', value: '2', checked: false });
-        alert.addInput({ type: 'radio', label: '10 minutos', value: '3', checked: false });
-        alert.addInput({ type: 'radio', label: '15 minutos', value: '4', checked: false });
-        alert.addInput({ type: 'radio', label: '20 minutos', value: '5', checked: false });
-        alert.addInput({ type: 'radio', label: '25 minutos', value: '5', checked: false });
-        alert.addInput({ type: 'radio', label: '30 minutos', value: '6', checked: false });
-        alert.addButton("Cancelar");
-        alert.addButton({
-            text: 'OK',
-            handler: function (data) {
-                _this.remidnerRadioOpen = false;
-                _this.reminderRadioResult = data;
-                if (data != null)
-                    _this.reminders.push(data);
-            }
-        });
-        alert.present();
-    };
-    return AppointmentEventPage;
-}());
-AppointmentEventPage = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'appointment-event-page',template:/*ion-inline-start:"/home/afiliamedica/dev/ionic3-seed-jwt/src/pages/appointment-event/appointment-event.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title><span class="right" (click)="saveEvent()">GUARDAR <ion-icon name="md-done-all"></ion-icon></span></ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="appointment-event-content">\n  <ion-toolbar no-border-top>\n    <ion-segment [(ngModel)]="section" (ionChange)="onSegmentChanged($event)">\n      <ion-segment-button value="personal">\n        Personal\n      </ion-segment-button>\n      <ion-segment-button value="medical">\n        Médico\n      </ion-segment-button>\n    </ion-segment>\n  </ion-toolbar>\n\n  <form [formGroup]="eventForm" (ngSubmit)="createPersonalEvent()">\n    <ion-list class="switchers-list">\n      <ion-item class="switcher-item">\n        <ion-label>Todo el día</ion-label>\n        <ion-toggle formControlName="isAllDay" (ionChange)="onIsAllDay()"></ion-toggle>\n      </ion-item>\n    </ion-list>\n    <ion-grid>\n      <ion-row>\n        <ion-col width-60>\n          <ion-item>\n            <ion-label>Inicio</ion-label>\n            <ion-datetime displayFormat="DD/MMM/YYYY" formControlName="dateStart"></ion-datetime>\n          </ion-item>\n        </ion-col>\n        <ion-col width-40>\n          <ion-item *ngIf="showTimes">\n            <ion-label></ion-label>\n            <ion-datetime displayFormat="h:mm A" formControlName="dateStart"></ion-datetime>\n          </ion-item>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col width-60>\n          <ion-item>\n            <ion-label>Fin</ion-label>\n            <ion-datetime displayFormat="DD/MMM/YYYY" formControlName="dateEnd"></ion-datetime>\n          </ion-item>\n        </ion-col>\n        <ion-col width-40>\n          <ion-item *ngIf="showTimes">\n            <ion-label></ion-label>\n            <ion-datetime displayFormat="h:mm A" formControlName="dateEnd"></ion-datetime>\n          </ion-item>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n\n    <ion-list class="switchers-list" *ngIf="!isMedicalEvent">\n      <ion-item class="switcher-item">\n        <ion-label>Mostrar como ocupado</ion-label>\n        <ion-toggle formControlName="isBusy"></ion-toggle>\n      </ion-item>\n    </ion-list>\n\n\n    <!--Paciente-->\n    <ion-item *ngIf="isMedicalEvent" class="switchers-list">\n      <ion-item-divider class="item-icon-right switcher-item">Paciente\n        <span class="right">Agregar\n          <ion-icon name="md-add-circle"></ion-icon></span>\n      </ion-item-divider>\n      <!--<ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)">-->\n      <ion-searchbar [showCancelButton]="shouldShowCancel" (ionInput)="onSearchPatient($event)" (ionCancel)="onCancelSearchPatien($event)" placeholder="Buscar">\n      </ion-searchbar>\n      <!--Listado de pacientes-->\n        <ion-list inset id="patients">\n          <button ion-item *ngFor="let patient of allPatients">\n            <!--<ion-avatar item-left>-->\n              <!--<img [src]="user.avatar_url">-->\n            <!--</ion-avatar>-->\n            <h2>{{patient.name}}&nbsp;{{patient.lastName}}&nbsp;{{patient.secondLastName}}</h2>\n            <ion-icon name="arrow-forward" item-right></ion-icon>\n          </button>\n        </ion-list>\n        <!--<ion-item *ngFor="let reminder of reminders" class="item-icon-right switcher-item" (click)="removeReminder(reminder)" value={{reminder}}>{{reminder}}<ion-icon name="md-trash" class="right"></ion-icon>-->\n    </ion-item>\n\n\n\n    <ion-item>\n      <!--<ion-label>Titulo</ion-label>-->\n      <ion-label floating>Titulo</ion-label>\n      <ion-input type="text" formControlName="title"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label stacked>Descripcion</ion-label>\n      <ion-textarea formControlName="description" rows="2"></ion-textarea>\n    </ion-item>\n\n    <!--Recordatorios-->\n    <ion-list inset id="reminders" class="switchers-list">\n      <ion-item class="item-icon-left switcher-item" id="reminder" (click)="addReminder()">\n        <ion-icon name="alarm"></ion-icon> Recordatorio<span class="right">Agregar\n          <ion-icon name="md-add-circle"></ion-icon></span></ion-item>\n      <ion-item *ngFor="let reminder of reminders" class="item-icon-right switcher-item" (click)="removeReminder(reminder)" value={{reminder}}>\n        {{reminder}}<ion-icon name="md-trash" class="right"></ion-icon>\n      </ion-item>        \n    </ion-list>\n\n    <!--Consultorios-->\n    <ion-item *ngIf="isMedicalEvent">\n      <ion-item-divider class="item-icon-right">Consultorios\n        <span class="right">Agregar\n          <ion-icon name="md-add-circle"></ion-icon></span>\n      </ion-item-divider>\n      <ion-item>\n        <ion-label>Consultorio</ion-label>\n        <ion-select>\n          <ion-option value="f">Consultorio1</ion-option>\n          <ion-option value="m">Consultorio2</ion-option>\n        </ion-select>\n      </ion-item>\n    </ion-item>\n\n    <!--Tipo de procedimiento-->\n    <ion-item *ngIf="isMedicalEvent">\n      <ion-label>Procedimiento</ion-label>\n      <ion-select formControlName="procedure">\n        <ion-option value="1">Revisión</ion-option>\n        <ion-option value="2">Cirugía</ion-option>\n        <ion-option value="3">Post Cirugía</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-list class="switchers-list" *ngIf="isMedicalEvent">\n      <ion-item class="switcher-item">\n        <ion-label>Es asegurado</ion-label>\n        <ion-toggle formControlName="hasInsurance" (ionChange)="onHasInsurance()"></ion-toggle>\n      </ion-item>\n    </ion-list>\n\n    <!--Tipo de procedimiento-->\n    <ion-item *ngIf="isMedicalEvent">\n      <ion-label>Aseguradora</ion-label>\n      <ion-select>\n        <ion-option value="a">Axxa</ion-option>\n        <ion-option value="b">GNP</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <!---->\n    <ion-list id="reminders" class="switchers-list" *ngIf="!isMedicalEvent">\n      <ion-item class="item-icon-left switcher-item" id="reminder" (click)="addReminder()">\n        <!--<i class="icon md-alarm"></i>Agregar recordatorio</ion-item>-->\n        <ion-icon name="alarm"></ion-icon> Agregar contacto</ion-item>\n    </ion-list>\n \n  </form>\n</ion-content>'/*ion-inline-end:"/home/afiliamedica/dev/ionic3-seed-jwt/src/pages/appointment-event/appointment-event.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* AlertController */], __WEBPACK_IMPORTED_MODULE_3__providers_appointment_service__["a" /* AppointmentService */], __WEBPACK_IMPORTED_MODULE_4__providers_userProfile_service__["a" /* UserProfileService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */]])
-], AppointmentEventPage);
-
-//# sourceMappingURL=appointment-event.js.map
-
-/***/ }),
-/* 311 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__appointment_event_appointment_event__ = __webpack_require__(310);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__protected_page_protected_page__ = __webpack_require__(307);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(50);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppointmentPage; });
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-/**
- * Generated class for the AppointmentPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-var AppointmentPage = (function (_super) {
-    __extends(AppointmentPage, _super);
-    function AppointmentPage(navCtrl, navParams, menuCtrl, storage) {
-        var _this = _super.call(this, navCtrl, navParams, storage) || this;
-        _this.navCtrl = navCtrl;
-        _this.navParams = navParams;
-        _this.menuCtrl = menuCtrl;
-        _this.storage = storage;
-        _this.calendar = {
-            mode: 'month',
-            currentDate: new Date()
-        }; // these are the variable used by the calendar.
-        _this.markDisabled = function (date) {
-            var current = new Date();
-            current.setHours(0, 0, 0);
-            return date < current;
-        };
-        return _this;
-    }
-    AppointmentPage.prototype.loadEvents = function () {
-        this.eventSource = this.createRandomEvents();
-    };
-    AppointmentPage.prototype.onViewTitleChanged = function (title) {
-        this.viewTitle = title;
-    };
-    AppointmentPage.prototype.onEventSelected = function (event) {
-        console.log('Event selected:' + event.startTime + '-' + event.endTime + ',' + event.title);
-    };
-    AppointmentPage.prototype.changeMode = function (mode) {
-        this.calendar.mode = mode;
-    };
-    AppointmentPage.prototype.today = function () {
-        this.calendar.currentDate = new Date();
-    };
-    AppointmentPage.prototype.onTimeSelected = function (ev) {
-        console.log('Selected time: ' + ev.selectedTime + ', hasEvents: ' +
-            (ev.events !== undefined && ev.events.length !== 0) + ', disabled: ' + ev.disabled);
-    };
-    AppointmentPage.prototype.onCurrentDateChanged = function (event) {
-        var today = new Date();
-        today.setHours(0, 0, 0, 0);
-        event.setHours(0, 0, 0, 0);
-        this.isToday = today.getTime() === event.getTime();
-    };
-    AppointmentPage.prototype.createRandomEvents = function () {
-        var events = [];
-        for (var i = 0; i < 50; i += 1) {
-            var date = new Date();
-            var eventType = Math.floor(Math.random() * 2);
-            var startDay = Math.floor(Math.random() * 90) - 45;
-            var endDay = Math.floor(Math.random() * 2) + startDay;
-            var startTime;
-            var endTime;
-            if (eventType === 0) {
-                startTime = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate() + startDay));
-                if (endDay === startDay) {
-                    endDay += 1;
-                }
-                endTime = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate() + endDay));
-                events.push({
-                    title: 'all day - ' + i,
-                    startTime: startTime,
-                    endTime: endTime,
-                    allDay: true
-                });
-            }
-            else {
-                var startMinute = Math.floor(Math.random() * 24 * 60);
-                var endMinute = Math.floor(Math.random() * 180) + startMinute;
-                startTime = new Date(date.getFullYear(), date.getMonth(), date.getDate() + startDay, 0, date.getMinutes() + startMinute);
-                endTime = new Date(date.getFullYear(), date.getMonth(), date.getDate() + endDay, 0, date.getMinutes() + endMinute);
-                events.push({
-                    title: 'Evento - ' + i,
-                    startTime: startTime,
-                    endTime: endTime,
-                    allDay: false
-                });
-            }
-        }
-        return events;
-    };
-    AppointmentPage.prototype.onRangeChanged = function (ev) {
-        console.log('range changed: startTime: ' + ev.startTime + ', endTime: ' + ev.endTime);
-    };
-    AppointmentPage.prototype.newAppointmentEvent = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__appointment_event_appointment_event__["a" /* AppointmentEventPage */]);
-    };
-    AppointmentPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad AppointmentPage');
-    };
-    return AppointmentPage;
-}(__WEBPACK_IMPORTED_MODULE_3__protected_page_protected_page__["a" /* ProtectedPage */]));
-AppointmentPage = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-appointment',template:/*ion-inline-start:"/home/afiliamedica/dev/ionic3-seed-jwt/src/pages/appointment/appointment.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n            <ion-icon name="menu"></ion-icon>\n          </button>    \n          <ion-title>Calendario</ion-title>\n        <ion-buttons end>\n            <button ion-button [disabled]="isToday" (click)="today()">Hoy</button>\n            <button ion-button (click)="changeMode(\'month\')">Mes</button>\n            <button ion-button (click)="changeMode(\'week\')">Sem</button>\n            <button ion-button (click)="changeMode(\'day\')">Dia</button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n\n<ion-content class="has-header" padding>\n    <calendar [eventSource]="eventSource"\n        [calendarMode]="calendar.mode"\n        [currentDate]="calendar.currentDate"\n        (onCurrentDateChanged)="onCurrentDateChanged($event)"\n        (onEventSelected)="onEventSelected($event)"\n        (onTitleChanged)="onViewTitleChanged($event)"\n        (onTimeSelected)="onTimeSelected($event)"              \n        step="30">\n    </calendar>\n    <ion-fab right bottom>\n        <button ion-fab (click)="newAppointmentEvent()"><ion-icon name="add"></ion-icon></button>        \n    </ion-fab>\n</ion-content>'/*ion-inline-end:"/home/afiliamedica/dev/ionic3-seed-jwt/src/pages/appointment/appointment.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */],
-        __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["a" /* Storage */]])
-], AppointmentPage);
-
-//# sourceMappingURL=appointment.js.map
-
-/***/ }),
-/* 312 */,
-/* 313 */,
-/* 314 */
+/* 314 */,
+/* 315 */,
+/* 316 */,
+/* 317 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -4942,7 +4561,7 @@ AppointmentPage = __decorate([
 //! author : Werner Mollentze : https://github.com/wernerm
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -5012,7 +4631,7 @@ return af;
 
 
 /***/ }),
-/* 315 */
+/* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -5020,7 +4639,7 @@ return af;
 //! author : Noureddine LOUAHEDJ : https://github.com/noureddineme
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -5076,7 +4695,7 @@ return arDz;
 
 
 /***/ }),
-/* 316 */
+/* 319 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -5084,7 +4703,7 @@ return arDz;
 //! author : Nusret Parlak: https://github.com/nusretparlak
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -5140,7 +4759,7 @@ return arKw;
 
 
 /***/ }),
-/* 317 */
+/* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -5148,7 +4767,7 @@ return arKw;
 //! author : Ali Hmer: https://github.com/kikoanis
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -5271,7 +4890,7 @@ return arLy;
 
 
 /***/ }),
-/* 318 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -5280,7 +4899,7 @@ return arLy;
 //! author : Abdel Said : https://github.com/abdelsaid
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -5336,7 +4955,7 @@ return arMa;
 
 
 /***/ }),
-/* 319 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -5344,7 +4963,7 @@ return arMa;
 //! author : Suhail Alkowaileet : https://github.com/xsoh
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -5446,7 +5065,7 @@ return arSa;
 
 
 /***/ }),
-/* 320 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -5454,7 +5073,7 @@ return arSa;
 //! author : Nader Toukabri : https://github.com/naderio
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -5510,7 +5129,7 @@ return arTn;
 
 
 /***/ }),
-/* 321 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -5520,7 +5139,7 @@ return arTn;
 //! author : forabi https://github.com/forabi
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -5657,7 +5276,7 @@ return ar;
 
 
 /***/ }),
-/* 322 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -5665,7 +5284,7 @@ return ar;
 //! author : topchiyev : https://github.com/topchiyev
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -5767,7 +5386,7 @@ return az;
 
 
 /***/ }),
-/* 323 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -5777,7 +5396,7 @@ return az;
 //! Author : Menelion Elensúle : https://github.com/Oire
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -5906,7 +5525,7 @@ return be;
 
 
 /***/ }),
-/* 324 */
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -5914,7 +5533,7 @@ return be;
 //! author : Krasen Borisov : https://github.com/kraz
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -6001,7 +5620,7 @@ return bg;
 
 
 /***/ }),
-/* 325 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -6009,7 +5628,7 @@ return bg;
 //! author : Kaushik Gandhi : https://github.com/kaushikgandhi
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -6125,7 +5744,7 @@ return bn;
 
 
 /***/ }),
-/* 326 */
+/* 329 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -6133,7 +5752,7 @@ return bn;
 //! author : Thupten N. Chakrishar : https://github.com/vajradog
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -6249,7 +5868,7 @@ return bo;
 
 
 /***/ }),
-/* 327 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -6257,7 +5876,7 @@ return bo;
 //! author : Jean-Baptiste Le Duigou : https://github.com/jbleduigou
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -6362,7 +5981,7 @@ return br;
 
 
 /***/ }),
-/* 328 */
+/* 331 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -6371,7 +5990,7 @@ return br;
 //! based on (hr) translation by Bojan Marković
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -6510,7 +6129,7 @@ return bs;
 
 
 /***/ }),
-/* 329 */
+/* 332 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -6518,7 +6137,7 @@ return bs;
 //! author : Juan G. Hurtado : https://github.com/juanghurtado
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -6603,7 +6222,7 @@ return ca;
 
 
 /***/ }),
-/* 330 */
+/* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -6611,7 +6230,7 @@ return ca;
 //! author : petrbela : https://github.com/petrbela
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -6780,7 +6399,7 @@ return cs;
 
 
 /***/ }),
-/* 331 */
+/* 334 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -6788,7 +6407,7 @@ return cs;
 //! author : Anatoly Mironov : https://github.com/mirontoli
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -6848,7 +6467,7 @@ return cv;
 
 
 /***/ }),
-/* 332 */
+/* 335 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -6857,7 +6476,7 @@ return cv;
 //! author : https://github.com/ryangreaves
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -6934,7 +6553,7 @@ return cy;
 
 
 /***/ }),
-/* 333 */
+/* 336 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -6942,7 +6561,7 @@ return cy;
 //! author : Ulrik Nielsen : https://github.com/mrbase
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -6999,7 +6618,7 @@ return da;
 
 
 /***/ }),
-/* 334 */
+/* 337 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7010,7 +6629,7 @@ return da;
 //! author : Mikolaj Dadela : https://github.com/mik01aj
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -7083,7 +6702,7 @@ return deAt;
 
 
 /***/ }),
-/* 335 */
+/* 338 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7091,7 +6710,7 @@ return deAt;
 //! author : sschueller : https://github.com/sschueller
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -7166,7 +6785,7 @@ return deCh;
 
 
 /***/ }),
-/* 336 */
+/* 339 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7176,7 +6795,7 @@ return deCh;
 //! author : Mikolaj Dadela : https://github.com/mik01aj
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -7249,7 +6868,7 @@ return de;
 
 
 /***/ }),
-/* 337 */
+/* 340 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7257,7 +6876,7 @@ return de;
 //! author : Jawish Hameed : https://github.com/jawish
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -7354,7 +6973,7 @@ return dv;
 
 
 /***/ }),
-/* 338 */
+/* 341 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7362,7 +6981,7 @@ return dv;
 //! author : Aggelos Karalias : https://github.com/mehiel
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -7459,7 +7078,7 @@ return el;
 
 
 /***/ }),
-/* 339 */
+/* 342 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7467,7 +7086,7 @@ return el;
 //! author : Jared Morse : https://github.com/jarcoal
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -7531,7 +7150,7 @@ return enAu;
 
 
 /***/ }),
-/* 340 */
+/* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7539,7 +7158,7 @@ return enAu;
 //! author : Jonathan Abourbih : https://github.com/jonbca
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -7599,7 +7218,7 @@ return enCa;
 
 
 /***/ }),
-/* 341 */
+/* 344 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7607,7 +7226,7 @@ return enCa;
 //! author : Chris Gedrim : https://github.com/chrisgedrim
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -7671,7 +7290,7 @@ return enGb;
 
 
 /***/ }),
-/* 342 */
+/* 345 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7679,7 +7298,7 @@ return enGb;
 //! author : Chris Cartlidge : https://github.com/chriscartlidge
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -7743,7 +7362,7 @@ return enIe;
 
 
 /***/ }),
-/* 343 */
+/* 346 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7751,7 +7370,7 @@ return enIe;
 //! author : Luke McGregor : https://github.com/lukemcgregor
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -7815,7 +7434,7 @@ return enNz;
 
 
 /***/ }),
-/* 344 */
+/* 347 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7825,7 +7444,7 @@ return enNz;
 //! comment : miestasmia corrected the translation by colindean
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -7893,14 +7512,14 @@ return eo;
 
 
 /***/ }),
-/* 345 */
+/* 348 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 //! locale : Spanish (Dominican Republic) [es-do]
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -7980,7 +7599,7 @@ return esDo;
 
 
 /***/ }),
-/* 346 */
+/* 349 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -7988,7 +7607,7 @@ return esDo;
 //! author : Julio Napurí : https://github.com/julionc
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -8068,7 +7687,7 @@ return es;
 
 
 /***/ }),
-/* 347 */
+/* 350 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8077,7 +7696,7 @@ return es;
 //! improvements : Illimar Tambek : https://github.com/ragulka
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -8153,7 +7772,7 @@ return et;
 
 
 /***/ }),
-/* 348 */
+/* 351 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8161,7 +7780,7 @@ return et;
 //! author : Eneko Illarramendi : https://github.com/eillarra
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -8224,7 +7843,7 @@ return eu;
 
 
 /***/ }),
-/* 349 */
+/* 352 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8232,7 +7851,7 @@ return eu;
 //! author : Ebrahim Byagowi : https://github.com/ebraminio
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -8336,7 +7955,7 @@ return fa;
 
 
 /***/ }),
-/* 350 */
+/* 353 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8344,7 +7963,7 @@ return fa;
 //! author : Tarmo Aidantausta : https://github.com/bleadof
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -8448,7 +8067,7 @@ return fi;
 
 
 /***/ }),
-/* 351 */
+/* 354 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8456,7 +8075,7 @@ return fi;
 //! author : Ragnar Johannesen : https://github.com/ragnar123
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -8513,7 +8132,7 @@ return fo;
 
 
 /***/ }),
-/* 352 */
+/* 355 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8521,7 +8140,7 @@ return fo;
 //! author : Jonathan Abourbih : https://github.com/jonbca
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -8592,7 +8211,7 @@ return frCa;
 
 
 /***/ }),
-/* 353 */
+/* 356 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8600,7 +8219,7 @@ return frCa;
 //! author : Gaspard Bucher : https://github.com/gaspard
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -8675,7 +8294,7 @@ return frCh;
 
 
 /***/ }),
-/* 354 */
+/* 357 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8683,7 +8302,7 @@ return frCh;
 //! author : John Fischer : https://github.com/jfroffice
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -8763,7 +8382,7 @@ return fr;
 
 
 /***/ }),
-/* 355 */
+/* 358 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8771,7 +8390,7 @@ return fr;
 //! author : Robin van der Vliet : https://github.com/robin0van0der0v
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -8843,7 +8462,7 @@ return fy;
 
 
 /***/ }),
-/* 356 */
+/* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8851,7 +8470,7 @@ return fy;
 //! author : Jon Ashdown : https://github.com/jonashdown
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -8924,7 +8543,7 @@ return gd;
 
 
 /***/ }),
-/* 357 */
+/* 360 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -8932,7 +8551,7 @@ return gd;
 //! author : Juan G. Hurtado : https://github.com/juanghurtado
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -9006,7 +8625,7 @@ return gl;
 
 
 /***/ }),
-/* 358 */
+/* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9014,7 +8633,7 @@ return gl;
 //! author : The Discoverer : https://github.com/WikiDiscoverer
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -9133,7 +8752,7 @@ return gomLatn;
 
 
 /***/ }),
-/* 359 */
+/* 362 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9143,7 +8762,7 @@ return gomLatn;
 //! author : Tal Ater : https://github.com/TalAter
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -9237,7 +8856,7 @@ return he;
 
 
 /***/ }),
-/* 360 */
+/* 363 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9245,7 +8864,7 @@ return he;
 //! author : Mayank Singhal : https://github.com/mayanksinghal
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -9366,7 +8985,7 @@ return hi;
 
 
 /***/ }),
-/* 361 */
+/* 364 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9374,7 +8993,7 @@ return hi;
 //! author : Bojan Marković : https://github.com/bmarkovic
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -9516,7 +9135,7 @@ return hr;
 
 
 /***/ }),
-/* 362 */
+/* 365 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9524,7 +9143,7 @@ return hr;
 //! author : Adam Brunner : https://github.com/adambrunner
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -9630,7 +9249,7 @@ return hu;
 
 
 /***/ }),
-/* 363 */
+/* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9638,7 +9257,7 @@ return hu;
 //! author : Armendarabyan : https://github.com/armendarabyan
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -9730,7 +9349,7 @@ return hyAm;
 
 
 /***/ }),
-/* 364 */
+/* 367 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9739,7 +9358,7 @@ return hyAm;
 //! reference: http://id.wikisource.org/wiki/Pedoman_Umum_Ejaan_Bahasa_Indonesia_yang_Disempurnakan
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -9818,7 +9437,7 @@ return id;
 
 
 /***/ }),
-/* 365 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9826,7 +9445,7 @@ return id;
 //! author : Hinrik Örn Sigurðsson : https://github.com/hinrik
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -9950,7 +9569,7 @@ return is;
 
 
 /***/ }),
-/* 366 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -9959,7 +9578,7 @@ return is;
 //! author: Mattia Larentis: https://github.com/nostalgiaz
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -10025,7 +9644,7 @@ return it;
 
 
 /***/ }),
-/* 367 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10033,7 +9652,7 @@ return it;
 //! author : LI Long : https://github.com/baryon
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -10110,7 +9729,7 @@ return ja;
 
 
 /***/ }),
-/* 368 */
+/* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10119,7 +9738,7 @@ return ja;
 //! reference: http://jv.wikipedia.org/wiki/Basa_Jawa
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -10198,7 +9817,7 @@ return jv;
 
 
 /***/ }),
-/* 369 */
+/* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10206,7 +9825,7 @@ return jv;
 //! author : Irakli Janiashvili : https://github.com/irakli-janiashvili
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -10292,7 +9911,7 @@ return ka;
 
 
 /***/ }),
-/* 370 */
+/* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10300,7 +9919,7 @@ return ka;
 //! authors : Nurlan Rakhimzhanov : https://github.com/nurlan
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -10384,7 +10003,7 @@ return kk;
 
 
 /***/ }),
-/* 371 */
+/* 374 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10392,7 +10011,7 @@ return kk;
 //! author : Kruy Vanna : https://github.com/kruyvanna
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -10447,7 +10066,7 @@ return km;
 
 
 /***/ }),
-/* 372 */
+/* 375 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10455,7 +10074,7 @@ return km;
 //! author : Rajeev Naik : https://github.com/rajeevnaikte
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -10578,7 +10197,7 @@ return kn;
 
 
 /***/ }),
-/* 373 */
+/* 376 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10587,7 +10206,7 @@ return kn;
 //! author : Jeeeyul Lee <jeeeyul@gmail.com>
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -10652,7 +10271,7 @@ return ko;
 
 
 /***/ }),
-/* 374 */
+/* 377 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10660,7 +10279,7 @@ return ko;
 //! author : Chyngyz Arystan uulu : https://github.com/chyngyz
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -10745,7 +10364,7 @@ return ky;
 
 
 /***/ }),
-/* 375 */
+/* 378 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10754,7 +10373,7 @@ return ky;
 //! author : David Raison : https://github.com/kwisatz
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -10887,7 +10506,7 @@ return lb;
 
 
 /***/ }),
-/* 376 */
+/* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10895,7 +10514,7 @@ return lb;
 //! author : Ryan Hart : https://github.com/ryanhart2
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -10962,7 +10581,7 @@ return lo;
 
 
 /***/ }),
-/* 377 */
+/* 380 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -10970,7 +10589,7 @@ return lo;
 //! author : Mindaugas Mozūras : https://github.com/mmozuras
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -11084,7 +10703,7 @@ return lt;
 
 
 /***/ }),
-/* 378 */
+/* 381 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11093,7 +10712,7 @@ return lt;
 //! author : Jānis Elmeris : https://github.com/JanisE
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -11186,7 +10805,7 @@ return lv;
 
 
 /***/ }),
-/* 379 */
+/* 382 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11194,7 +10813,7 @@ return lv;
 //! author : Miodrag Nikač <miodrag@restartit.me> : https://github.com/miodragnikac
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -11302,7 +10921,7 @@ return me;
 
 
 /***/ }),
-/* 380 */
+/* 383 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11310,7 +10929,7 @@ return me;
 //! author : John Corrigan <robbiecloset@gmail.com> : https://github.com/johnideal
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -11371,7 +10990,7 @@ return mi;
 
 
 /***/ }),
-/* 381 */
+/* 384 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11379,7 +10998,7 @@ return mi;
 //! author : Borislav Mickov : https://github.com/B0k0
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -11466,7 +11085,7 @@ return mk;
 
 
 /***/ }),
-/* 382 */
+/* 385 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11474,7 +11093,7 @@ return mk;
 //! author : Floyd Pink : https://github.com/floydpink
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -11552,7 +11171,7 @@ return ml;
 
 
 /***/ }),
-/* 383 */
+/* 386 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11561,7 +11180,7 @@ return ml;
 //! author : Vivek Athalye : https://github.com/vnathalye
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -11716,7 +11335,7 @@ return mr;
 
 
 /***/ }),
-/* 384 */
+/* 387 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11725,7 +11344,7 @@ return mr;
 //! author : Weldan Jamili : https://github.com/weldan
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -11804,7 +11423,7 @@ return msMy;
 
 
 /***/ }),
-/* 385 */
+/* 388 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11812,7 +11431,7 @@ return msMy;
 //! author : Weldan Jamili : https://github.com/weldan
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -11891,7 +11510,7 @@ return ms;
 
 
 /***/ }),
-/* 386 */
+/* 389 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -11901,7 +11520,7 @@ return ms;
 //! author : Tin Aung Lin : https://github.com/thanyawzinmin
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -11992,7 +11611,7 @@ return my;
 
 
 /***/ }),
-/* 387 */
+/* 390 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12001,7 +11620,7 @@ return my;
 //!           Sigurd Gartmann : https://github.com/sigurdga
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -12060,7 +11679,7 @@ return nb;
 
 
 /***/ }),
-/* 388 */
+/* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12068,7 +11687,7 @@ return nb;
 //! author : suvash : https://github.com/suvash
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -12188,7 +11807,7 @@ return ne;
 
 
 /***/ }),
-/* 389 */
+/* 392 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12197,7 +11816,7 @@ return ne;
 //! author : Jacob Middag : https://github.com/middagj
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -12281,7 +11900,7 @@ return nlBe;
 
 
 /***/ }),
-/* 390 */
+/* 393 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12290,7 +11909,7 @@ return nlBe;
 //! author : Jacob Middag : https://github.com/middagj
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -12374,7 +11993,7 @@ return nl;
 
 
 /***/ }),
-/* 391 */
+/* 394 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12382,7 +12001,7 @@ return nl;
 //! author : https://github.com/mechuwind
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -12439,7 +12058,7 @@ return nn;
 
 
 /***/ }),
-/* 392 */
+/* 395 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12447,7 +12066,7 @@ return nn;
 //! author : Harpreet Singh : https://github.com/harpreetkhalsagtbit
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -12568,7 +12187,7 @@ return paIn;
 
 
 /***/ }),
-/* 393 */
+/* 396 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12576,7 +12195,7 @@ return paIn;
 //! author : Rafal Hirsz : https://github.com/evoL
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -12680,7 +12299,7 @@ return pl;
 
 
 /***/ }),
-/* 394 */
+/* 397 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12688,7 +12307,7 @@ return pl;
 //! author : Caio Ribeiro Pereira : https://github.com/caio-ribeiro-pereira
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -12746,7 +12365,7 @@ return ptBr;
 
 
 /***/ }),
-/* 395 */
+/* 398 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12754,7 +12373,7 @@ return ptBr;
 //! author : Jefferson : https://github.com/jalex79
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -12816,7 +12435,7 @@ return pt;
 
 
 /***/ }),
-/* 396 */
+/* 399 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12825,7 +12444,7 @@ return pt;
 //! author : Valentin Agachi : https://github.com/avaly
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -12896,7 +12515,7 @@ return ro;
 
 
 /***/ }),
-/* 397 */
+/* 400 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -12906,7 +12525,7 @@ return ro;
 //! author : Коренберг Марк : https://github.com/socketpair
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -13084,7 +12703,7 @@ return ru;
 
 
 /***/ }),
-/* 398 */
+/* 401 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13092,7 +12711,7 @@ return ru;
 //! author : Narain Sagar : https://github.com/narainsagar
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -13187,7 +12806,7 @@ return sd;
 
 
 /***/ }),
-/* 399 */
+/* 402 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13195,7 +12814,7 @@ return sd;
 //! authors : Bård Rolstad Henriksen : https://github.com/karamell
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -13253,7 +12872,7 @@ return se;
 
 
 /***/ }),
-/* 400 */
+/* 403 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13261,7 +12880,7 @@ return se;
 //! author : Sampath Sitinamaluwa : https://github.com/sampathsris
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -13329,7 +12948,7 @@ return si;
 
 
 /***/ }),
-/* 401 */
+/* 404 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13338,7 +12957,7 @@ return si;
 //! based on work of petrbela : https://github.com/petrbela
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -13484,7 +13103,7 @@ return sk;
 
 
 /***/ }),
-/* 402 */
+/* 405 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13492,7 +13111,7 @@ return sk;
 //! author : Robert Sedovšek : https://github.com/sedovsek
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -13651,7 +13270,7 @@ return sl;
 
 
 /***/ }),
-/* 403 */
+/* 406 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13661,7 +13280,7 @@ return sl;
 //! author : Oerd Cukalla : https://github.com/oerd
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -13726,7 +13345,7 @@ return sq;
 
 
 /***/ }),
-/* 404 */
+/* 407 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13734,7 +13353,7 @@ return sq;
 //! author : Milan Janačković<milanjanackovic@gmail.com> : https://github.com/milan-j
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -13841,7 +13460,7 @@ return srCyrl;
 
 
 /***/ }),
-/* 405 */
+/* 408 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13849,7 +13468,7 @@ return srCyrl;
 //! author : Milan Janačković<milanjanackovic@gmail.com> : https://github.com/milan-j
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -13956,7 +13575,7 @@ return sr;
 
 
 /***/ }),
-/* 406 */
+/* 409 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -13964,7 +13583,7 @@ return sr;
 //! author : Nicolai Davies<mail@nicolai.io> : https://github.com/nicolaidavies
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -14050,7 +13669,7 @@ return ss;
 
 
 /***/ }),
-/* 407 */
+/* 410 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14058,7 +13677,7 @@ return ss;
 //! author : Jens Alm : https://github.com/ulmus
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -14124,7 +13743,7 @@ return sv;
 
 
 /***/ }),
-/* 408 */
+/* 411 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14132,7 +13751,7 @@ return sv;
 //! author : Fahad Kassim : https://github.com/fadsel
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -14188,7 +13807,7 @@ return sw;
 
 
 /***/ }),
-/* 409 */
+/* 412 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14196,7 +13815,7 @@ return sw;
 //! author : Arjunkumar Krishnamoorthy : https://github.com/tk120404
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -14323,7 +13942,7 @@ return ta;
 
 
 /***/ }),
-/* 410 */
+/* 413 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14331,7 +13950,7 @@ return ta;
 //! author : Krishna Chaitanya Thota : https://github.com/kcthota
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -14417,7 +14036,7 @@ return te;
 
 
 /***/ }),
-/* 411 */
+/* 414 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14426,7 +14045,7 @@ return te;
 //! author : Onorio De J. Afonso : https://github.com/marobo
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -14490,7 +14109,7 @@ return tet;
 
 
 /***/ }),
-/* 412 */
+/* 415 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14498,7 +14117,7 @@ return tet;
 //! author : Kridsada Thanabulpong : https://github.com/sirn
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -14562,7 +14181,7 @@ return th;
 
 
 /***/ }),
-/* 413 */
+/* 416 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14570,7 +14189,7 @@ return th;
 //! author : Dan Hagman : https://github.com/hagmandan
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -14629,7 +14248,7 @@ return tlPh;
 
 
 /***/ }),
-/* 414 */
+/* 417 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14637,7 +14256,7 @@ return tlPh;
 //! author : Dominika Kruk : https://github.com/amaranthrose
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -14754,7 +14373,7 @@ return tlh;
 
 
 /***/ }),
-/* 415 */
+/* 418 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14763,7 +14382,7 @@ return tlh;
 //!           Burak Yiğit Kaya: https://github.com/BYK
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -14849,7 +14468,7 @@ return tr;
 
 
 /***/ }),
-/* 416 */
+/* 419 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14858,7 +14477,7 @@ return tr;
 //! author : Iustì Canun
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -14945,7 +14564,7 @@ return tzl;
 
 
 /***/ }),
-/* 417 */
+/* 420 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -14953,7 +14572,7 @@ return tzl;
 //! author : Abdel Said : https://github.com/abdelsaid
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -15008,7 +14627,7 @@ return tzmLatn;
 
 
 /***/ }),
-/* 418 */
+/* 421 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15016,7 +14635,7 @@ return tzmLatn;
 //! author : Abdel Said : https://github.com/abdelsaid
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -15071,7 +14690,7 @@ return tzm;
 
 
 /***/ }),
-/* 419 */
+/* 422 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15080,7 +14699,7 @@ return tzm;
 //! Author : Menelion Elensúle : https://github.com/Oire
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -15227,7 +14846,7 @@ return uk;
 
 
 /***/ }),
-/* 420 */
+/* 423 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15236,7 +14855,7 @@ return uk;
 //! author : Zack : https://github.com/ZackVision
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -15331,7 +14950,7 @@ return ur;
 
 
 /***/ }),
-/* 421 */
+/* 424 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15339,7 +14958,7 @@ return ur;
 //! author : Rasulbek Mirzayev : github.com/Rasulbeeek
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -15394,7 +15013,7 @@ return uzLatn;
 
 
 /***/ }),
-/* 422 */
+/* 425 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15402,7 +15021,7 @@ return uzLatn;
 //! author : Sardor Muminov : https://github.com/muminoff
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -15457,7 +15076,7 @@ return uz;
 
 
 /***/ }),
-/* 423 */
+/* 426 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15465,7 +15084,7 @@ return uz;
 //! author : Bang Nguyen : https://github.com/bangnk
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -15541,7 +15160,7 @@ return vi;
 
 
 /***/ }),
-/* 424 */
+/* 427 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15549,7 +15168,7 @@ return vi;
 //! author : Andrew Hood : https://github.com/andrewhood125
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -15614,7 +15233,7 @@ return xPseudo;
 
 
 /***/ }),
-/* 425 */
+/* 428 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15622,7 +15241,7 @@ return xPseudo;
 //! author : Atolagbe Abisoye : https://github.com/andela-batolagbe
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -15679,7 +15298,7 @@ return yo;
 
 
 /***/ }),
-/* 426 */
+/* 429 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15688,7 +15307,7 @@ return yo;
 //! author : Zeno Zeng : https://github.com/zenozeng
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -15795,7 +15414,7 @@ return zhCn;
 
 
 /***/ }),
-/* 427 */
+/* 430 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15805,7 +15424,7 @@ return zhCn;
 //! author : Konstantin : https://github.com/skfd
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -15905,7 +15524,7 @@ return zhHk;
 
 
 /***/ }),
-/* 428 */
+/* 431 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -15914,7 +15533,7 @@ return zhHk;
 //! author : Chris Lam : https://github.com/hehachris
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(306)) :
+    true ? factory(__webpack_require__(312)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -16014,538 +15633,253 @@ return zhTw;
 
 
 /***/ }),
-/* 429 */,
-/* 430 */,
-/* 431 */,
-/* 432 */,
+/* 432 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_appointment_service__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_userProfile_service__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__protected_page_protected_page__ = __webpack_require__(313);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_storage__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_moment__ = __webpack_require__(312);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_moment__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_map__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_map__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppointmentEventPage; });
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+//import { AppointmentPage } from '../appointment-page/appointment-page';
+
+
+
+
+var AppointmentEventPage = (function (_super) {
+    __extends(AppointmentEventPage, _super);
+    function AppointmentEventPage(navCtrl, navParams, alertCtrl, storage, appointmentEvent, userProfile, toastCtrl) {
+        var _this = _super.call(this, navCtrl, navParams, storage) || this;
+        _this.navCtrl = navCtrl;
+        _this.navParams = navParams;
+        _this.alertCtrl = alertCtrl;
+        _this.storage = storage;
+        _this.appointmentEvent = appointmentEvent;
+        _this.userProfile = userProfile;
+        _this.toastCtrl = toastCtrl;
+        _this.event = {
+            startDate: new Date().toISOString(),
+            endDate: new Date().toISOString(),
+        };
+        _this.showTimes = true;
+        _this.reminders = [];
+        _this.allPatients = [];
+        _this.section = "personal";
+        _this.isMedicalEvent = false;
+        _this.hasInsurance = false;
+        _this.reminders = [];
+        _this.allPatients = [];
+        //this.procedures = [{id: 1,title:'Revision'},{id: 2,title:'Cirugia'}, {id: 2,title:'PostCirugia'}];
+        var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds
+        var localISOTime = (new Date(Date.now() - tzoffset)).toISOString().slice(0, -1); //Get local dateTime ISO format
+        _this.event.startDate = new Date(localISOTime).toISOString();
+        _this.event.endDate = new Date(__WEBPACK_IMPORTED_MODULE_7_moment___default()(localISOTime).subtract(new Date(localISOTime).getTimezoneOffset(), 'minutes').toDate()).toISOString();
+        _this.event.endDate = new Date(__WEBPACK_IMPORTED_MODULE_7_moment___default()(_this.event.endDate).add(1, 'hours').toDate()).toISOString(); //Add 1 hour
+        _this.eventForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* FormGroup */]({
+            isAllDay: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["h" /* FormControl */](false, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
+            title: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["h" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
+            startDate: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["h" /* FormControl */](_this.event.startDate, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
+            endDate: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["h" /* FormControl */](_this.event.endDate, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
+            description: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["h" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
+            isBusy: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["h" /* FormControl */](false, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
+            hasInsurance: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["h" /* FormControl */](false, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
+            procedure: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["h" /* FormControl */]('')
+        });
+        return _this;
+    }
+    AppointmentEventPage.prototype.save = function () {
+        var _this = this;
+        var newAppointment = {
+            title: this.eventForm.get('title').value,
+            description: this.eventForm.get('description').value,
+            startDate: this.eventForm.get('startDate').value,
+            endDate: this.eventForm.get('endDate').value,
+            isAllDay: this.eventForm.get('isAllDay').value,
+            reminders: [],
+            reminderMethods: [],
+            attendees: [],
+            appointmentStatus: [],
+            procedures: this.eventForm.get('procedure').value
+        };
+        var newAppointmentType = { id: this.section === "personal" ? 1 : 2, };
+        newAppointment.isBusy = this.section === "personal" ? this.eventForm.get('isBusy').value : true; //Medical event allways busy
+        newAppointment.appointmentType = newAppointmentType;
+        for (var i = 0; i < this.reminders.length; i++) {
+            var newReminder = { id: this.reminders[i] };
+            newAppointment.reminders.push(newReminder);
+        }
+        var newReminderMethods = { id: 1 };
+        newAppointment.reminderMethods.push(newReminderMethods);
+        var newLocation = { institutionId: 1 };
+        newAppointment.location = newLocation;
+        var newDoctor = { userId: 2 };
+        newAppointment.doctor = newDoctor;
+        var newPatient = { userId: 3 };
+        newAppointment.patient = newPatient;
+        //let newInsurance: models.MedicalInsurance = { id: 1 }
+        //newAppointment.insurance = newInsurance;
+        this.appointmentEvent.createAppointment(newAppointment)
+            .subscribe(function () {
+            var alert = _this.alertCtrl.create({
+                title: 'AfiliaMD', subTitle: 'El evento se agrego a tu agenda exitosamente',
+                buttons: ['Aceptar']
+            });
+            alert.present();
+            _this.navCtrl.pop(); //Go Back to the calendar
+        }, function (e) {
+            var alert = _this.alertCtrl.create({
+                title: 'Error', subTitle: 'Ocurrio un error al guardar la información, favor de reintentar más tarde',
+                buttons: ['Aceptar']
+            });
+            alert.present();
+        });
+    };
+    AppointmentEventPage.prototype.onSearchPatient = function (searchEvent) {
+        var _this = this;
+        var term = searchEvent.target.value;
+        // We will only perform the search if we have 3 or more characters
+        if (term != null) {
+            if (term.trim() === '' || term.trim().length < 3) {
+                this.allPatients = [];
+            }
+            else {
+                this.userProfile.getUser(undefined, term, undefined, undefined, undefined)
+                    .subscribe(function (usersProfile) {
+                    _this.allPatients = usersProfile;
+                });
+            }
+        }
+        else {
+            this.allPatients = [];
+        }
+    };
+    AppointmentEventPage.prototype.onCancelSearchPatien = function () { this.allPatients = []; };
+    AppointmentEventPage.prototype.ionViewDidLoad = function () {
+    };
+    AppointmentEventPage.prototype.onSegmentChanged = function (segmentButton) {
+        if (segmentButton.value == 'personal') {
+            this.isMedicalEvent = false;
+        }
+        else {
+            this.isMedicalEvent = true;
+        }
+    };
+    AppointmentEventPage.prototype.onSegmentSelected = function (segmentButton) {
+        //console.log('Segment selected' + segmentButton.value);
+    };
+    AppointmentEventPage.prototype.createPersonalEvent = function () {
+    };
+    AppointmentEventPage.prototype.onIsAllDay = function () {
+        var optionValue = this.eventForm.get('isAllDay').value;
+        if (optionValue == true) {
+            this.showTimes = false;
+        }
+        else {
+            this.showTimes = true;
+        }
+    };
+    AppointmentEventPage.prototype.onHasInsurance = function () {
+    };
+    AppointmentEventPage.prototype.removeReminder = function (reminder) {
+        this.reminders.splice(this.reminders.indexOf(reminder), 1);
+    };
+    AppointmentEventPage.prototype.addReminder = function () {
+        var _this = this;
+        var alert = this.alertCtrl.create({ cssClass: 'category-prompt' });
+        //alert.setTitle('Lightsaber color');
+        alert.addInput({ type: 'radio', label: '1 minuto', value: '1', checked: false });
+        alert.addInput({ type: 'radio', label: '5 minutos', value: '2', checked: false });
+        alert.addInput({ type: 'radio', label: '10 minutos', value: '3', checked: false });
+        alert.addInput({ type: 'radio', label: '15 minutos', value: '4', checked: false });
+        alert.addInput({ type: 'radio', label: '20 minutos', value: '5', checked: false });
+        alert.addInput({ type: 'radio', label: '25 minutos', value: '5', checked: false });
+        alert.addInput({ type: 'radio', label: '30 minutos', value: '6', checked: false });
+        alert.addButton("Cancelar");
+        alert.addButton({
+            text: 'OK',
+            handler: function (data) {
+                _this.remidnerRadioOpen = false;
+                _this.reminderRadioResult = data;
+                if (data != null)
+                    _this.reminders.push(data);
+            }
+        });
+        alert.present();
+    };
+    AppointmentEventPage.prototype.alerta = function () {
+        console.log("click en el microfono");
+    };
+    return AppointmentEventPage;
+}(__WEBPACK_IMPORTED_MODULE_5__protected_page_protected_page__["a" /* ProtectedPage */]));
+AppointmentEventPage = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'appointment-event-page',template:/*ion-inline-start:"/home/afiliamedica/dev/jwt-ionic3/src/pages/appointment-event-page/appointment-event-page.html"*/'<ion-header>\n  <ion-navbar>\n    <!--<ion-title><span class="right" (click)="saveEvent()">GUARDAR <ion-icon name="md-done-all"></ion-icon></span></ion-title>-->\n    <ion-nav-back-button></ion-nav-back-button>\n    <ion-title></ion-title>\n    <ion-buttons end [hidden]="!eventForm.dirty">\n      <button ion-button icon-end (click)="save()">\n        GUARDAR <ion-icon name="md-done-all"></ion-icon>\n      </button>\n    </ion-buttons>    \n  </ion-navbar>\n</ion-header>\n\n<ion-content class="appointment-event-content">\n  <ion-toolbar no-border-top>\n    <ion-segment [(ngModel)]="section" (ionChange)="onSegmentChanged($event)">\n      <ion-segment-button value="personal">\n        Personal\n      </ion-segment-button>\n      <ion-segment-button value="medical">\n        Médico\n      </ion-segment-button>\n    </ion-segment>\n  </ion-toolbar>\n\n  <form [formGroup]="eventForm" (ngSubmit)="createPersonalEvent()">\n    <ion-list class="switchers-list">\n      <ion-item class="switcher-item">\n        <ion-label>Todo el día</ion-label>\n        <ion-toggle formControlName="isAllDay" (ionChange)="onIsAllDay()"></ion-toggle>\n      </ion-item>\n    </ion-list>\n    <ion-grid>\n      <ion-row>\n        <ion-col width-60>\n          <ion-item>\n            <ion-label>Inicio</ion-label>\n            <ion-datetime displayFormat="DD/MMM/YYYY" formControlName="startDate"></ion-datetime>\n          </ion-item>\n        </ion-col>\n        <ion-col width-40>\n          <ion-item *ngIf="showTimes">\n            <ion-label></ion-label>\n            <ion-datetime displayFormat="h:mm A" formControlName="startDate"></ion-datetime>\n          </ion-item>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col width-60>\n          <ion-item>\n            <ion-label>Fin</ion-label>\n            <ion-datetime displayFormat="DD/MMM/YYYY" formControlName="endDate"></ion-datetime>\n          </ion-item>\n        </ion-col>\n        <ion-col width-40>\n          <ion-item *ngIf="showTimes">\n            <ion-label></ion-label>\n            <ion-datetime displayFormat="h:mm A" formControlName="endDate"></ion-datetime>\n          </ion-item>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n\n    <ion-list class="switchers-list" *ngIf="!isMedicalEvent">\n      <ion-item class="switcher-item">\n        <ion-label>Mostrar como ocupado</ion-label>\n        <ion-toggle formControlName="isBusy"></ion-toggle>\n      </ion-item>\n    </ion-list>\n\n\n    <!--Paciente-->\n    <ion-item *ngIf="isMedicalEvent" class="switchers-list">\n      <ion-item-divider class="item-icon-right switcher-item">Paciente\n        <span class="right">Agregar\n          <ion-icon name="md-add-circle"></ion-icon></span>\n      </ion-item-divider>\n      <!--<ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)">-->\n      <ion-searchbar [showCancelButton]="shouldShowCancel" (ionInput)="onSearchPatient($event)" (ionCancel)="onCancelSearchPatien($event)"\n        placeholder="Buscar">\n      </ion-searchbar>\n      <!--Listado de pacientes-->\n      <ion-list inset id="patients">\n        <button ion-item *ngFor="let patient of allPatients">\n            <!--<ion-avatar item-left>-->\n              <!--<img [src]="user.avatar_url">-->\n            <!--</ion-avatar>-->\n            <h2>{{patient.name}}&nbsp;{{patient.lastName}}&nbsp;{{patient.secondLastName}}</h2>\n            <ion-icon name="arrow-forward" item-right></ion-icon>\n          </button>\n      </ion-list>\n      <!--<ion-item *ngFor="let reminder of reminders" class="item-icon-right switcher-item" (click)="removeReminder(reminder)" value={{reminder}}>{{reminder}}<ion-icon name="md-trash" class="right"></ion-icon>-->\n    </ion-item>\n\n\n\n    <ion-item>\n      <!--<ion-label>Titulo</ion-label>-->\n      <ion-label floating>Titulo</ion-label>\n      <ion-input type="text" formControlName="title"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label stacked>Descripcion</ion-label>\n      <ion-textarea formControlName="description" rows="2"></ion-textarea>\n    </ion-item>\n\n    <!--Recordatorios-->\n    <ion-list inset id="reminders" class="switchers-list">\n      <ion-item class="item-icon-left switcher-item" id="reminder" (click)="addReminder()">\n        <ion-icon name="alarm"></ion-icon> Recordatorio<span class="right">Agregar\n          <ion-icon name="md-add-circle"></ion-icon></span></ion-item>\n      <ion-item *ngFor="let reminder of reminders" class="item-icon-right switcher-item" (click)="removeReminder(reminder)" value={{reminder}}>\n        {{reminder}}\n        <ion-icon name="md-trash" class="right"></ion-icon>\n      </ion-item>\n    </ion-list>\n\n    <!--Consultorios-->\n    <ion-item *ngIf="isMedicalEvent">\n      <ion-item-divider class="item-icon-right">Consultorios\n        <span class="right">Agregar\n          <ion-icon name="md-add-circle"></ion-icon></span>\n      </ion-item-divider>\n      <ion-item>\n        <ion-label>Consultorio</ion-label>\n        <ion-select>\n          <ion-option value="f">Consultorio1</ion-option>\n          <ion-option value="m">Consultorio2</ion-option>\n        </ion-select>\n      </ion-item>\n    </ion-item>\n\n    <!--Tipo de procedimiento-->\n    <ion-item *ngIf="isMedicalEvent">\n      <ion-label>Procedimiento</ion-label>\n      <ion-select formControlName="procedure">\n        <ion-option value="1">Revisión</ion-option>\n        <ion-option value="2">Cirugía</ion-option>\n        <ion-option value="3">Post Cirugía</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-list class="switchers-list" *ngIf="isMedicalEvent">\n      <ion-item class="switcher-item">\n        <ion-label>Es asegurado</ion-label>\n        <ion-toggle formControlName="hasInsurance" (ionChange)="onHasInsurance()"></ion-toggle>\n      </ion-item>\n    </ion-list>\n\n    <!--Tipo de procedimiento-->\n    <ion-item *ngIf="isMedicalEvent">\n      <ion-label>Aseguradora</ion-label>\n      <ion-select>\n        <ion-option value="a">Axxa</ion-option>\n        <ion-option value="b">GNP</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <!---->\n    <ion-list id="reminders" class="switchers-list" *ngIf="!isMedicalEvent">\n      <ion-item class="item-icon-left switcher-item" id="reminder" (click)="addReminder()">\n        <!--<i class="icon md-alarm"></i>Agregar recordatorio</ion-item>-->\n        <ion-icon name="alarm"></ion-icon> Agregar contacto</ion-item>\n    </ion-list>\n  </form>\n</ion-content>'/*ion-inline-end:"/home/afiliamedica/dev/jwt-ionic3/src/pages/appointment-event-page/appointment-event-page.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* AlertController */],
+        __WEBPACK_IMPORTED_MODULE_6__ionic_storage__["a" /* Storage */],
+        __WEBPACK_IMPORTED_MODULE_3__providers_appointment_service__["a" /* AppointmentService */],
+        __WEBPACK_IMPORTED_MODULE_4__providers_userProfile_service__["a" /* UserProfileService */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]])
+], AppointmentEventPage);
+
+//# sourceMappingURL=appointment-event-page.js.map
+
+/***/ }),
 /* 433 */,
 /* 434 */,
 /* 435 */,
 /* 436 */,
-/* 437 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_variables__ = __webpack_require__(309);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_configuration__ = __webpack_require__(308);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppointmentService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
-
-
-
-
-
-
-var AppointmentService = (function () {
-    function AppointmentService(http, basePath, configuration) {
-        this.http = http;
-        this.basePath = 'http://afiliamedica.bitnamiapp.com:8080/v1';
-        this.defaultHeaders = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
-        this.configuration = new __WEBPACK_IMPORTED_MODULE_4__app_configuration__["a" /* Configuration */]();
-        if (basePath) {
-            this.basePath = basePath;
-        }
-        if (configuration) {
-            this.configuration = configuration;
-        }
-    }
-    AppointmentService.prototype.createAppointment = function (body, extraHttpRequestParams) {
-        return this.createAppointmentWithHttpInfo(body, extraHttpRequestParams)
-            .map(function (response) {
-            if (response.status === 204) {
-                return undefined;
-            }
-            else {
-                return response.json();
-            }
-        });
-    };
-    AppointmentService.prototype.getAppointmentById = function (id, extraHttpRequestParams) {
-        return this.getAppointmentByIdWithHttpInfo(id, extraHttpRequestParams)
-            .map(function (response) {
-            if (response.status === 204) {
-                return undefined;
-            }
-            else {
-                return response.json();
-            }
-        });
-    };
-    AppointmentService.prototype.createAppointmentWithHttpInfo = function (body, extraHttpRequestParams) {
-        var path = this.basePath + '/appointments';
-        var queryParameters = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["URLSearchParams"]();
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"](this.defaultHeaders.toJSON());
-        var consumes = [
-            'application/json'
-        ];
-        var produces = [
-            'application/json'
-        ];
-        headers.set('Content-Type', 'application/json');
-        var requestOptions = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestOptions"]({
-            method: __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestMethod"].Post,
-            headers: headers,
-            body: body == null ? '' : JSON.stringify(body),
-            search: queryParameters
-        });
-        if (extraHttpRequestParams) {
-            requestOptions = Object.assign(requestOptions, extraHttpRequestParams);
-        }
-        return this.http.request(path, requestOptions);
-    };
-    AppointmentService.prototype.getAppointmentByIdWithHttpInfo = function (id, extraHttpRequestParams) {
-        var path = this.basePath + '/appointments/${id}';
-        var queryParameters = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["URLSearchParams"]();
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"](this.defaultHeaders.toJSON());
-        if (id === null || id === undefined) {
-            throw new Error('Required parameter id was null or undefined when calling getAppointmentById.');
-        }
-        var consumes = [
-            'application/json'
-        ];
-        var produces = [
-            'application/json'
-        ];
-        var requestOptions = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestOptions"]({
-            method: __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestMethod"].Get,
-            headers: headers,
-            search: queryParameters
-        });
-        if (extraHttpRequestParams) {
-            requestOptions = Object.assign(requestOptions, extraHttpRequestParams);
-        }
-        return this.http.request(path, requestOptions);
-    };
-    return AppointmentService;
-}());
-AppointmentService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Optional"])()), __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_3__app_variables__["a" /* BASE_PATH */])), __param(2, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Optional"])()),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"], String, __WEBPACK_IMPORTED_MODULE_4__app_configuration__["a" /* Configuration */]])
-], AppointmentService);
-
-//# sourceMappingURL=appointment-service.js.map
-
-/***/ }),
-/* 438 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_variables__ = __webpack_require__(309);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_configuration__ = __webpack_require__(308);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserProfileService; });
-/**
- * Afiliamedica API
- * No description provided (generated by Swagger Codegen https://github.com/swagger-api/swagger-codegen)
- *
- * OpenAPI spec version: 1.0.0
- *
- *
- * NOTE: This class is auto generated by the swagger code generator program.
- * https://github.com/swagger-api/swagger-codegen.git
- * Do not edit the class manually.
- */
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
-
-
-
-
-
-
-/* tslint:disable:no-unused-variable member-ordering */
-var UserProfileService = (function () {
-    function UserProfileService(http, basePath, configuration) {
-        this.http = http;
-        this.basePath = 'http://afiliamedica.bitnamiapp.com:8080/v1';
-        this.defaultHeaders = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
-        this.configuration = new __WEBPACK_IMPORTED_MODULE_4__app_configuration__["a" /* Configuration */]();
-        if (basePath) {
-            this.basePath = basePath;
-        }
-        if (configuration) {
-            this.configuration = configuration;
-        }
-    }
-    /**
-     * Retrive all users from the DB
-     * Return a list with all users into the DB
-     */
-    UserProfileService.prototype.getAllUsers = function (extraHttpRequestParams) {
-        return this.getAllUsersWithHttpInfo(extraHttpRequestParams)
-            .map(function (response) {
-            if (response.status === 204) {
-                return undefined;
-            }
-            else {
-                return response.json();
-            }
-        });
-    };
-    /**
-     * Retrive a user identified by Field
-     * retrive a user by one or many  their properties
-     * @param email user email
-     * @param name name
-     * @param lastName user lastName
-     * @param secondLastName user secondLastName
-     */
-    //public getUser(email?: string, name?: string, lastName?: string, secondLastName?: string, extraHttpRequestParams?: any): Observable<models.UserVO> {
-    UserProfileService.prototype.getUser = function (email, name, lastName, secondLastName, extraHttpRequestParams) {
-        return this.getUserWithHttpInfo(email, name, lastName, secondLastName, extraHttpRequestParams)
-            .map(function (response) {
-            if (response.status === 204) {
-                return undefined;
-            }
-            else {
-                return response.json();
-            }
-        });
-    };
-    /**
-     * Retrive a user identified by ID
-     * return a user
-     * @param id name that need to be updated
-     */
-    UserProfileService.prototype.getUserById = function (id, extraHttpRequestParams) {
-        return this.getUserByIdWithHttpInfo(id, extraHttpRequestParams)
-            .map(function (response) {
-            if (response.status === 204) {
-                return undefined;
-            }
-            else {
-                return response.json();
-            }
-        });
-    };
-    /**
-     * Loggin operation
-     * This operation receive an email or phone number(both is valid) and password
-     * @param password user password
-     * @param email user email as identifier
-     * @param mobilePhoneNumber user phone number as identifier
-     */
-    UserProfileService.prototype.login = function (password, email, mobilePhoneNumber, extraHttpRequestParams) {
-        return this.loginWithHttpInfo(password, email, mobilePhoneNumber, extraHttpRequestParams)
-            .map(function (response) {
-            if (response.status === 204) {
-                return undefined;
-            }
-            else {
-                return response.json();
-            }
-        });
-    };
-    /**
-     * Reset user password
-     * reset user password with user&#39;s phone number or email as identifier
-     * @param id user id
-     * @param body
-     */
-    UserProfileService.prototype.resetUser = function (id, body, extraHttpRequestParams) {
-        return this.resetUserWithHttpInfo(id, body, extraHttpRequestParams)
-            .map(function (response) {
-            if (response.status === 204) {
-                return undefined;
-            }
-            else {
-                return response.json();
-            }
-        });
-    };
-    /**
-     * Reset user password
-     * reset user password with user&#39;s phone number or email as identifier
-     * @param id user id
-     * @param body
-     */
-    UserProfileService.prototype.updateUser = function (id, body, extraHttpRequestParams) {
-        return this.updateUserWithHttpInfo(id, body, extraHttpRequestParams)
-            .map(function (response) {
-            if (response.status === 204) {
-                return undefined;
-            }
-            else {
-                return response.json();
-            }
-        });
-    };
-    /**
-     * Retrive all users from the DB
-     * Return a list with all users into the DB
-     */
-    UserProfileService.prototype.getAllUsersWithHttpInfo = function (extraHttpRequestParams) {
-        var path = this.basePath + "/usersProfile";
-        var queryParameters = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["URLSearchParams"]();
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"](this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
-        // to determine the Content-Type header
-        var consumes = [];
-        // to determine the Accept header
-        var produces = [
-            'application/json'
-        ];
-        var requestOptions = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestOptions"]({
-            method: __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestMethod"].Get,
-            headers: headers,
-            search: queryParameters
-        });
-        // https://github.com/swagger-api/swagger-codegen/issues/4037
-        if (extraHttpRequestParams) {
-            requestOptions = Object.assign(requestOptions, extraHttpRequestParams);
-        }
-        return this.http.request(path, requestOptions);
-    };
-    /**
-     * Retrive a user identified by Field
-     * retrive a user by one or many  their properties
-     * @param email user email
-     * @param name name
-     * @param lastName user lastName
-     * @param secondLastName user secondLastName
-     */
-    UserProfileService.prototype.getUserWithHttpInfo = function (email, name, lastName, secondLastName, extraHttpRequestParams) {
-        var path = this.basePath + "/usersProfile/query";
-        var queryParameters = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["URLSearchParams"]();
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"](this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
-        if (email !== undefined) {
-            /*if(email instanceof Date) {
-                queryParameters.set('email', <any>email.d.toISOString());
-            } else {*/
-            queryParameters.set('email', email);
-            //}
-        }
-        if (name !== undefined) {
-            /*if(name instanceof Date) {
-                queryParameters.set('name', <any>name.d.toISOString());
-            } else {*/
-            queryParameters.set('name', name);
-            //}
-        }
-        if (lastName !== undefined) {
-            /*if(lastName instanceof Date) {
-                queryParameters.set('lastName', <any>lastName.d.toISOString());
-            } else {*/
-            queryParameters.set('lastName', lastName);
-            //}
-        }
-        if (secondLastName !== undefined) {
-            /*if(secondLastName instanceof Date) {
-                queryParameters.set('secondLastName', <any>secondLastName.d.toISOString());
-            } else {*/
-            queryParameters.set('secondLastName', secondLastName);
-            //}
-        }
-        // to determine the Content-Type header
-        var consumes = [];
-        // to determine the Accept header
-        var produces = [
-            'application/json'
-        ];
-        var requestOptions = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestOptions"]({
-            method: __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestMethod"].Get,
-            headers: headers,
-            search: queryParameters
-        });
-        // https://github.com/swagger-api/swagger-codegen/issues/4037
-        if (extraHttpRequestParams) {
-            requestOptions = Object.assign(requestOptions, extraHttpRequestParams);
-        }
-        return this.http.request(path, requestOptions);
-    };
-    /**
-     * Retrive a user identified by ID
-     * return a user
-     * @param id name that need to be updated
-     */
-    UserProfileService.prototype.getUserByIdWithHttpInfo = function (id, extraHttpRequestParams) {
-        var path = this.basePath + ("/usersProfile/" + id);
-        var queryParameters = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["URLSearchParams"]();
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"](this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
-        // verify required parameter 'id' is not null or undefined
-        if (id === null || id === undefined) {
-            throw new Error('Required parameter id was null or undefined when calling getUserById.');
-        }
-        // to determine the Content-Type header
-        var consumes = [];
-        // to determine the Accept header
-        var produces = [
-            'application/json'
-        ];
-        var requestOptions = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestOptions"]({
-            method: __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestMethod"].Get,
-            headers: headers,
-            search: queryParameters
-        });
-        // https://github.com/swagger-api/swagger-codegen/issues/4037
-        if (extraHttpRequestParams) {
-            requestOptions = Object.assign(requestOptions, extraHttpRequestParams);
-        }
-        return this.http.request(path, requestOptions);
-    };
-    /**
-     * Loggin operation
-     * This operation receive an email or phone number(both is valid) and password
-     * @param password user password
-     * @param email user email as identifier
-     * @param mobilePhoneNumber user phone number as identifier
-     */
-    UserProfileService.prototype.loginWithHttpInfo = function (password, email, mobilePhoneNumber, extraHttpRequestParams) {
-        var path = this.basePath + "/usersProfile/login";
-        var queryParameters = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["URLSearchParams"]();
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"](this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
-        // verify required parameter 'password' is not null or undefined
-        if (password === null || password === undefined) {
-            throw new Error('Required parameter password was null or undefined when calling login.');
-        }
-        if (email !== undefined) {
-            /*if(email instanceof Date) {
-                queryParameters.set('email', <any>email.d.toISOString());
-            } else {*/
-            queryParameters.set('email', email);
-            //}
-        }
-        if (mobilePhoneNumber !== undefined) {
-            /*if(mobilePhoneNumber instanceof Date) {
-                queryParameters.set('mobilePhoneNumber', <any>mobilePhoneNumber.d.toISOString());
-            } else {*/
-            queryParameters.set('mobilePhoneNumber', mobilePhoneNumber);
-            //}
-        }
-        if (password !== undefined) {
-            /*if(password instanceof Date) {
-                queryParameters.set('password', <any>password.d.toISOString());
-            } else {*/
-            queryParameters.set('password', password);
-            //}
-        }
-        // to determine the Content-Type header
-        var consumes = [];
-        // to determine the Accept header
-        var produces = [
-            'application/json'
-        ];
-        var requestOptions = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestOptions"]({
-            method: __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestMethod"].Get,
-            headers: headers,
-            search: queryParameters
-        });
-        // https://github.com/swagger-api/swagger-codegen/issues/4037
-        if (extraHttpRequestParams) {
-            requestOptions = Object.assign(requestOptions, extraHttpRequestParams);
-        }
-        return this.http.request(path, requestOptions);
-    };
-    /**
-     * Reset user password
-     * reset user password with user&#39;s phone number or email as identifier
-     * @param id user id
-     * @param body
-     */
-    UserProfileService.prototype.resetUserWithHttpInfo = function (id, body, extraHttpRequestParams) {
-        var path = this.basePath + ("/usersProfile/" + id);
-        var queryParameters = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["URLSearchParams"]();
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"](this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
-        // verify required parameter 'id' is not null or undefined
-        if (id === null || id === undefined) {
-            throw new Error('Required parameter id was null or undefined when calling resetUser.');
-        }
-        // to determine the Content-Type header
-        var consumes = [
-            'application/json'
-        ];
-        // to determine the Accept header
-        var produces = [
-            'application/json'
-        ];
-        headers.set('Content-Type', 'application/json');
-        var requestOptions = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestOptions"]({
-            method: __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestMethod"].Patch,
-            headers: headers,
-            body: body == null ? '' : JSON.stringify(body),
-            search: queryParameters
-        });
-        // https://github.com/swagger-api/swagger-codegen/issues/4037
-        if (extraHttpRequestParams) {
-            requestOptions = Object.assign(requestOptions, extraHttpRequestParams);
-        }
-        return this.http.request(path, requestOptions);
-    };
-    /**
-     * Reset user password
-     * reset user password with user&#39;s phone number or email as identifier
-     * @param id user id
-     * @param body
-     */
-    UserProfileService.prototype.updateUserWithHttpInfo = function (id, body, extraHttpRequestParams) {
-        var path = this.basePath + ("/usersProfile/" + id);
-        var queryParameters = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["URLSearchParams"]();
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"](this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
-        // verify required parameter 'id' is not null or undefined
-        if (id === null || id === undefined) {
-            throw new Error('Required parameter id was null or undefined when calling updateUser.');
-        }
-        // to determine the Content-Type header
-        var consumes = [
-            'application/json'
-        ];
-        // to determine the Accept header
-        var produces = [
-            'application/json'
-        ];
-        headers.set('Content-Type', 'application/json');
-        var requestOptions = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestOptions"]({
-            method: __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestMethod"].Put,
-            headers: headers,
-            body: body == null ? '' : JSON.stringify(body),
-            search: queryParameters
-        });
-        // https://github.com/swagger-api/swagger-codegen/issues/4037
-        if (extraHttpRequestParams) {
-            requestOptions = Object.assign(requestOptions, extraHttpRequestParams);
-        }
-        return this.http.request(path, requestOptions);
-    };
-    return UserProfileService;
-}());
-UserProfileService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Optional"])()), __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_3__app_variables__["a" /* BASE_PATH */])), __param(2, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Optional"])()),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"], String, __WEBPACK_IMPORTED_MODULE_4__app_configuration__["a" /* Configuration */]])
-], UserProfileService);
-
-//# sourceMappingURL=userProfile-service.js.map
-
-/***/ }),
-/* 439 */
+/* 437 */,
+/* 438 */,
+/* 439 */,
+/* 440 */,
+/* 441 */,
+/* 442 */,
+/* 443 */,
+/* 444 */,
+/* 445 */,
+/* 446 */,
+/* 447 */,
+/* 448 */,
+/* 449 */,
+/* 450 */,
+/* 451 */,
+/* 452 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -16573,240 +15907,240 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 440 */
+/* 453 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 314,
-	"./af.js": 314,
-	"./ar": 321,
-	"./ar-dz": 315,
-	"./ar-dz.js": 315,
-	"./ar-kw": 316,
-	"./ar-kw.js": 316,
-	"./ar-ly": 317,
-	"./ar-ly.js": 317,
-	"./ar-ma": 318,
-	"./ar-ma.js": 318,
-	"./ar-sa": 319,
-	"./ar-sa.js": 319,
-	"./ar-tn": 320,
-	"./ar-tn.js": 320,
-	"./ar.js": 321,
-	"./az": 322,
-	"./az.js": 322,
-	"./be": 323,
-	"./be.js": 323,
-	"./bg": 324,
-	"./bg.js": 324,
-	"./bn": 325,
-	"./bn.js": 325,
-	"./bo": 326,
-	"./bo.js": 326,
-	"./br": 327,
-	"./br.js": 327,
-	"./bs": 328,
-	"./bs.js": 328,
-	"./ca": 329,
-	"./ca.js": 329,
-	"./cs": 330,
-	"./cs.js": 330,
-	"./cv": 331,
-	"./cv.js": 331,
-	"./cy": 332,
-	"./cy.js": 332,
-	"./da": 333,
-	"./da.js": 333,
-	"./de": 336,
-	"./de-at": 334,
-	"./de-at.js": 334,
-	"./de-ch": 335,
-	"./de-ch.js": 335,
-	"./de.js": 336,
-	"./dv": 337,
-	"./dv.js": 337,
-	"./el": 338,
-	"./el.js": 338,
-	"./en-au": 339,
-	"./en-au.js": 339,
-	"./en-ca": 340,
-	"./en-ca.js": 340,
-	"./en-gb": 341,
-	"./en-gb.js": 341,
-	"./en-ie": 342,
-	"./en-ie.js": 342,
-	"./en-nz": 343,
-	"./en-nz.js": 343,
-	"./eo": 344,
-	"./eo.js": 344,
-	"./es": 346,
-	"./es-do": 345,
-	"./es-do.js": 345,
-	"./es.js": 346,
-	"./et": 347,
-	"./et.js": 347,
-	"./eu": 348,
-	"./eu.js": 348,
-	"./fa": 349,
-	"./fa.js": 349,
-	"./fi": 350,
-	"./fi.js": 350,
-	"./fo": 351,
-	"./fo.js": 351,
-	"./fr": 354,
-	"./fr-ca": 352,
-	"./fr-ca.js": 352,
-	"./fr-ch": 353,
-	"./fr-ch.js": 353,
-	"./fr.js": 354,
-	"./fy": 355,
-	"./fy.js": 355,
-	"./gd": 356,
-	"./gd.js": 356,
-	"./gl": 357,
-	"./gl.js": 357,
-	"./gom-latn": 358,
-	"./gom-latn.js": 358,
-	"./he": 359,
-	"./he.js": 359,
-	"./hi": 360,
-	"./hi.js": 360,
-	"./hr": 361,
-	"./hr.js": 361,
-	"./hu": 362,
-	"./hu.js": 362,
-	"./hy-am": 363,
-	"./hy-am.js": 363,
-	"./id": 364,
-	"./id.js": 364,
-	"./is": 365,
-	"./is.js": 365,
-	"./it": 366,
-	"./it.js": 366,
-	"./ja": 367,
-	"./ja.js": 367,
-	"./jv": 368,
-	"./jv.js": 368,
-	"./ka": 369,
-	"./ka.js": 369,
-	"./kk": 370,
-	"./kk.js": 370,
-	"./km": 371,
-	"./km.js": 371,
-	"./kn": 372,
-	"./kn.js": 372,
-	"./ko": 373,
-	"./ko.js": 373,
-	"./ky": 374,
-	"./ky.js": 374,
-	"./lb": 375,
-	"./lb.js": 375,
-	"./lo": 376,
-	"./lo.js": 376,
-	"./lt": 377,
-	"./lt.js": 377,
-	"./lv": 378,
-	"./lv.js": 378,
-	"./me": 379,
-	"./me.js": 379,
-	"./mi": 380,
-	"./mi.js": 380,
-	"./mk": 381,
-	"./mk.js": 381,
-	"./ml": 382,
-	"./ml.js": 382,
-	"./mr": 383,
-	"./mr.js": 383,
-	"./ms": 385,
-	"./ms-my": 384,
-	"./ms-my.js": 384,
-	"./ms.js": 385,
-	"./my": 386,
-	"./my.js": 386,
-	"./nb": 387,
-	"./nb.js": 387,
-	"./ne": 388,
-	"./ne.js": 388,
-	"./nl": 390,
-	"./nl-be": 389,
-	"./nl-be.js": 389,
-	"./nl.js": 390,
-	"./nn": 391,
-	"./nn.js": 391,
-	"./pa-in": 392,
-	"./pa-in.js": 392,
-	"./pl": 393,
-	"./pl.js": 393,
-	"./pt": 395,
-	"./pt-br": 394,
-	"./pt-br.js": 394,
-	"./pt.js": 395,
-	"./ro": 396,
-	"./ro.js": 396,
-	"./ru": 397,
-	"./ru.js": 397,
-	"./sd": 398,
-	"./sd.js": 398,
-	"./se": 399,
-	"./se.js": 399,
-	"./si": 400,
-	"./si.js": 400,
-	"./sk": 401,
-	"./sk.js": 401,
-	"./sl": 402,
-	"./sl.js": 402,
-	"./sq": 403,
-	"./sq.js": 403,
-	"./sr": 405,
-	"./sr-cyrl": 404,
-	"./sr-cyrl.js": 404,
-	"./sr.js": 405,
-	"./ss": 406,
-	"./ss.js": 406,
-	"./sv": 407,
-	"./sv.js": 407,
-	"./sw": 408,
-	"./sw.js": 408,
-	"./ta": 409,
-	"./ta.js": 409,
-	"./te": 410,
-	"./te.js": 410,
-	"./tet": 411,
-	"./tet.js": 411,
-	"./th": 412,
-	"./th.js": 412,
-	"./tl-ph": 413,
-	"./tl-ph.js": 413,
-	"./tlh": 414,
-	"./tlh.js": 414,
-	"./tr": 415,
-	"./tr.js": 415,
-	"./tzl": 416,
-	"./tzl.js": 416,
-	"./tzm": 418,
-	"./tzm-latn": 417,
-	"./tzm-latn.js": 417,
-	"./tzm.js": 418,
-	"./uk": 419,
-	"./uk.js": 419,
-	"./ur": 420,
-	"./ur.js": 420,
-	"./uz": 422,
-	"./uz-latn": 421,
-	"./uz-latn.js": 421,
-	"./uz.js": 422,
-	"./vi": 423,
-	"./vi.js": 423,
-	"./x-pseudo": 424,
-	"./x-pseudo.js": 424,
-	"./yo": 425,
-	"./yo.js": 425,
-	"./zh-cn": 426,
-	"./zh-cn.js": 426,
-	"./zh-hk": 427,
-	"./zh-hk.js": 427,
-	"./zh-tw": 428,
-	"./zh-tw.js": 428
+	"./af": 317,
+	"./af.js": 317,
+	"./ar": 324,
+	"./ar-dz": 318,
+	"./ar-dz.js": 318,
+	"./ar-kw": 319,
+	"./ar-kw.js": 319,
+	"./ar-ly": 320,
+	"./ar-ly.js": 320,
+	"./ar-ma": 321,
+	"./ar-ma.js": 321,
+	"./ar-sa": 322,
+	"./ar-sa.js": 322,
+	"./ar-tn": 323,
+	"./ar-tn.js": 323,
+	"./ar.js": 324,
+	"./az": 325,
+	"./az.js": 325,
+	"./be": 326,
+	"./be.js": 326,
+	"./bg": 327,
+	"./bg.js": 327,
+	"./bn": 328,
+	"./bn.js": 328,
+	"./bo": 329,
+	"./bo.js": 329,
+	"./br": 330,
+	"./br.js": 330,
+	"./bs": 331,
+	"./bs.js": 331,
+	"./ca": 332,
+	"./ca.js": 332,
+	"./cs": 333,
+	"./cs.js": 333,
+	"./cv": 334,
+	"./cv.js": 334,
+	"./cy": 335,
+	"./cy.js": 335,
+	"./da": 336,
+	"./da.js": 336,
+	"./de": 339,
+	"./de-at": 337,
+	"./de-at.js": 337,
+	"./de-ch": 338,
+	"./de-ch.js": 338,
+	"./de.js": 339,
+	"./dv": 340,
+	"./dv.js": 340,
+	"./el": 341,
+	"./el.js": 341,
+	"./en-au": 342,
+	"./en-au.js": 342,
+	"./en-ca": 343,
+	"./en-ca.js": 343,
+	"./en-gb": 344,
+	"./en-gb.js": 344,
+	"./en-ie": 345,
+	"./en-ie.js": 345,
+	"./en-nz": 346,
+	"./en-nz.js": 346,
+	"./eo": 347,
+	"./eo.js": 347,
+	"./es": 349,
+	"./es-do": 348,
+	"./es-do.js": 348,
+	"./es.js": 349,
+	"./et": 350,
+	"./et.js": 350,
+	"./eu": 351,
+	"./eu.js": 351,
+	"./fa": 352,
+	"./fa.js": 352,
+	"./fi": 353,
+	"./fi.js": 353,
+	"./fo": 354,
+	"./fo.js": 354,
+	"./fr": 357,
+	"./fr-ca": 355,
+	"./fr-ca.js": 355,
+	"./fr-ch": 356,
+	"./fr-ch.js": 356,
+	"./fr.js": 357,
+	"./fy": 358,
+	"./fy.js": 358,
+	"./gd": 359,
+	"./gd.js": 359,
+	"./gl": 360,
+	"./gl.js": 360,
+	"./gom-latn": 361,
+	"./gom-latn.js": 361,
+	"./he": 362,
+	"./he.js": 362,
+	"./hi": 363,
+	"./hi.js": 363,
+	"./hr": 364,
+	"./hr.js": 364,
+	"./hu": 365,
+	"./hu.js": 365,
+	"./hy-am": 366,
+	"./hy-am.js": 366,
+	"./id": 367,
+	"./id.js": 367,
+	"./is": 368,
+	"./is.js": 368,
+	"./it": 369,
+	"./it.js": 369,
+	"./ja": 370,
+	"./ja.js": 370,
+	"./jv": 371,
+	"./jv.js": 371,
+	"./ka": 372,
+	"./ka.js": 372,
+	"./kk": 373,
+	"./kk.js": 373,
+	"./km": 374,
+	"./km.js": 374,
+	"./kn": 375,
+	"./kn.js": 375,
+	"./ko": 376,
+	"./ko.js": 376,
+	"./ky": 377,
+	"./ky.js": 377,
+	"./lb": 378,
+	"./lb.js": 378,
+	"./lo": 379,
+	"./lo.js": 379,
+	"./lt": 380,
+	"./lt.js": 380,
+	"./lv": 381,
+	"./lv.js": 381,
+	"./me": 382,
+	"./me.js": 382,
+	"./mi": 383,
+	"./mi.js": 383,
+	"./mk": 384,
+	"./mk.js": 384,
+	"./ml": 385,
+	"./ml.js": 385,
+	"./mr": 386,
+	"./mr.js": 386,
+	"./ms": 388,
+	"./ms-my": 387,
+	"./ms-my.js": 387,
+	"./ms.js": 388,
+	"./my": 389,
+	"./my.js": 389,
+	"./nb": 390,
+	"./nb.js": 390,
+	"./ne": 391,
+	"./ne.js": 391,
+	"./nl": 393,
+	"./nl-be": 392,
+	"./nl-be.js": 392,
+	"./nl.js": 393,
+	"./nn": 394,
+	"./nn.js": 394,
+	"./pa-in": 395,
+	"./pa-in.js": 395,
+	"./pl": 396,
+	"./pl.js": 396,
+	"./pt": 398,
+	"./pt-br": 397,
+	"./pt-br.js": 397,
+	"./pt.js": 398,
+	"./ro": 399,
+	"./ro.js": 399,
+	"./ru": 400,
+	"./ru.js": 400,
+	"./sd": 401,
+	"./sd.js": 401,
+	"./se": 402,
+	"./se.js": 402,
+	"./si": 403,
+	"./si.js": 403,
+	"./sk": 404,
+	"./sk.js": 404,
+	"./sl": 405,
+	"./sl.js": 405,
+	"./sq": 406,
+	"./sq.js": 406,
+	"./sr": 408,
+	"./sr-cyrl": 407,
+	"./sr-cyrl.js": 407,
+	"./sr.js": 408,
+	"./ss": 409,
+	"./ss.js": 409,
+	"./sv": 410,
+	"./sv.js": 410,
+	"./sw": 411,
+	"./sw.js": 411,
+	"./ta": 412,
+	"./ta.js": 412,
+	"./te": 413,
+	"./te.js": 413,
+	"./tet": 414,
+	"./tet.js": 414,
+	"./th": 415,
+	"./th.js": 415,
+	"./tl-ph": 416,
+	"./tl-ph.js": 416,
+	"./tlh": 417,
+	"./tlh.js": 417,
+	"./tr": 418,
+	"./tr.js": 418,
+	"./tzl": 419,
+	"./tzl.js": 419,
+	"./tzm": 421,
+	"./tzm-latn": 420,
+	"./tzm-latn.js": 420,
+	"./tzm.js": 421,
+	"./uk": 422,
+	"./uk.js": 422,
+	"./ur": 423,
+	"./ur.js": 423,
+	"./uz": 425,
+	"./uz-latn": 424,
+	"./uz-latn.js": 424,
+	"./uz.js": 425,
+	"./vi": 426,
+	"./vi.js": 426,
+	"./x-pseudo": 427,
+	"./x-pseudo.js": 427,
+	"./yo": 428,
+	"./yo.js": 428,
+	"./zh-cn": 429,
+	"./zh-cn.js": 429,
+	"./zh-hk": 430,
+	"./zh-hk.js": 430,
+	"./zh-tw": 431,
+	"./zh-tw.js": 431
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -16822,7 +16156,7 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 440;
+webpackContext.id = 453;
 
 
 /***/ })

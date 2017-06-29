@@ -1,15 +1,15 @@
 webpackJsonp([5],{
 
-/***/ 299:
+/***/ 311:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__book_edit_page__ = __webpack_require__(430);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(111);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookEditPageModule", function() { return BookEditPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile__ = __webpack_require__(477);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(114);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfilePageModule", function() { return ProfilePageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,31 +20,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var BookEditPageModule = (function () {
-    function BookEditPageModule() {
+var ProfilePageModule = (function () {
+    function ProfilePageModule() {
     }
-    return BookEditPageModule;
+    return ProfilePageModule;
 }());
-BookEditPageModule = __decorate([
+ProfilePageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__book_edit_page__["a" /* BookEditPage */],
+            __WEBPACK_IMPORTED_MODULE_2__profile__["a" /* ProfilePage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__book_edit_page__["a" /* BookEditPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__profile__["a" /* ProfilePage */]),
             __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["a" /* TranslateModule */].forChild()
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__book_edit_page__["a" /* BookEditPage */]
-        ]
+            __WEBPACK_IMPORTED_MODULE_2__profile__["a" /* ProfilePage */]
+        ],
+        entryComponents: [],
+        schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["NO_ERRORS_SCHEMA"], __WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
     })
-], BookEditPageModule);
+], ProfilePageModule);
 
-//# sourceMappingURL=book-edit-page.module.js.map
+//# sourceMappingURL=profile.module.js.map
 
 /***/ }),
 
-/***/ 307:
+/***/ 315:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -72,17 +74,15 @@ var ProtectedPage = (function () {
 
 /***/ }),
 
-/***/ 430:
+/***/ 477:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__protected_page_protected_page__ = __webpack_require__(307);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_books_service__ = __webpack_require__(215);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BookEditPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__protected_page_protected_page__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(54);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -106,49 +106,43 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-var BookEditPage = (function (_super) {
-    __extends(BookEditPage, _super);
-    function BookEditPage(navCtrl, navParams, menuCtrl, storage, formBuilder, booksService) {
+//import { UserProfilePage } from '../user-profile-page/user-profile';
+//import { List1Page } from '../list-1/list-1';
+//import { List2Page } from '../list-2/list-2';
+//import { GridPage } from '../grid/grid';
+//import { NotificationsPage } from '../notifications/notifications';
+var ProfilePage = (function (_super) {
+    __extends(ProfilePage, _super);
+    function ProfilePage(navCtrl, navParams, storage) {
         var _this = _super.call(this, navCtrl, navParams, storage) || this;
         _this.navCtrl = navCtrl;
         _this.navParams = navParams;
-        _this.menuCtrl = menuCtrl;
         _this.storage = storage;
-        _this.formBuilder = formBuilder;
-        _this.booksService = booksService;
-        _this.book = navParams.get('book');
-        _this.bookData = _this.formBuilder.group({
-            title: [_this.book.title, __WEBPACK_IMPORTED_MODULE_4__angular_forms__["e" /* Validators */].required],
-            author_name: [_this.book.author_name, __WEBPACK_IMPORTED_MODULE_4__angular_forms__["e" /* Validators */].required],
-            pages_count: [_this.book.pages_count, __WEBPACK_IMPORTED_MODULE_4__angular_forms__["e" /* Validators */].required],
-        });
+        _this.items = [
+            { title: 'Mis datos personales', component: 'UserProfilePage', icon: 'md-person' },
+            { title: 'Métodos de pago', note: '', component: 'List1Page', icon: 'md-card' },
+            { title: 'Restablecer contraseña', note: '', component: 'List2Page', icon: 'md-lock' },
+            { title: 'Firma electrónica', component: 'GridPage', icon: 'md-home' }
+        ];
         return _this;
     }
-    BookEditPage.prototype.process = function () {
-        var _this = this;
-        var updatedBook = Object.assign(this.book, this.bookData.value);
-        this.booksService.update(updatedBook)
-            .then(function () { return _this.navCtrl.pop(); })
-            .catch(function (e) { return console.log("add book error", e); });
+    ProfilePage.prototype.itemTapped = function (event, item) {
+        this.navCtrl.push(item.component);
     };
-    return BookEditPage;
+    ProfilePage.prototype.ionViewDidLoad = function () {
+        //console.log('ionViewDidLoad MyAccountPage');
+    };
+    return ProfilePage;
 }(__WEBPACK_IMPORTED_MODULE_2__protected_page_protected_page__["a" /* ProtectedPage */]));
-BookEditPage = __decorate([
+ProfilePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-book-edit-page',template:/*ion-inline-start:"/home/afiliamedica/dev/ionic3-seed-jwt/src/pages/book-edit-page/book-edit-page.html"*/'<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>    \n    <ion-title>{{ \'page.books.edit\' | translate }}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-grid>\n    <ion-row justify-content-around>\n      <ion-col col-sm-6 col-md-6 col-lg-4 col-xl-3  align-self-center>\n        <form [formGroup]="bookData" (ngSubmit)="process()">\n          <ion-item>\n            <ion-label floating>{{ \'label.title\' | translate }}:</ion-label>\n            <ion-input type="text" formControlName="title"></ion-input>\n          </ion-item>\n          \n          <ion-item>\n            <ion-label floating>{{ \'label.author_name\' | translate }}:</ion-label>\n            <ion-input type="text" formControlName="author_name"></ion-input>\n          </ion-item>\n          \n          <ion-item>\n            <ion-label floating>{{ \'label.pages\' | translate }}:</ion-label>\n            <ion-input type="number" formControlName="pages_count"></ion-input>\n          </ion-item>\n          \n\n          <button margin-top ion-button type="submit" [disabled]="!bookData.valid">{{ \'button.submit\' | translate }}</button>\n\n        </form>\n        \n      </ion-col>\n\n    </ion-row>\n    \n    \n    \n  </ion-grid>  \n  \n</ion-content>\n'/*ion-inline-end:"/home/afiliamedica/dev/ionic3-seed-jwt/src/pages/book-edit-page/book-edit-page.html"*/,
+        selector: 'page-profile',template:/*ion-inline-start:"/home/afiliamedica/dev/jwt-ionic3/src/pages/profile/profile.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>{{ \'page.profile.title\' | translate }}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="profile-content">\n  <ion-list class="menu-list">\n    <button class="list-item" ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">\n      <ion-row no-padding>\n        <ion-col no-padding class="item-content">\n          <ion-icon name="{{item.icon}}" item-left color="primary"></ion-icon>\n          <h3 class="item-title">{{item.title}}</h3>\n          <span class="item-note" *ngIf="item.note">{{item.note}}</span>\n        </ion-col>\n        <ion-col no-padding width-10 class="item-icon">\n          <ion-icon name="arrow-forward"></ion-icon>\n        </ion-col>\n      </ion-row>\n    </button>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/home/afiliamedica/dev/jwt-ionic3/src/pages/profile/profile.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */],
-        __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["a" /* Storage */],
-        __WEBPACK_IMPORTED_MODULE_4__angular_forms__["f" /* FormBuilder */],
-        __WEBPACK_IMPORTED_MODULE_5__providers_books_service__["a" /* BooksService */]])
-], BookEditPage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["a" /* Storage */]])
+], ProfilePage);
 
-//# sourceMappingURL=book-edit-page.js.map
+//# sourceMappingURL=profile.js.map
 
 /***/ })
 

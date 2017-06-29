@@ -1,19 +1,34 @@
 {
   "label": {
     "email": "Email",
-    "password": "Clave",
-    "username": "Usuario",
-    "password": "Clave",
-    "confirmPassword" : "Confirmar Clave",
+    "username": "Número de celular",
+    "password": "Contraseña",
+    "confirmPassword" : "Confirmar Contraseña",
     "title" : "Titulo",
     "author_name": "Autor",
-    "pages": "Pages"
+    "pages": "Pages",
+    "name": "Nombre(s)",
+    "lastName":"Apellido Paterno",
+    "secondLastName" : "Apellido Materno",
+    "workPhone" : "Teléfono de Oficina",
+    "homePhone" : "Teléfono de Casa",
+    "rfc" : "RFC",
+    "curp" : "CURP",
+    "sex" : "Genero",
+    "isAfilia" : "Es Paciente Afilia",
+    "documents" : "Documentos",        
+    "addresses" : "Direcciones",        
+    "promotions" : "Promociones",        
+    "paymentMethods" : "Metodos de Pago",                
+    "contacts" : "Historial Medico",                    
+    "vitalSignalDetails" : "Signos Vitales",
+    "terms" : "Terminos y Condiciones"
   },
   "button" : {
     "login" : "Entrar",
     "register" : "Afiliate",
     "new_registration" : "Afiliate!",
-    "forgotten_password" : "Recuperar Clave",
+    "forgotten_password" : "Recuperar Contraseña",
     "submit" : "Enviar",
     "add_book": "Agregar Libro",
     "edit": "Editar",
@@ -23,19 +38,62 @@
     "login" : "Entrar",
     "logout" : "Salir",
     "register" : "Afiliate",
-    "forgotten_password" : "Recuperar Clave",
-    "profile" : "Perfil",
-    "books" : {
-      "list" : "My books",
-      "add": "Add book",
-      "edit" : "Edit book",
-      "preview": "Preview"
+    "forgotten_password" : "Recuperar Contraseña",
+
+    "appointment" : {
+      "title" : "Consultorio" 
     },
-    "Consultorio" : {
-      "calendar" : "Calendario",
-      "add": "Add book",
-      "edit" : "Edit book",
-      "preview": "Preview"
-    }
+    "pendings" : {
+      "title" : "Pendientes"
+    },
+    "medicalVisit" : {
+      "title" : "Paso de Visita"
+    },
+    "notes" : {
+      "title" : "Notas"
+    },
+    "myTeam" : {
+      "title" : "Mi equipo"
+    },
+    "patients" : {
+      "title" : "Pacientes"
+    },
+    "prescriptions" : {
+      "title" : "Recetas"
+    },
+    "insurances" : {
+      "title" : "Seguros"
+    },
+    "finances" : {
+      "title" : "Finanzas"
+    },
+    "profile" : {
+      "title" : "Mi perfil",
+      "user-profile": {
+          "title":"Perfil",
+          "personalData":"Datos personales",
+          "name": "Nombre",
+          "lastName":"Appelido Paterno",
+          "secondLastName": "Apellido Materno",
+          "rfc": "RFC",
+          "curp": "CURP",
+          "nationality": "Pais de Nacimiento",
+          "contactInformation": "Datos de contacto",
+          "mobilePhoneNumber": "Teléfono celular",
+          "workPhone": "Teléfono fijo",
+          "facebook": "Usuario Facebook",
+          "email": "Correo electrónico",          
+          "education": "Formacion Académica",
+          "medicalLicense": "Cédula Profesional",
+          "specialityLicence": "Cédula Especialidad",
+          "institution": "Institución",
+          "graduationDate": "Año en que termino",
+          "hasSpeciality": "Cuenta con certificado de especialidad",
+          "profActivities": "Actividades Profesionales",
+          "distinctions": "Distinciones",
+          "asosiations": "Asociaciones",
+          "speciality": "Especialidad"
+      }
+    }    
   }
 }

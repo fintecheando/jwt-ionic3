@@ -35,8 +35,22 @@ export class UserProfileService {
             .catch(this.handleError);
     }
 
+    public getSpecialities(): Promise<models.Specialities[]> {
+        return this.http.get('./assets/catalogs/specialities.json')
+            .toPromise()
+            .then(response => response.json().specialities as models.Specialities[])
+            .catch(this.handleError);
+    }
+
+    public getSubSpecialities(): Promise<models.SubSpecialities[]> {
+        return this.http.get('./assets/catalogs/subSpecialities.json')
+            .toPromise()
+            .then(response => response.json().subSpecialities as models.SubSpecialities[])
+            .catch(this.handleError);
+    }
+
     private handleError(error: any): Promise<any> {
-        console.error('An error occurred', error); // for demo purposes only
+        //console.error('An error occurred', error);
         return Promise.reject(error.message || error);
     }
 

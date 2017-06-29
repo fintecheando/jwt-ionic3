@@ -1,7 +1,6 @@
 import { NgModule,NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { AppointmentPage } from './appointment-page';
-//import { AppointmentEventPage } from '../appointment-event-page/appointment-event-page';
 import { NgCalendarModule  } from 'ionic2-calendar';
 import {TranslateModule} from '@ngx-translate/core';
 

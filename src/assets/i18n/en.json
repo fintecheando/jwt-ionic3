@@ -68,7 +68,32 @@
       "title" : "Finanzas"
     },
     "profile" : {
-      "title" : "Mi perfil"
+      "title" : "Mi perfil",
+      "user-profile": {
+          "title":"Perfil",
+          "personalData":"Datos personales",
+          "name": "Nombre",
+          "lastName":"Appelido Paterno",
+          "secondLastName": "Apellido Materno",
+          "rfc": "RFC",
+          "curp": "CURP",
+          "nationality": "Pais de Nacimiento",
+          "contactInformation": "Datos de contacto",
+          "mobilePhoneNumber": "Teléfono celular",
+          "workPhone": "Teléfono fijo",
+          "facebook": "Usuario Facebook",
+          "email": "Correo electrónico",          
+          "education": "Formacion Académica",
+          "medicalLicense": "Cédula Profesional",
+          "specialityLicence": "Cédula Especialidad",
+          "institution": "Institución",
+          "graduationDate": "Año en que termino",
+          "hasSpeciality": "Cuenta con certificado de especialidad",
+          "profActivities": "Actividades Profesionales",
+          "distinctions": "Distinciones",
+          "asosiations": "Asociaciones",
+          "speciality": "Especialidad"
+      }
     }    
   }
 }

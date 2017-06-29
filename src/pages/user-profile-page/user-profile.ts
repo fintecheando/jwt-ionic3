@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { NavController, ModalController, LoadingController, ToastController, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, ModalController, LoadingController, ToastController, AlertController } from 'ionic-angular';
 import { FormGroup, FormControl } from '@angular/forms';
-//import { NativeStorage } from '@ionic-native/native-storage';
 import { UserProfileService } from '../../providers/userProfile-service';
 import { DoctorService } from '../../providers/doctor-service';
-import { MyAccountPage } from '../my-account/my-account';
+//import { MyAccountPage } from '../my-account/my-account';
 import * as models from '../../models/models';
 import 'rxjs/Rx';
 
+@IonicPage()
 @Component({
   selector: 'user-profile-page',
   templateUrl: 'user-profile.html'
@@ -21,7 +21,6 @@ export class UserProfilePage {
     public nav: NavController,
     public modal: ModalController,
     public loadingCtrl: LoadingController,
-    //private nativeStorage: NativeStorage,
     private userProfile: UserProfileService,
     private doctor: DoctorService,
     private toastCtrl: ToastController,
@@ -36,10 +35,15 @@ export class UserProfilePage {
       rfc: new FormControl(),
       curp: new FormControl(),
       nationality: new FormControl(),
+      mobilePhoneNumber: new FormControl(),
+      workPhone: new FormControl(),
+      email: new FormControl(),
+      facebook: new FormControl(),
       medicalLicense: new FormControl(),
       specialityLicence: new FormControl(),
-      mobilePhoneNumber: new FormControl(),
-      email: new FormControl()
+      institution: new FormControl(),
+      graduationDate: new FormControl(),
+      hasSpeciality: new FormControl()
     });
   }
 
@@ -129,7 +133,7 @@ export class UserProfilePage {
                 //let toast = this.toastCtrl.create({ message: 'La información se guardo exitosamente', duration: 5000, position: 'middle' });
                 //toast.onDidDismiss(() => { });
                 //toast.present();
-                this.nav.push(MyAccountPage);
+                this.nav.push('ProfilePage');
         }
       );
   }

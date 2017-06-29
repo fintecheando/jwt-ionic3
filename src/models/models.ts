@@ -30,3 +30,6 @@ export * from './UserResetVO';
 export * from './UserVO';
 export * from './VitalSign';
 export * from './Countries';
+export * from './Specialities';
+export * from './SubSpecialities';
+

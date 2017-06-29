@@ -75281,17 +75281,17 @@ background-image ion-spinner * {
   fill: #c2c2c2 !important;
 }
 
+ion-menu button {
+  height: 40px;
+}
+
 ion-menu .menu-content {
   background-color: #f7f7f7;
 }
 
-ion-menu .menu-list {
-  margin-top: 20vh;
-}
-
 ion-menu .menu-list .item {
   background-color: #f7f7f7;
-  padding-right: 32px;
+  padding-right: 25px;
 }
 
 ion-menu .menu-list .item:first-child {
@@ -75304,7 +75304,7 @@ ion-menu .menu-list .item:last-child {
 
 ion-menu .menu-list .item .item-inner {
   border-bottom: 1px solid rgba(194, 194, 194, 0.15);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 300;
   letter-spacing: 1px;
   color: #336799;
