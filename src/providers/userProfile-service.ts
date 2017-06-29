@@ -43,14 +43,13 @@ export class UserProfileService {
     }
 
     public getSubSpecialities(): Promise<models.SubSpecialities[]> {
-        return this.http.get('./assets/catalogs/subSpecialities.json')
+        return this.http.get('./assets/catalogs/subspecialities.json')
             .toPromise()
-            .then(response => response.json().subSpecialities as models.SubSpecialities[])
+            .then(response => response.json().subspecialities as models.SubSpecialities[])
             .catch(this.handleError);
     }
 
     private handleError(error: any): Promise<any> {
-        //console.error('An error occurred', error);
         return Promise.reject(error.message || error);
     }
 

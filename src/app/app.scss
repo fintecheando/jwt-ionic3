@@ -31,3 +31,58 @@ $output-bourbon-deprecation-warnings: false;
   bottom: 10px;
   z-index: 9999;
 }
+
+ion-icon {
+    &[class*="afiliamd-"] {
+        // Instead of using the font-based icons
+        // We're applying SVG masks
+        mask-size: contain;
+        mask-position: 50% 50%;
+        //mask-repeat: no-repeat;
+        background: currentColor;
+        width: 1em;
+        height: 1em;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    // custom icons
+    &[class*="afiliamd-agenda"] {
+        mask-image: url(../assets/icon/agenda.svg);
+    }
+    &[class*="afiliamd-beat"] {
+        mask-image: url(../assets/icon/beat.svg);
+    }
+    &[class*="afiliamd-consultorios"] {
+        mask-image: url(../assets/icon/consultorios.svg);
+    }
+    &[class*="afiliamd-datospersonales"] {
+        mask-image: url(../assets/icon/datospersonales.svg);
+    }
+    &[class*="afiliamd-equipotrabajo"] {
+        mask-image: url(../assets/icon/equipotrabajo.svg);
+    }
+    &[class*="afiliamd-finanzas"] {
+        mask-image: url(../assets/icon/finanzas.svg);
+    }
+    &[class*="afiliamd-hospitales"] {
+        mask-image: url(../assets/icon/hospitales.svg);
+    }    
+    &[class*="afiliamd-notificaciones"] {
+        mask-image: url(../assets/icon/notificaciones.svg);
+    }    
+    &[class*="afiliamd-pacientes"] {
+        mask-image: url(../assets/icon/pacientes.svg);
+    }    
+    &[class*="afiliamd-pasodevisita"] {
+        mask-image: url(../assets/icon/pasodevisita.svg);
+    }    
+    &[class*="afiliamd-equipotrabajo"] {
+        mask-image: url(../assets/icon/equipotrabajo.svg);
+    }    
+    &[class*="afiliamd-pendientes"] {
+        mask-image: url(../assets/icon/pendientes.svg);
+    }    
+    &[class*="afiliamd-recetas"] {
+        mask-image: url(../assets/icon/recetas.svg);
+    }    
+}

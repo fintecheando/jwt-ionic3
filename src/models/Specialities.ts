@@ -1,4 +1,4 @@
 export interface Specialities {
-	idSpeciality: string;
-	description: string;
+	idSpeciality?: string;
+	description?: string;
 }

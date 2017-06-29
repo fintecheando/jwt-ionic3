@@ -1,0 +1,272 @@
+{
+    "specialities": [
+    {
+        "idSpeciality": "2",
+        "description": "Alercologia Pediatrica"
+    },
+    {
+        "idSpeciality": "3",
+        "description": "Anatomia Patologica"
+    },
+    {
+        "idSpeciality": "4",
+        "description": "Anestesiologia"
+    },
+    {
+        "idSpeciality": "5",
+        "description": "Angiologia y Cirugia Vascular"
+    },
+    {
+        "idSpeciality": "6",
+        "description": "Biologia de Reproduccion N. M."
+    },
+    {
+        "idSpeciality": "7",
+        "description": "Cardiologia"
+    },
+    {
+        "idSpeciality": "8",
+        "description": "Cardiologia Intervencionista"
+    },
+    {
+        "idSpeciality": "9",
+        "description": "Cardiologia Pediatrica"
+    },
+    {
+        "idSpeciality": "10",
+        "description": "Cirugia Cardiotoracica"
+    },
+    {
+        "idSpeciality": "11",
+        "description": "Cirugia de Torax"
+    },
+    {
+        "idSpeciality": "12",
+        "description": "Cirugia General"
+    },
+    {
+        "idSpeciality": "13",
+        "description": "Cirugia Maxilofacial N. M."
+    },
+    {
+        "idSpeciality": "14",
+        "description": "Cirugia Neurologica"
+    },
+    {
+        "idSpeciality": "15",
+        "description": "Cirugia Neurologica Pediatrica"
+    },
+    {
+        "idSpeciality": "16",
+        "description": "Cirugia Oncologica"
+    },
+    {
+        "idSpeciality": "17",
+        "description": "Cirugia Pediatrica"
+    },
+    {
+        "idSpeciality": "18",
+        "description": "Cirugia Plastica"
+    },
+    {
+        "idSpeciality": "19",
+        "description": "Coloproctologia"
+    },
+    {
+        "idSpeciality": "20",
+        "description": "Coloproctologia"
+    },
+    {
+        "idSpeciality": "21",
+        "description": "Dermatologia"
+    },
+    {
+        "idSpeciality": "22",
+        "description": "Dermatologia Pediatrica"
+    },
+    {
+        "idSpeciality": "23",
+        "description": "Ecocardiografia"
+    },
+    {
+        "idSpeciality": "24",
+        "description": "Endocrinologia"
+    },
+    {
+        "idSpeciality": "25",
+        "description": "Endocrinologia Pediatrica"
+    },
+    {
+        "idSpeciality": "26",
+        "description": "Endoscopia"
+    },
+    {
+        "idSpeciality": "27",
+        "description": "Fisiologia Digestiva"
+    },
+    {
+        "idSpeciality": "28",
+        "description": "Gastroenterologia"
+    },
+    {
+        "idSpeciality": "29",
+        "description": "Gastroenterologia Pediatrica"
+    },
+    {
+        "idSpeciality": "30",
+        "description": "Geriatria"
+    },
+    {
+        "idSpeciality": "31",
+        "description": "Ginecologia y Obstetricia"
+    },
+    {
+        "idSpeciality": "32",
+        "description": "Hematologia"
+    },
+    {
+        "idSpeciality": "33",
+        "description": "Infectologia"
+    },
+    {
+        "idSpeciality": "34",
+        "description": "Infectologia Pediatrica"
+    },
+    {
+        "idSpeciality": "35",
+        "description": "Inmunologia y Alergia"
+    },
+    {
+        "idSpeciality": "36",
+        "description": "Medicina Critica"
+    },
+    {
+        "idSpeciality": "37",
+        "description": "Medicina de Rehabilitacion"
+    },
+    {
+        "idSpeciality": "38",
+        "description": "Medicina de Urgencias"
+    },
+    {
+        "idSpeciality": "39",
+        "description": "Medicina General"
+    },
+    {
+        "idSpeciality": "40",
+        "description": "Medicina Interna"
+    },
+    {
+        "idSpeciality": "41",
+        "description": "Medicina Nuclear"
+    },
+    {
+        "idSpeciality": "42",
+        "description": "Nefrologia"
+    },
+    {
+        "idSpeciality": "43",
+        "description": "Nefrologia Pediatrica"
+    },
+    {
+        "idSpeciality": "44",
+        "description": "Neonatologia"
+    },
+    {
+        "idSpeciality": "45",
+        "description": "Neumologia"
+    },
+    {
+        "idSpeciality": "46",
+        "description": "Neumologia Pediatrica"
+    },
+    {
+        "idSpeciality": "47",
+        "description": "Neurologia"
+    },
+    {
+        "idSpeciality": "48",
+        "description": "Neurologia Pediatrica"
+    },
+    {
+        "idSpeciality": "49",
+        "description": "Nutriologia N. M."
+    },
+    {
+        "idSpeciality": "50",
+        "description": "Odontologia N. M."
+    },
+    {
+        "idSpeciality": "51",
+        "description": "Oftalmologia"
+    },
+    {
+        "idSpeciality": "52",
+        "description": "Oftalmologia Pediatrica"
+    },
+    {
+        "idSpeciality": "53",
+        "description": "Oncologia Medica"
+    },
+    {
+        "idSpeciality": "54",
+        "description": "Oncologia Medica Pediatrica"
+    },
+    {
+        "idSpeciality": "55",
+        "description": "Ort y Traumatologia Pediatrica"
+    },
+    {
+        "idSpeciality": "56",
+        "description": "Ortodoncia N. M."
+    },
+    {
+        "idSpeciality": "57",
+        "description": "Ortopedia y Traumatologia"
+    },
+    {
+        "idSpeciality": "58",
+        "description": "Otorrinolaringologia"
+    },
+    {
+        "idSpeciality": "59",
+        "description": "Otorrinolaringologia Pediatrica"
+    },
+    {
+        "idSpeciality": "60",
+        "description": "Pediatrica"
+    },
+    {
+        "idSpeciality": "61",
+        "description": "Psicologia N. M."
+    },
+    {
+        "idSpeciality": "62",
+        "description": "Psiquiatria"
+    },
+    {
+        "idSpeciality": "63",
+        "description": "Radiologia e Imagen"
+    },
+    {
+        "idSpeciality": "64",
+        "description": "Radioterapia"
+    },
+    {
+        "idSpeciality": "65",
+        "description": "Reumatologia"
+    },
+    {
+        "idSpeciality": "66",
+        "description": "Urologia"
+    },
+    {
+        "idSpeciality": "67",
+        "description": "Urologia Pediatrica"
+    },
+    {
+        "idSpeciality": "68",
+        "description": "Otra"
+    }
+]
+}

@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {IonicPageModule} from 'ionic-angular';
-import {ProfilePage} from './profile-page';
+import {MyProfilePage} from './profile-page';
 import {TranslateModule} from '@ngx-translate/core';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
@@ -8,14 +8,14 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
 
 @NgModule({
   declarations: [
-    ProfilePage,
+    MyProfilePage,
   ],
   imports: [
-    IonicPageModule.forChild(ProfilePage),
+    IonicPageModule.forChild(MyProfilePage),
     TranslateModule.forChild()
   ],
   exports: [
-    ProfilePage
+    MyProfilePage
   ],
   providers: [
     SpeechRecognition,

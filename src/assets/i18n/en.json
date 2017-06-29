@@ -87,12 +87,18 @@
           "medicalLicense": "Cédula Profesional",
           "specialityLicence": "Cédula Especialidad",
           "institution": "Institución",
-          "graduationDate": "Año en que termino",
-          "hasSpeciality": "Cuenta con certificado de especialidad",
+          "graduationDate": "Fecha en que termino",
+          "hasSpeciality": "¿Cuenta con especialidad?",
           "profActivities": "Actividades Profesionales",
+          "otherstudies": "Otros estudios",
           "distinctions": "Distinciones",
           "asosiations": "Asociaciones",
-          "speciality": "Especialidad"
+          "speciality": "Especialidad",
+          "certs": "Certificados",          
+          "cert1": "Primer Certificado ",
+          "cert2": "Segundo Certificado ",
+          "cert3": "Tercer Certificado ",
+          "certsDate": "Fecha Termino"
       }
     }    
   }

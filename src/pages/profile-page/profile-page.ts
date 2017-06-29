@@ -16,7 +16,7 @@ import {AuthService} from '../../providers/auth-service';
   selector: 'page-profile-page',
   templateUrl: 'profile-page.html',
 })
-export class ProfilePage extends ProtectedPage {
+export class MyProfilePage extends ProtectedPage {
 
   public user: UserModel;
   

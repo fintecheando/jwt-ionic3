@@ -28,19 +28,18 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      {title: 'page.appointment.title'  , component: 'AppointmentPage'              ,icon:'calendar'},
-      {title: 'page.pendings.title'     , component: 'PendingsPage'                 ,icon:'md-alert'},
-      {title: 'page.medicalVisit.title' , component: 'MedicalVisitPage'             ,icon:'md-chatbubbles'},
-      {title: 'page.notes.title'        , component: 'NotesPage'                    ,icon:'md-document'},
-      {title: 'page.myTeam.title'       , component: 'MyTeamPage'                   ,icon:'ios-people'},
-      {title: 'page.patients.title'     , component: 'PatientPage'                  ,icon:'ios-person'},
-      {title: 'page.prescriptions.title', component: 'PrescriptionsPage'            ,icon:'md-medkit'},
-      {title: 'page.insurances.title'   , component: 'InsurancesPage'               ,icon:'ios-help-buoy'},
-      {title: 'page.finances.title'     , component: 'FinancesPage'                 ,icon:'md-cash'},
-      {title: 'page.profile.title'      , component: 'ProfilePage'                  ,icon:'md-finger-print'},
-      {title: 'page.logout'             , component: 'LoginPage', method: 'logout'  ,icon:'md-log-out'}
+      {title: 'page.appointment.title'  , component: 'AppointmentPage'              ,icon:'calendar'},       //calendar
+      {title: 'page.pendings.title'     , component: 'MyProfilePage'                ,icon:'md-alert'},       //md-alert
+      {title: 'page.medicalVisit.title' , component: 'MedicalVisitPage'             ,icon:'md-chatbubbles'}, //md-chatbubbles
+      {title: 'page.notes.title'        , component: 'NotesPage'                    ,icon:'md-document'},    //md-document
+      {title: 'page.myTeam.title'       , component: 'MyTeamPage'                   ,icon:'ios-people'},     //ios-people
+      {title: 'page.patients.title'     , component: 'PatientPage'                  ,icon:'ios-person'},     //ios-person
+      {title: 'page.prescriptions.title', component: 'PrescriptionsPage'            ,icon:'md-medkit'},      //md-medkit
+      {title: 'page.insurances.title'   , component: 'InsurancesPage'               ,icon:'ios-help-buoy'},  //ios-help-buoy
+      {title: 'page.finances.title'     , component: 'FinancesPage'                 ,icon:'md-cash'},        //md-cash
+      {title: 'page.profile.title'      , component: 'ProfilePage'                  ,icon:'md-finger-print'},//md-finger-print
+      {title: 'page.logout'             , component: 'LoginPage', method: 'logout'  ,icon:'md-log-out'}      //md-log-out
     ];
-
   }
 
   initializeApp() {

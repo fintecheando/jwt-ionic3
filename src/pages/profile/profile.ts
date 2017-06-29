@@ -19,7 +19,7 @@ export class ProfilePage extends ProtectedPage {
     super(navCtrl, navParams, storage);
     this.items = [
       { title: 'Mis datos personales'                  , component: 'UserProfilePage'   , icon: 'md-person' },
-      { title: 'Métodos de pago'       , note: ''      , component: 'List1Page'         , icon: 'md-card' },
+      { title: 'Métodos de pago'       , note: ''      , component: 'List1Page'         , icon: 'md-card' },  //md-card
       { title: 'Restablecer contraseña', note: ''      , component: 'List2Page'         , icon: 'md-lock' },
       { title: 'Firma electrónica'                     , component: 'GridPage'          , icon: 'md-home' }
     ];

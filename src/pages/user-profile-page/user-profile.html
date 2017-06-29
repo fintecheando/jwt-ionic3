@@ -22,152 +22,143 @@
   <form [formGroup]="profileForm" class="profile-form">
     <ion-item-divider>{{ 'page.profile.user-profile.personalData' | translate }}</ion-item-divider>
     <ion-list class="user-data-content">
-      <ion-item>
-        <ion-label stacked>{{ 'page.profile.user-profile.name' | translate }}</ion-label>
-        <ion-input type="text" formControlName="name"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label stacked>{{ 'page.profile.user-profile.lastName' | translate }}</ion-label>
-        <ion-input type="text" formControlName="lastName"></ion-input>
-      </ion-item>
-      <ion-item>
+
+      <ion-grid no-padding><ion-row><ion-col width-90><ion-item>
+              <ion-label stacked>{{ 'page.profile.user-profile.name' | translate }}</ion-label>
+              <ion-input type="text" formControlName="name"></ion-input>
+      </ion-item></ion-col><ion-col width-10><button ion-button icon-only icon-start clear (click)="listenCtrl('name')"><ion-icon item-right name="mic"></ion-icon></button></ion-col></ion-row></ion-grid>
+
+      <ion-grid no-padding><ion-row><ion-col width-90><ion-item>
+                <ion-label stacked>{{ 'page.profile.user-profile.lastName' | translate }}</ion-label>
+                <ion-input type="text" formControlName="lastName"></ion-input>
+      </ion-item></ion-col><ion-col width-10><button ion-button icon-only icon-start clear (click)="listenCtrl('lastName')"><ion-icon item-right name="mic"></ion-icon></button></ion-col></ion-row></ion-grid>
+
+      <ion-grid no-padding><ion-row><ion-col width-90><ion-item>
         <ion-label stacked>{{ 'page.profile.user-profile.secondLastName' | translate }}</ion-label>
         <ion-input type="text" formControlName="secondLastName"></ion-input>
-      </ion-item>      
-      <ion-item>
+      </ion-item></ion-col><ion-col width-10><button ion-button icon-only icon-start clear (click)="listenCtrl('secondLastName')"><ion-icon item-right name="mic"></ion-icon></button></ion-col></ion-row></ion-grid>
+      
+      <ion-grid no-padding><ion-row><ion-col width-90><ion-item>
         <ion-label stacked>{{ 'page.profile.user-profile.rfc' | translate }}</ion-label>
         <ion-input type="text" formControlName="rfc"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label stacked>{{ 'page.profile.user-profile.curp' | translate }}</ion-label> 
+      </ion-item></ion-col><ion-col width-10><button ion-button icon-only icon-start clear (click)="listenCtrl('rfc')"><ion-icon item-right name="mic"></ion-icon></button></ion-col></ion-row></ion-grid>
+      <ion-grid no-padding><ion-row><ion-col width-90><ion-item>
+        <ion-label stacked>{{ 'page.profile.user-profile.curp' | translate }}</ion-label>
         <ion-input type="text" formControlName="curp"></ion-input>
-      </ion-item>
+      </ion-item></ion-col><ion-col width-10><button ion-button icon-only icon-start clear (click)="listenCtrl('curp')"><ion-icon item-right name="mic"></ion-icon></button></ion-col></ion-row></ion-grid>
 
       <ion-item-divider>{{ 'page.profile.user-profile.nationality' | translate }}</ion-item-divider>
-      <ion-searchbar formControlName="nationality" [showCancelButton]="shouldShowCancel" (ionInput)="onSearchCountry($event)" (ionCancel)="onCancelSearchCountry($event)" placeholder="Buscar"  >
+      <ion-searchbar formControlName="nationality" [showCancelButton]="shouldShowCancel" (ionInput)="onSearchCountry($event)" (ionCancel)="onCancelSearchCountry($event)"
+        placeholder="Buscar">
       </ion-searchbar>
       <ion-list inset id="countries">
         <button ion-item *ngFor="let country of allCountries" (click)="onCountrySelected(country)">{{country.name}}<ion-icon name="arrow-forward" item-right></ion-icon></button>
       </ion-list>
-    </ion-list>
 
-    <ion-item-divider>{{ 'page.profile.user-profile.contactInformation' | translate }}</ion-item-divider>
-    <ion-list class="user-data-content">
-      <ion-item>
+      <ion-item-divider>{{ 'page.profile.user-profile.contactInformation' | translate }}</ion-item-divider>
+
+      <ion-grid no-padding><ion-row><ion-col width-90><ion-item>
         <ion-label stacked>{{ 'page.profile.user-profile.mobilePhoneNumber' | translate }}</ion-label>
         <ion-input type="text" formControlName="mobilePhoneNumber"></ion-input>
-      </ion-item>
-      <ion-item>
+      </ion-item></ion-col><ion-col width-10><button ion-button icon-only icon-start clear (click)="listenCtrl('mobilePhoneNumber')"><ion-icon item-right name="mic"></ion-icon></button></ion-col></ion-row></ion-grid>
+      <ion-grid no-padding><ion-row><ion-col width-90><ion-item>
         <ion-label stacked>{{ 'page.profile.user-profile.workPhone' | translate }}</ion-label>
         <ion-input type="text" formControlName="workPhone"></ion-input>
-      </ion-item>      
-      <ion-item>
+      </ion-item></ion-col><ion-col width-10><button ion-button icon-only icon-start clear (click)="listenCtrl('workPhone')"><ion-icon item-right name="mic"></ion-icon></button></ion-col></ion-row></ion-grid>
+      <ion-grid no-padding><ion-row><ion-col width-90><ion-item>
         <ion-label stacked>{{ 'page.profile.user-profile.email' | translate }}</ion-label>
         <ion-input type="text" formControlName="email"></ion-input>
-      </ion-item>
-      <ion-item>
+      </ion-item></ion-col><ion-col width-10><button ion-button icon-only icon-start clear (click)="listenCtrl('email')"><ion-icon item-right name="mic"></ion-icon></button></ion-col></ion-row></ion-grid>
+      <ion-grid no-padding><ion-row><ion-col width-90><ion-item>
         <ion-label stacked>{{ 'page.profile.user-profile.facebook' | translate }}</ion-label>
         <ion-input type="text" formControlName="facebook"></ion-input>
-      </ion-item>      
-    </ion-list>
+      </ion-item></ion-col><ion-col width-10><button ion-button icon-only icon-start clear (click)="listenCtrl('facebook')"><ion-icon item-right name="mic"></ion-icon></button></ion-col></ion-row></ion-grid>
 
 
-    <ion-item-divider>{{ 'page.profile.user-profile.education' | translate }}</ion-item-divider>
-    <ion-list class="user-data-content">
-      <ion-item>
+      <ion-item-divider>{{ 'page.profile.user-profile.education' | translate }}</ion-item-divider>
+      <ion-grid no-padding><ion-row><ion-col width-90><ion-item>
         <ion-label stacked>{{ 'page.profile.user-profile.medicalLicense' | translate }}</ion-label>
         <ion-input type="text" formControlName="medicalLicense"></ion-input>
-      </ion-item>
-      <ion-item>
+      </ion-item></ion-col><ion-col width-10><button ion-button icon-only icon-start clear (click)="listenCtrl('medicalLicense')"><ion-icon item-right name="mic"></ion-icon></button></ion-col></ion-row></ion-grid>
+
+      <!--Camara y clip -->
+
+      <ion-grid no-padding><ion-row><ion-col width-90><ion-item>
         <ion-label stacked>{{ 'page.profile.user-profile.institution' | translate }}</ion-label>
         <ion-input type="text" formControlName="institution"></ion-input>
-      </ion-item>
+      </ion-item></ion-col><ion-col width-10><button ion-button icon-only icon-start clear (click)="listenCtrl('institution')"><ion-icon item-right name="mic"></ion-icon></button></ion-col></ion-row></ion-grid>
       <ion-item>
         <ion-label>{{ 'page.profile.user-profile.graduationDate' | translate }}</ion-label>
         <ion-datetime displayFormat="DD/MMM/YYYY" formControlName="graduationDate"></ion-datetime>
       </ion-item>
-
-      <ion-item>
-        <ion-label>{{ 'page.profile.user-profile.hasSpeciality' | translate }}</ion-label>
-        <ion-toggle formControlName="hasSpeciality"></ion-toggle>
-      </ion-item>
-
-      <!-- ESPECIALIDADES 
-        <ion-item-divider class="item-icon-right switcher-item">{{ 'page.profile.user-profile.speciality' | translate }}
+      <ion-grid no-padding><ion-row><ion-col width-90><ion-item>
+        <ion-label stacked>{{ 'page.profile.user-profile.otherstudies' | translate }}</ion-label>
+        <ion-input type="text" formControlName="otherstudies"></ion-input>
+      </ion-item></ion-col><ion-col width-10><button ion-button icon-only icon-start clear (click)="listenCtrl('otherstudies')"><ion-icon item-right name="mic"></ion-icon></button></ion-col></ion-row></ion-grid>
+      <ion-item></ion-item>
+      <!-- ESPECIALIDADES -->
+      <!--<ion-item-divider class="item-icon-right switcher-item">{{ 'page.profile.user-profile.speciality' | translate }}
           <span class="right">Agregar
             <ion-icon name="md-add-circle"></ion-icon></span>
-        </ion-item-divider>      
-        <ion-item *ngIf="!hasSpeciality">
+        </ion-item-divider>-->
+      <ion-item>
+        <ion-label>{{ 'page.profile.user-profile.hasSpeciality' | translate }}</ion-label>
+        <ion-toggle formControlName="hasSpeciality" (ionChange)="onHasSpeciality()"></ion-toggle>
+      </ion-item>
+
+      <ion-list *ngIf="!showSpecialities">
+      <ion-grid no-padding><ion-row><ion-col width-90><ion-item>
           <ion-label stacked>{{ 'page.profile.user-profile.specialityLicence' | translate }}</ion-label>
           <ion-input type="text" formControlName="specialityLicence"></ion-input>
+      </ion-item></ion-col><ion-col width-10><button ion-button icon-only icon-start clear (click)="listenCtrl('specialityLicence')"><ion-icon item-right name="mic"></ion-icon></button></ion-col></ion-row></ion-grid>
+        <ion-item>
+          <ion-label>{{ 'page.profile.user-profile.speciality' | translate }}</ion-label>
+          <ion-select formControlName="speciality">
+            <ion-option *ngFor="let item of allSpecialities" value="{{item.idSpeciality}}">{{item.description}}</ion-option>
+          </ion-select>
         </ion-item>
 
-        <ion-select formControlName="speciality">
-          <ion-option *ngFor="let item of specialities"  value="{{item.idSpeciality}}">{{item.description}}</ion-option>       
-        </ion-select>-->
+        <ion-item-divider>{{ 'page.profile.user-profile.certs' | translate }}</ion-item-divider>
+      <ion-grid no-padding><ion-row><ion-col width-90><ion-item>
+          <ion-label stacked>{{ 'page.profile.user-profile.cert1' | translate }}</ion-label>
+          <ion-input type="text" formControlName="cert1"></ion-input>
+      </ion-item></ion-col><ion-col width-10><button ion-button icon-only icon-start clear (click)="listenCtrl('cert1')"><ion-icon item-right name="mic"></ion-icon></button></ion-col></ion-row></ion-grid>
+        <ion-item>
+          <ion-label>{{ 'page.profile.user-profile.certsDate' | translate }}</ion-label>
+          <ion-datetime displayFormat="DD/MMM/YYYY" formControlName="cert1Date"></ion-datetime>
+        </ion-item>
+      <ion-grid no-padding><ion-row><ion-col width-90><ion-item>
+          <ion-label stacked>{{ 'page.profile.user-profile.cert2' | translate }}</ion-label>
+          <ion-input type="text" formControlName="cert2"></ion-input>
+      </ion-item></ion-col><ion-col width-10><button ion-button icon-only icon-start clear (click)="listenCtrl('cert2')"><ion-icon item-right name="mic"></ion-icon></button></ion-col></ion-row></ion-grid>
+        <ion-item>
+          <ion-label>{{ 'page.profile.user-profile.certsDate' | translate }}</ion-label>
+          <ion-datetime displayFormat="DD/MMM/YYYY" formControlName="cert2Date"></ion-datetime>
+        </ion-item>
+      <ion-grid no-padding><ion-row><ion-col width-90><ion-item>
+          <ion-label stacked>{{ 'page.profile.user-profile.cert3' | translate }}</ion-label>
+          <ion-input type="text" formControlName="cert3"></ion-input>
+      </ion-item></ion-col><ion-col width-10><button ion-button icon-only icon-start clear (click)="listenCtrl('cert3')"><ion-icon item-right name="mic"></ion-icon></button></ion-col></ion-row></ion-grid>
+        <ion-item>
+          <ion-label>{{ 'page.profile.user-profile.certsDate' | translate }}</ion-label>
+          <ion-datetime displayFormat="DD/MMM/YYYY" formControlName="cert3Date"></ion-datetime>
+        </ion-item>
+      </ion-list>
 
-      <ion-item>
+      <ion-item-divider> </ion-item-divider>
+      <ion-grid no-padding><ion-row><ion-col width-90><ion-item>
         <ion-label stacked>{{ 'page.profile.user-profile.profActivities' | translate }}</ion-label>
-        <ion-input type="text" formControlName="institution"></ion-input>
-      </ion-item>
-      <ion-item>
+        <ion-input type="text" formControlName="profActivities"></ion-input>
+      </ion-item></ion-col><ion-col width-10><button ion-button icon-only icon-start clear (click)="listenCtrl('profActivities')"><ion-icon item-right name="mic"></ion-icon></button></ion-col></ion-row></ion-grid>
+      <ion-grid no-padding><ion-row><ion-col width-90><ion-item>
         <ion-label stacked>{{ 'page.profile.user-profile.distinctions' | translate }}</ion-label>
-        <ion-input type="text" formControlName="institution"></ion-input>
-      </ion-item>
-      <ion-item>
+        <ion-input type="text" formControlName="distinctions"></ion-input>
+      </ion-item></ion-col><ion-col width-10><button ion-button icon-only icon-start clear (click)="listenCtrl('distinctions')"><ion-icon item-right name="mic"></ion-icon></button></ion-col></ion-row></ion-grid>
+      <ion-grid no-padding><ion-row><ion-col width-90><ion-item>
         <ion-label stacked>{{ 'page.profile.user-profile.asosiations' | translate }}</ion-label>
-        <ion-input type="text" formControlName="institution"></ion-input>
-      </ion-item>
-
+        <ion-input type="text" formControlName="asosiations"></ion-input>
+      </ion-item></ion-col><ion-col width-10><button ion-button icon-only icon-start clear (click)="listenCtrl('asosiations')"><ion-icon item-right name="mic"></ion-icon></button></ion-col></ion-row></ion-grid>
     </ion-list>
 
-
-<!--
-    <ion-row class="user-preferences-row">
-      <span class="radio-tags-label">Currency</span>
-      <ion-list class="radio-tags" radio-group >
-        <ion-item class="radio-tag">
-          <ion-label>&#36;</ion-label>
-          <ion-radio value="dollar"></ion-radio>
-        </ion-item>
-        <ion-item class="radio-tag">
-          <ion-label>
-            <span>&euro;</span>
-          </ion-label>
-          <ion-radio value="euro"></ion-radio>
-        </ion-item>
-        <ion-item class="radio-tag">
-          <ion-label>
-            <span>&pound;</span>
-          </ion-label>
-          <ion-radio value="pound"></ion-radio>
-        </ion-item>
-      </ion-list>
-    </ion-row>
-
-    <ion-row class="user-preferences-row">
-      <span class="radio-tags-label">Weather</span>
-      <ion-list class="radio-tags" radio-group >
-        <ion-item class="radio-tag">
-          <ion-label>&deg;C</ion-label>
-          <ion-radio value="celsius"></ion-radio>
-        </ion-item>
-        <ion-item class="radio-tag">
-          <ion-label>
-            <span>&deg;F</span>
-          </ion-label>
-          <ion-radio value="fahrenheit"></ion-radio>
-        </ion-item>
-      </ion-list>
-    </ion-row>
-
-    <ion-list class="switchers-list">
-      <ion-item class="switcher-item">
-        <ion-label>Notifications</ion-label>
-        <ion-toggle></ion-toggle>
-      </ion-item>
-    </ion-list>
--->
   </form>
-  <!--<button class="alt-button logout-button" ion-button full icon-left (click)="logout()"><ion-icon name="log-out"></ion-icon>Log out</button>-->
 </ion-content>

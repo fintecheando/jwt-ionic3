@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, ModalController, LoadingController, ToastController, AlertController } from 'ionic-angular';
+import { IonicPage, NavController,NavParams, ModalController, LoadingController, ToastController, AlertController } from 'ionic-angular';
 import { FormGroup, FormControl } from '@angular/forms';
 import { UserProfileService } from '../../providers/userProfile-service';
+import {ProtectedPage} from '../protected-page/protected-page';
 import { DoctorService } from '../../providers/doctor-service';
-//import { MyAccountPage } from '../my-account/my-account';
+import { SpeechRecognition } from '@ionic-native/speech-recognition';
+import { TextToSpeech } from '@ionic-native/text-to-speech';
+import { NgZone } from '@angular/core';
+import {Storage} from '@ionic/storage';
+
 import * as models from '../../models/models';
 import 'rxjs/Rx';
 
@@ -12,22 +17,34 @@ import 'rxjs/Rx';
   selector: 'user-profile-page',
   templateUrl: 'user-profile.html'
 })
-export class UserProfilePage {
+export class UserProfilePage extends ProtectedPage  {
   profileForm: FormGroup;
   loading: any;
   private allCountries: any[] = [];
+  private allSpecialities: any[] = [];
+  showSpecialities: boolean = true;
+  isListening: boolean = false;
+  matches: Array<String>;
 
   constructor(
-    public nav: NavController,
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public storage: Storage,        
     public modal: ModalController,
     public loadingCtrl: LoadingController,
     private userProfile: UserProfileService,
     private doctor: DoctorService,
     private toastCtrl: ToastController,
-    private alertCtrl: AlertController  
+    private alertCtrl: AlertController,
+    public speech: SpeechRecognition,
+    private tts: TextToSpeech,
+    private zone: NgZone
   ) {
+    super(navCtrl, navParams, storage);
+    
     this.loading = this.loadingCtrl.create();
     this.allCountries = [];
+    this.allSpecialities = [];
     this.profileForm = new FormGroup({
       name: new FormControl(),
       lastName: new FormControl(),
@@ -43,8 +60,26 @@ export class UserProfilePage {
       specialityLicence: new FormControl(),
       institution: new FormControl(),
       graduationDate: new FormControl(),
-      hasSpeciality: new FormControl()
+      hasSpeciality: new FormControl(),
+      speciality: new FormControl(),
+      cert1: new FormControl(),
+      cert2: new FormControl(),
+      cert3: new FormControl(),
+      cert1Date: new FormControl(),
+      cert2Date: new FormControl(),
+      cert3Date: new FormControl(),
+      profActivities: new FormControl(),
+      distinctions: new FormControl(),
+      asosiations: new FormControl(),
+      otherstudies: new FormControl()
     });
+
+    this.userProfile.getSpecialities()
+      .then(specialities => {
+        for (let i = 0; i < specialities.length; i++) {
+            this.allSpecialities.push(specialities[i]);
+        }
+      });
   }
 
   ionViewDidLoad() {
@@ -65,6 +100,24 @@ export class UserProfilePage {
       });*/
     this.loading.dismiss();
   }
+
+  async hasPermission():Promise<boolean> {
+        try {
+                const permission = await this.speech.hasPermission();
+                console.log(permission);
+                return permission;
+        } catch(e) {
+            console.log(e);
+        }
+    }
+
+    async getPermission():Promise<void> {
+        try {
+            this.speech.requestPermission();
+        } catch(e) {
+            console.log(e);
+        }
+    }
 
   onSearchCountry(searchEvent) {
     this.allCountries = [];
@@ -133,8 +186,36 @@ export class UserProfilePage {
                 //let toast = this.toastCtrl.create({ message: 'La información se guardo exitosamente', duration: 5000, position: 'middle' });
                 //toast.onDidDismiss(() => { });
                 //toast.present();
-                this.nav.push('ProfilePage');
+                this.navCtrl.push('ProfilePage');
         }
       );
+  }
+
+  onHasSpeciality(){
+    let optionValue = this.profileForm.get('hasSpeciality').value;
+    if (optionValue == true) { this.showSpecialities = false; }
+    else { this.showSpecialities = true; }
+  }
+
+  toggleListenMode():void {
+    this.isListening = this.isListening ? false : true;
+    console.log('listening mode is now : ' + this.isListening);
+  }
+
+  listenCtrl(control): void {
+      console.log("Listening" + control);
+      if (this.isListening) {
+          this.speech.stopListening();
+          this.toggleListenMode();
+          return;
+      }
+      this.toggleListenMode();
+      this.speech.startListening()
+          .subscribe(matches => {
+              this.zone.run(() => {
+                  this.matches = matches;
+                  this.profileForm.controls['name'].setValue(matches[0]);
+              })
+          }, error => console.error(error));
   }
 }

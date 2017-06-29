@@ -1,0 +1,380 @@
+{
+    "subspecialities":    
+    [
+    {
+        "idSpeciality": "3",
+        "idSubSpeciality": "1",
+        "description": "Autopsias-Necropsias"
+    },
+    {
+        "idSpeciality": "3",
+        "idSubSpeciality": "2",
+        "description": "Citologia y Biopsias"
+    },
+    {
+        "idSpeciality": "3",
+        "idSubSpeciality": "3",
+        "description": "Cultivo de Tejidos"
+    },
+    {
+        "idSpeciality": "3",
+        "idSubSpeciality": "4",
+        "description": "Inmuno-Histoquimica"
+    },
+    {
+        "idSpeciality": "3",
+        "idSubSpeciality": "5",
+        "description": "Microscopia Electronica"
+    },
+    {
+        "idSpeciality": "3",
+        "idSubSpeciality": "6",
+        "description": "Patologia Molecular y Citogenetica"
+    },
+    {
+        "idSpeciality": "3",
+        "idSubSpeciality": "7",
+        "description": "Tecnicas Cuantitativas"
+    },
+    {
+        "idSpeciality": "4",
+        "idSubSpeciality": "8",
+        "description": "Anestesia Ambulatoria"
+    },
+    {
+        "idSpeciality": "4",
+        "idSubSpeciality": "9",
+        "description": "Anestesia Cirugia Torax y Cardiovascular "
+    },
+    {
+        "idSpeciality": "4",
+        "idSubSpeciality": "10",
+        "description": "Anestesia General"
+    },
+    {
+        "idSpeciality": "4",
+        "idSubSpeciality": "11",
+        "description": "Anestesia Obstetrica "
+    },
+    {
+        "idSpeciality": "4",
+        "idSubSpeciality": "12",
+        "description": "Anestesia Pediatrica "
+    },
+    {
+        "idSpeciality": "4",
+        "idSubSpeciality": "13",
+        "description": "Cuidados Criticos "
+    },
+    {
+        "idSpeciality": "4",
+        "idSubSpeciality": "14",
+        "description": "Tratamiento del Dolor "
+    },
+    {
+        "idSpeciality": "5",
+        "idSubSpeciality": "15",
+        "description": "Angiologia"
+    },
+    {
+        "idSpeciality": "5",
+        "idSubSpeciality": "16",
+        "description": "Cirugia Arterial "
+    },
+    {
+        "idSpeciality": "5",
+        "idSubSpeciality": "17",
+        "description": "Cirugia Endovascular "
+    },
+    {
+        "idSpeciality": "5",
+        "idSubSpeciality": "18",
+        "description": "Diagnostico Vascular No Invasivo "
+    },
+    {
+        "idSpeciality": "5",
+        "idSubSpeciality": "19",
+        "description": "Fiebologia"
+    },
+    {
+        "idSpeciality": "8",
+        "idSubSpeciality": "20",
+        "description": "Arritmias"
+    },
+    {
+        "idSpeciality": "8",
+        "idSubSpeciality": "21",
+        "description": "Cardioligia Extrahospitalaria "
+    },
+    {
+        "idSpeciality": "8",
+        "idSubSpeciality": "22",
+        "description": "Cardioligia Intervencionista "
+    },
+    {
+        "idSpeciality": "8",
+        "idSubSpeciality": "23",
+        "description": "Cardioligia Nuclear "
+    },
+    {
+        "idSpeciality": "8",
+        "idSubSpeciality": "24",
+        "description": "Cardiologia Pediatrica"
+    },
+    {
+        "idSpeciality": "8",
+        "idSubSpeciality": "25",
+        "description": "Cardioneumologia"
+    },
+    {
+        "idSpeciality": "8",
+        "idSubSpeciality": "26",
+        "description": "Cardipatia Isquemica "
+    },
+    {
+        "idSpeciality": "8",
+        "idSubSpeciality": "27",
+        "description": "Ecocardiografia"
+    },
+    {
+        "idSpeciality": "8",
+        "idSubSpeciality": "28",
+        "description": "Electrocardiogramas "
+    },
+    {
+        "idSpeciality": "8",
+        "idSubSpeciality": "29",
+        "description": "Electrofisiologia"
+    },
+    {
+        "idSpeciality": "8",
+        "idSubSpeciality": "30",
+        "description": "Hemodinamia"
+    },
+    {
+        "idSpeciality": "8",
+        "idSubSpeciality": "31",
+        "description": "Hemodinamia Infantil "
+    },
+    {
+        "idSpeciality": "8",
+        "idSubSpeciality": "32",
+        "description": "Infantil"
+    },
+    {
+        "idSpeciality": "8",
+        "idSubSpeciality": "33",
+        "description": "Pruebas de Esfuerzo "
+    },
+    {
+        "idSpeciality": "8",
+        "idSubSpeciality": "35",
+        "description": "Rehabilitacion Cardiaca "
+    },
+    {
+        "idSpeciality": "8",
+        "idSubSpeciality": "36",
+        "description": "Unidad Coronaria"
+    },
+    {
+        "idSpeciality": "8",
+        "idSubSpeciality": "37",
+        "description": "Pruebas Diagnosticas "
+    },
+    {
+        "idSpeciality": "12",
+        "idSubSpeciality": "39",
+        "description": "Cirugia del Torax "
+    },
+    {
+        "idSpeciality": "12",
+        "idSubSpeciality": "40",
+        "description": "Trasplante Cardiaco"
+    },
+    {
+        "idSpeciality": "12",
+        "idSubSpeciality": "41",
+        "description": "Patologia Aortica "
+    },
+    {
+        "idSpeciality": "12",
+        "idSubSpeciality": "42",
+        "description": "Electroestimulacion  "
+    },
+    {
+        "idSpeciality": "13",
+        "idSubSpeciality": "43",
+        "description": "Apoyo Nutricional"
+    },
+    {
+        "idSpeciality": "13",
+        "idSubSpeciality": "44",
+        "description": "Cabeza y Cuello"
+    },
+    {
+        "idSpeciality": "13",
+        "idSubSpeciality": "45",
+        "description": "Cirugia de la Obesidad Morbida "
+    },
+    {
+        "idSpeciality": "13",
+        "idSubSpeciality": "46",
+        "description": "Cirugia Abdominal"
+    },
+    {
+        "idSpeciality": "13",
+        "idSubSpeciality": "47",
+        "description": "Cirugia de la Mama"
+    },
+    {
+        "idSpeciality": "13",
+        "idSubSpeciality": "48",
+        "description": "Cirugia del Torax "
+    },
+    {
+        "idSpeciality": "13",
+        "idSubSpeciality": "50",
+        "description": "Cirugia Endoscopica "
+    },
+    {
+        "idSpeciality": "13",
+        "idSubSpeciality": "51",
+        "description": "Cirugia Esodagogastrica "
+    },
+    {
+        "idSpeciality": "13",
+        "idSubSpeciality": "52",
+        "description": "Cirugia Hepato-Bilio-Pancreas"
+    },
+    {
+        "idSpeciality": "13",
+        "idSubSpeciality": "53",
+        "description": "Cirugia Ontologica "
+    },
+    {
+        "idSpeciality": "14",
+        "idSubSpeciality": "55",
+        "description": "Cirugia Oral "
+    },
+    {
+        "idSpeciality": "14",
+        "idSubSpeciality": "57",
+        "description": "Cirugia Ortognatica y Estetica  "
+    },
+    {
+        "idSpeciality": "66",
+        "idSubSpeciality": "58",
+        "description": "Liteasis"
+    },
+    {
+        "idSpeciality": "66",
+        "idSubSpeciality": "59",
+        "description": "Andrologia "
+    },
+    {
+        "idSpeciality": "66",
+        "idSubSpeciality": "60",
+        "description": "CirugÃa Urologica "
+    },
+    {
+        "idSpeciality": "66",
+        "idSubSpeciality": "61",
+        "description": "Disfuncion erectil "
+    },
+    {
+        "idSpeciality": "66",
+        "idSubSpeciality": "62",
+        "description": "Endourologia y Laparoscopia Urologica "
+    },
+    {
+        "idSpeciality": "66",
+        "idSubSpeciality": "63",
+        "description": "Eyaculacion precoz "
+    },
+    {
+        "idSpeciality": "66",
+        "idSubSpeciality": "64",
+        "description": "Infertilidad "
+    },
+    {
+        "idSpeciality": "14",
+        "idSubSpeciality": "65",
+        "description": "Cirugia Craneofacial "
+    },
+    {
+        "idSpeciality": "14",
+        "idSubSpeciality": "66",
+        "description": "Malformaciones Congenitas"
+    },
+    {
+        "idSpeciality": "14",
+        "idSubSpeciality": "67",
+        "description": "Ortopedia Maxilar"
+    },
+    {
+        "idSpeciality": "14",
+        "idSubSpeciality": "68",
+        "description": "Traumatismos Faciales "
+    },
+    {
+        "idSpeciality": "14",
+        "idSubSpeciality": "69",
+        "description": "Tumores Faciales"
+    },
+    {
+        "idSpeciality": "17",
+        "idSubSpeciality": "71",
+        "description": "Biopsia por Marcaje Mamario"
+    },
+    {
+        "idSpeciality": "17",
+        "idSubSpeciality": "72",
+        "description": "Cancer cervicouterino "
+    },
+    {
+        "idSpeciality": "18",
+        "idSubSpeciality": "73",
+        "description": "Aparato Digestivo"
+    },
+    {
+        "idSpeciality": "18",
+        "idSubSpeciality": "74",
+        "description": "Aparato Respiratorio"
+    },
+    {
+        "idSpeciality": "18",
+        "idSubSpeciality": "75",
+        "description": "Aparato Urinario"
+    },
+    {
+        "idSpeciality": "18",
+        "idSubSpeciality": "76",
+        "description": "Boca y Dientes"
+    },
+    {
+        "idSpeciality": "18",
+        "idSubSpeciality": "77",
+        "description": "Cirugia del recien nacido"
+    },
+    {
+        "idSpeciality": "18",
+        "idSubSpeciality": "78",
+        "description": "Cirugia Endoscopica  "
+    },
+    {
+        "idSpeciality": "18",
+        "idSubSpeciality": "79",
+        "description": "Sistema Nervioso"
+    },
+    {
+        "idSpeciality": "18",
+        "idSubSpeciality": "80",
+        "description": "Piel, Pelo, Uñas"
+    },
+    {
+        "idSpeciality": "18",
+        "idSubSpeciality": "81",
+        "description": "Oido, Nariz, Garganta "
+    }
+]
+}
